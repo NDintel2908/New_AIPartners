@@ -13,14 +13,12 @@ export default function HeroSection() {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Generative AI in action:
-              <span className="block text-blue-100">Customer success stories</span>
-              <span className="block">with Google Cloud partners</span>
+              AIPARTNERS
+               
+              <span className="block">One-Stop Winning AI Transformation Station</span>
             </h1>
             <p className="text-xl text-blue-50 mb-8 leading-relaxed max-w-2xl">
-              Explore real-world examples of how businesses are leveraging generative AI to innovate
-              and transform leveraging the services, tools, and software of Google Cloud's partner
-              community.
+              Từ chiến lược đến triển khai, mọi giải pháp AI đều hội tụ tại đây. Chúng tôi giúp doanh nghiệp tăng tốc chuyển đổi số và bứt phá trong kỷ nguyên AI. Một điểm dừng, trọn hành trình chiến thắng.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button

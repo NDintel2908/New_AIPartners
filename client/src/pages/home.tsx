@@ -1,5 +1,6 @@
 import NavigationHeader from "@/components/navigation-header";
 import HeroSection from "@/components/hero-section";
+import AboutSection from "@/components/about-section";
 import SuccessStoriesSection from "@/components/success-stories-section";
 import PartnersSection from "@/components/partners-section";
 import CTASection from "@/components/cta-section";
@@ -11,6 +12,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <NavigationHeader />
       <HeroSection />
+      <AboutSection />
       <SuccessStoriesSection />
       <PartnersSection />
       <CTASection />

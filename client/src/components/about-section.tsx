@@ -5,31 +5,17 @@ import { Users, Target, Lightbulb, Shield, Globe, Zap } from "lucide-react";
 const values = [
   {
     icon: Target,
-    title: "Mission-Driven",
-    description: "Empowering businesses to harness the full potential of AI and transform their operations.",
+    title: "AI Transformation – Growth & Optimization",
+    description: "Tập trung vào giải pháp chuyển đổi AI mang tính thực tiễn, tối ưu vận hành và thúc đẩy tăng trưởng bền vững cho doanh nghiệp.",
     color: "text-blue-600",
     bgColor: "bg-blue-100"
   },
   {
     icon: Lightbulb,
-    title: "Innovation First",
-    description: "Leading the way with cutting-edge AI solutions that drive real business value.",
+    title: "One-stop AI enablement network",
+    description: "Cung cấp đầy đủ dịch vụ – từ tư vấn chiến lược, đào tạo, phát triển ứng dụng AI đến triển khai nguồn lực nhân sự – dưới một hệ sinh thái duy nhất.",
     color: "text-yellow-600",
     bgColor: "bg-yellow-100"
-  },
-  {
-    icon: Shield,
-    title: "Trust & Security",
-    description: "Building secure, reliable AI systems that you can trust with your most critical data.",
-    color: "text-green-600",
-    bgColor: "bg-green-100"
-  },
-  {
-    icon: Globe,
-    title: "Global Reach",
-    description: "Connecting businesses worldwide with Google Cloud's powerful AI ecosystem.",
-    color: "text-purple-600",
-    bgColor: "bg-purple-100"
   }
 ];
 
@@ -68,7 +54,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-3xl font-bold text-gray-900 mb-6">
             About us
           </h2>
           <p className="text-xl text-google-gray max-w-4xl mx-auto leading-relaxed">
@@ -91,12 +77,12 @@ export default function AboutSection() {
             <div className="space-y-4 text-google-gray">
               <p className="text-lg leading-relaxed">
                 AIP được thành lập từ tháng 6 năm 2024 với mô hình hoạt động gồm AI Builders – AI Trainers – AI Workforce – AI Agent Market, giúp doanh nghiệp tiếp cận AI dễ dàng, và tiết kiệm.
-                
+
               </p>
               <p className="text-lg leading-relaxed">
                 Chúng tôi không chỉ tư vấn – mà còn trực tiếp xây dựng, triển khai và đào tạo để đưa AI vào vận hành thực tế, kết nối nguồn lực từ Việt Nam, Nhật Bản và Thái Lan nhằm thúc đẩy tiến trình chuyển đổi số thông minh và bền vững.
               </p>
-             
+
             </div>
           </motion.div>
 
@@ -116,17 +102,17 @@ export default function AboutSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-google-blue/20 to-transparent"></div>
             </div>
-            
+
             {/* Floating Stats Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              
+
             >
               <div className="flex items-center space-x-4">
-                
+
               </div>
             </motion.div>
           </motion.div>
@@ -143,7 +129,7 @@ export default function AboutSection() {
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-12">
             Our Core Values
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}

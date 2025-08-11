@@ -9,7 +9,6 @@ export default function NavigationHeader() {
   const navItems = [
     { href: "#about", label: "About" },
     { href: "#success-stories", label: "Success Stories" },
-    { href: "#partners", label: "Partners" },
     { href: "#contact", label: "Contact" },
   ];
 

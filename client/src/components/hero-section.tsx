@@ -2,6 +2,15 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Rocket, Play } from "lucide-react";
 
+const partnerLogos = [
+  { name: "AES", logo: "AES" },
+  { name: "Anthropic", logo: "ANTHROPIC" },
+  { name: "Airwallex", logo: "Airwallex" },
+  { name: "GitLab", logo: "♥ GitLab" },
+  { name: "Allegro", logo: "allegro" },
+  { name: "GrowthLoop", logo: "GrowthLoop" }
+];
+
 export default function HeroSection() {
   return (
     <section className="hero-gradient text-white py-20 lg:py-28">
@@ -51,6 +60,38 @@ export default function HeroSection() {
             />
           </motion.div>
         </div>
+
+        {/* Partner Logos Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="mt-20"
+        >
+          <div className="text-center mb-8">
+            <p className="text-blue-100 text-lg font-medium">
+              Trusted by leading companies worldwide
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12 opacity-70">
+            {partnerLogos.map((partner, index) => (
+              <motion.div
+                key={partner.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                whileHover={{ opacity: 1, scale: 1.05 }}
+                className="text-white/80 hover:text-white transition-all duration-300 cursor-pointer"
+              >
+                <span className={`text-2xl font-bold ${
+                  partner.logo.includes('♥') ? 'text-orange-300' : ''
+                }`}>
+                  {partner.logo}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

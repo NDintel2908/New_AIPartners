@@ -1,0 +1,85 @@
+1. Bố cục tổng thể (Layout)
+Canvas layout: Dùng một container toàn màn hình với nền trắng (#FFFFFF), padding rộng rãi (~40px).
+
+Centered main content: Tất cả phần tử được căn giữa theo cả chiều ngang và chiều dọc.
+
+Radial arrangement: 5 phần tử (AI Builders, AI Ready Data, AI Agent Market, AI Workforce, AI Trainers) được bố trí theo vòng tròn xung quanh ngôi sao đỏ trung tâm.
+
+Aspect ratio lock: Giữ tỷ lệ đồng nhất để không bị méo khi responsive.
+
+2. Thành phần chính
+2.1. Tiêu đề
+Typography:
+
+Font: Sans-serif hiện đại (vd: "Inter" hoặc "Roboto").
+
+Font size: 32–36px
+
+Font weight: Bold (700)
+
+Alignment: Center
+
+Color: #000000
+
+Spacing: Margin-bottom ~20px.
+
+2.2. Ngôi sao trung tâm
+SVG icon hoặc vector shape để đảm bảo không vỡ hình khi zoom.
+
+Màu: #D32F2F (đỏ đậm).
+
+Hiệu ứng: Drop shadow nhẹ (0px 4px 6px rgba(0,0,0,0.2)).
+
+Kích thước: ~25% chiều rộng container.
+
+Giữ vị trí absolute center (CSS position: absolute; transform: translate(-50%, -50%)).
+
+2.3. Các nút thành phần (AI Builders, AI Ready Data, …)
+Shape: Circle icon + text label.
+
+Icon: Gradient xanh (#2A9DF4 → #1565C0).
+
+Text label: Bold, size 16–18px, màu #000.
+
+Positioning:
+
+Dùng CSS transform rotate() hoặc flex radial positioning để đảm bảo khoảng cách đều nhau quanh ngôi sao.
+
+Responsive: Dùng vw hoặc em để giữ khoảng cách tương đối.
+
+2.4. Box mô tả
+AI Trainers:
+
+Container bo tròn góc 40px.
+
+Border màu #AB47BC (tím), dày 2px.
+
+Nền trắng, shadow nhẹ.
+
+Padding 20px.
+
+Font size: 14–16px, màu chữ #4A148C cho tiêu đề và #333 cho nội dung.
+
+Giữ cố định bên phải sao cho khoảng cách với ngôi sao cân đối.
+
+3. Nguyên tắc UX
+Visual hierarchy: Tiêu đề > Ngôi sao > 5 icon > Box mô tả.
+
+White space: Đảm bảo khoảng trống đủ giữa các phần tử để không bị rối.
+
+Responsive design:
+
+Mobile: Các icon xếp thành vòng cung thay vì vòng tròn hoàn chỉnh.
+
+Tablet/Desktop: Giữ nguyên vòng tròn.
+
+Hover effect: Khi hover vào icon hoặc box → phóng to 1.05x + shadow tăng nhẹ.
+
+4. Dev note cho Replit
+Dùng HTML5 semantic tags (<header>, <main>, <section>, <article>).
+
+CSS Flexbox hoặc CSS Grid để căn giữa và định vị vòng tròn.
+
+SVG cho ngôi sao để đảm bảo scale mượt.
+
+Text và icon xuất hiện theo fade-in animation (CSS @keyframes + opacity).

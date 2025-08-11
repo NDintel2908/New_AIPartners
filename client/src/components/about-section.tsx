@@ -5,23 +5,13 @@ import { Users, Target, Lightbulb, Shield, Globe, Zap } from "lucide-react";
 const values = [
   {
     icon: Target,
-    title: "Mission-Driven",
-    description: "Empowering businesses to harness the full potential of AI and transform their operations.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Innovation First",
-    description: "Leading the way with cutting-edge AI solutions that drive real business value.",
-  },
-  {
-    icon: Shield,
-    title: "Trust & Security",
-    description: "Building secure, reliable AI systems that you can trust with your most critical data.",
+    title: "AI Transformation – Growth & Optimization",
+    description: "Tập trung vào giải pháp chuyển đổi AI mang tính thực tiễn, tối ưu vận hành và thúc đẩy tăng trưởng bền vững cho doanh nghiệp.",
   },
   {
     icon: Globe,
-    title: "Global Reach",
-    description: "Connecting businesses worldwide with Google Cloud's powerful AI ecosystem.",
+    title: "One-stop AI enablement network",
+    description: "Cung cấp đầy đủ dịch vụ – từ tư vấn chiến lược, đào tạo, phát triển ứng dụng AI đến triển khai nguồn lực nhân sự – dưới một hệ sinh thái duy nhất.",
   }
 ];
 

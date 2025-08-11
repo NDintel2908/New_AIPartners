@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Database, Code, Briefcase, ShoppingCart, GraduationCap } from "lucide-react";
 import { useState } from "react";
 
@@ -31,7 +31,13 @@ const aiEcosystemComponents = [
     description: "Các hãng tuyển dụng, săn người và mạng lưới doanh nghiệp sẵn sàng tuyển dụng, cộng tác cùng nhân lực từ AI Trainers",
     angle: 216, // Bottom Left
   },
-
+  {
+    id: "ai-trainers",
+    icon: GraduationCap,
+    title: "AI Trainers",
+    description: "Dịch vụ đào tạo, huấn luyện chuyên đề AI. Phát triển lực lượng lao động năng lực mới có tư duy và khả năng sử dụng AI-Tools, cộng tác cùng AI-Agents cho 5 năm tới",
+    angle: 288, // Top Left
+  }
 ];
 
 export default function AITrainersModel() {
@@ -46,7 +52,7 @@ export default function AITrainersModel() {
     };
   };
 
-  const radius = 200; // Distance from center
+  const radius = 220; // Distance from center
 
   return (
     <section className="py-20 bg-white">
@@ -65,7 +71,7 @@ export default function AITrainersModel() {
         </motion.div>
 
         {/* Main Container */}
-        <div className="relative flex items-center justify-center min-h-[600px]">
+        <div className="relative flex items-center justify-center min-h-[700px]">
           
           {/* Central Star */}
           <motion.div
@@ -100,81 +106,82 @@ export default function AITrainersModel() {
             const IconComponent = component.icon;
             
             return (
-              <motion.div
-                key={component.id}
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ 
-                  duration: 0.8, 
-                  delay: 0.5 + index * 0.2,
-                  type: "spring",
-                  stiffness: 100 
-                }}
-                whileHover={{ scale: 1.05 }}
-                className="absolute z-10 flex flex-col items-center cursor-pointer"
-                style={{
-                  left: `calc(50% + ${position.x}px)`,
-                  top: `calc(50% + ${position.y}px)`,
-                  transform: 'translate(-50%, -50%)'
-                }}
-                onMouseEnter={() => setHoveredComponent(component.id)}
-                onMouseLeave={() => setHoveredComponent(null)}
-              >
-                {/* Icon Circle */}
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mb-3 shadow-lg">
-                  <IconComponent className="text-white h-8 w-8" />
-                </div>
-                
-                {/* Label */}
-                <span className="font-bold text-black text-lg text-center max-w-[120px] leading-tight">
-                  {component.title}
-                </span>
-              </motion.div>
+              <div key={component.id}>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ 
+                    duration: 0.8, 
+                    delay: 0.5 + index * 0.2,
+                    type: "spring",
+                    stiffness: 100 
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  className="absolute z-10 flex flex-col items-center cursor-pointer"
+                  style={{
+                    left: `calc(50% + ${position.x}px)`,
+                    top: `calc(50% + ${position.y}px)`,
+                    transform: 'translate(-50%, -50%)'
+                  }}
+                  onMouseEnter={() => setHoveredComponent(component.id)}
+                  onMouseLeave={() => setHoveredComponent(null)}
+                >
+                  {/* Icon Circle */}
+                  <div className="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center mb-3 shadow-lg">
+                    <IconComponent className="text-white h-8 w-8" />
+                  </div>
+                  
+                  {/* Label */}
+                  <span className="font-bold text-black text-base text-center max-w-[120px] leading-tight font-sans">
+                    {component.title}
+                  </span>
+                </motion.div>
+
+                {/* Description Box on Hover */}
+                <AnimatePresence>
+                  {hoveredComponent === component.id && (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                      animate={{ opacity: 1, scale: 1, y: 0 }}
+                      exit={{ opacity: 0, scale: 0.9, y: 10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute z-30"
+                      style={{
+                        left: `calc(50% + ${position.x}px)`,
+                        top: `calc(50% + ${position.y}px + 80px)`,
+                        transform: 'translate(-50%, 0)',
+                        width: '280px'
+                      }}
+                    >
+                      <div className="bg-purple-50 border-2 border-purple-400 rounded-2xl p-4 shadow-lg">
+                        <div className="flex items-center mb-3">
+                          <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center mr-3">
+                            <IconComponent className="text-white h-5 w-5" />
+                          </div>
+                          <h3 className="font-bold text-black text-base font-sans">{component.title}</h3>
+                        </div>
+                        
+                        <p className="text-black text-sm leading-relaxed font-sans">
+                          {component.description}
+                        </p>
+                        
+                        {/* Arrow pointing up */}
+                        <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-purple-400"></div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             );
           })}
-
-          {/* AI Trainers Description Box */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 1 }}
-            whileHover={{ scale: 1.05 }}
-            className="absolute z-15 right-0 top-1/2 transform -translate-y-1/2 translate-x-80"
-            style={{ width: '320px' }}
-          >
-            <div 
-              className="bg-white border-2 border-purple-400 rounded-[40px] p-6 shadow-lg"
-            >
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center mr-3">
-                  <GraduationCap className="text-white h-6 w-6" />
-                </div>
-                <h3 className="font-bold text-purple-800 text-lg">AI Trainers</h3>
-              </div>
-              
-              <div className="space-y-3">
-                <div className="bg-purple-50 rounded-lg p-3">
-                  <p className="text-purple-800 font-medium text-sm">
-                    Dịch vụ đào tạo, huấn luyện chuyên đề AI
-                  </p>
-                </div>
-                
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Phát triển lực lượng lao động năng lực mới có tư duy và khả năng sử dụng AI-Tools, 
-                  cộng tác cùng AI-Agents cho 5 năm tới
-                </p>
-              </div>
-            </div>
-          </motion.div>
 
           {/* Connection Lines */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 5 }}>
             <defs>
               <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style={{ stopColor: '#94a3b8', stopOpacity: 0.6 }} />
-                <stop offset="100%" style={{ stopColor: '#64748b', stopOpacity: 0.3 }} />
+                <stop offset="0%" style={{ stopColor: '#cbd5e1', stopOpacity: 0.8 }} />
+                <stop offset="100%" style={{ stopColor: '#94a3b8', stopOpacity: 0.4 }} />
               </linearGradient>
             </defs>
             {aiEcosystemComponents.map((component, index) => {
@@ -191,8 +198,7 @@ export default function AITrainersModel() {
                   x2={`calc(50% + ${position.x}px)`}
                   y2={`calc(50% + ${position.y}px)`}
                   stroke="url(#lineGradient)"
-                  strokeWidth="1.5"
-                  strokeDasharray="8,4"
+                  strokeWidth="1"
                 />
               );
             })}
@@ -207,7 +213,7 @@ export default function AITrainersModel() {
           transition={{ duration: 0.6, delay: 1.5 }}
           className="text-center mt-16 max-w-4xl mx-auto"
         >
-          <p className="text-gray-600 text-lg leading-relaxed">
+          <p className="text-gray-600 text-lg leading-relaxed font-sans">
             Hệ sinh thái tổng hợp tạo nên một mạng lưới hoàn chỉnh cho việc phát triển, 
             đào tạo và triển khai các giải pháp AI trong doanh nghiệp hiện đại.
           </p>

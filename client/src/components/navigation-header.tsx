@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, Menu, Cloud } from "lucide-react";
+import { Menu, Cloud } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -37,14 +37,6 @@ export default function NavigationHeader() {
           </div>
           
           <div className="flex items-center space-x-4">
-            <div className="hidden md:flex items-center bg-google-gray-light rounded-full px-4 py-2">
-              <Search className="text-google-gray mr-2 h-4 w-4" />
-              <Input
-                type="text"
-                placeholder="Search..."
-                className="bg-transparent border-none outline-none text-sm w-32 p-0 focus-visible:ring-0"
-              />
-            </div>
             <Button className="bg-google-blue hover:bg-google-blue-dark text-white px-6 py-2 rounded-md text-sm font-medium">
               Start free
             </Button>

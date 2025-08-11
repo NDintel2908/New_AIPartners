@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { TrendingUp, GitBranch, Users, ArrowRight } from "lucide-react";
+import { TrendingUp, GitBranch, Users } from "lucide-react";
 
 const successStories = [
   {
@@ -90,13 +90,6 @@ export default function SuccessStoriesSection() {
                   <p className="text-google-gray mb-4">
                     {story.description}
                   </p>
-                  <a
-                    href="#"
-                    className="text-google-blue hover:text-google-blue-dark font-medium inline-flex items-center group"
-                  >
-                    Read more 
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </a>
                 </CardContent>
               </Card>
             </motion.div>

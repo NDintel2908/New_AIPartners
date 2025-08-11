@@ -71,32 +71,7 @@ export default function AITrainersModel() {
         {/* Main Container */}
         <div className="relative flex items-center justify-center min-h-[700px]">
           
-          {/* Central Star */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.3 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.2, type: "spring", stiffness: 120 }}
-            className="absolute z-20 flex items-center justify-center"
-            style={{
-              left: '50%',
-              top: '50%',
-              transform: 'translate(-50%, -50%)'
-            }}
-          >
-            <svg width="100" height="100" viewBox="0 0 100 100" className="drop-shadow-xl">
-              <defs>
-                <filter id="starShadow">
-                  <feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="rgba(0,0,0,0.25)" floodOpacity="1"/>
-                </filter>
-              </defs>
-              <path
-                d="M50,5 L62,35 L95,35 L70,55 L78,85 L50,68 L22,85 L30,55 L5,35 L38,35 Z"
-                fill="#D32F2F"
-                filter="url(#starShadow)"
-              />
-            </svg>
-          </motion.div>
+
 
           {/* Surrounding Components */}
           {aiEcosystemComponents.map((component, index) => {

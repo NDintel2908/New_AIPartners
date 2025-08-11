@@ -96,7 +96,7 @@ const successStories = [
     iconColor: "text-cyan-600",
     bgColor: "bg-cyan-100",
     gradient: "from-cyan-500 to-blue-500",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
+    image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
     description: "Smart city innovations powered by AI and IoT technologies",
     size: "medium"
   },

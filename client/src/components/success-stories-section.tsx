@@ -145,7 +145,7 @@ export default function SuccessStoriesSection() {
   };
 
   return (
-    <section id="success-stories" className="py-12 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <section id="success-stories" className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0 }}
@@ -196,7 +196,7 @@ export default function SuccessStoriesSection() {
               }}
               className={`${getMosaicClassName(story.size, index)} transition-all duration-300`}
             >
-              <Card className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl border-0 h-full group">
+              <Card className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl border-0 h-full group min-h-[300px]">
                 <div className={`${getMosaicImageHeight(story.size)} bg-gradient-to-br ${story.gradient} relative overflow-hidden`}>
                   <motion.img
                     src={story.image}
@@ -228,7 +228,7 @@ export default function SuccessStoriesSection() {
                   </motion.div>
                 </div>
                 
-                <CardContent className={`${story.size === 'small' ? 'p-4' : 'p-5'}`}>
+                <CardContent className={`${story.size === 'small' ? 'p-4' : 'p-6'}`}>
                   <motion.h4 
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}

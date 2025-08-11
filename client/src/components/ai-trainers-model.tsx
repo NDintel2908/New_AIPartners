@@ -1,52 +1,56 @@
 import { motion } from "framer-motion";
-import { Database, Users, Code, Briefcase, ShoppingCart, Star } from "lucide-react";
+import { Database, Code, Briefcase, ShoppingCart, GraduationCap } from "lucide-react";
+import { useState } from "react";
 
-const aiTrainersComponents = [
+const aiEcosystemComponents = [
   {
     id: "ai-builders",
     icon: Code,
     title: "AI Builders",
-    description: "Các hãng công nghệ và đối ngũ tư vấn giải pháp AI năng lực và kinh nghiệm",
-    position: "top",
-    color: "bg-blue-500"
-  },
-  {
-    id: "ai-trainers", 
-    icon: Users,
-    title: "AI Trainers",
-    description: "Dịch vụ đào tạo, huấn luyện chuyên đề AI",
-    descriptionDetail: "Phát triển lực lượng lao động năng lực mới có tư duy và khả năng sử dụng AI-Tools cộng tác cùng AI-Agents cho 5 năm tới",
-    position: "right",
-    color: "bg-blue-500",
-    isHighlighted: true
+    description: "Các hãng công nghệ và đội ngũ tư vấn giải pháp AI",
+    detailDescription: "Các hãng công nghệ và đối ngũ tư vấn giải pháp AI năng lực và kinh nghiệm",
+    angle: 0, // Top
   },
   {
     id: "ai-workforce",
-    icon: Briefcase, 
-    title: "AI Workforce",
-    description: "Các hãng tuyển dụng, săn người và mạng lưới doanh nghiệp sẵn sàng tuyển dụng, cộng tác cùng nhân lực từ AI Trainers",
-    position: "bottom-right",
-    color: "bg-blue-500"
+    icon: Briefcase,
+    title: "AI Workforce", 
+    description: "Mạng lưới doanh nghiệp tuyển dụng nhân lực AI",
+    detailDescription: "Các hãng tuyển dụng, săn người và mạng lưới doanh nghiệp sẵn sàng tuyển dụng, cộng tác cùng nhân lực từ AI Trainers",
+    angle: 90, // Right
   },
   {
     id: "ai-agent-market",
     icon: ShoppingCart,
-    title: "AI Agent Market", 
-    description: "Chợ các tác nhân AI Agents sẵn sàng phối hợp và được sử dụng bởi lực lượng lao động mới",
-    position: "bottom-left",
-    color: "bg-blue-500"
+    title: "AI Agent Market",
+    description: "Chợ các tác nhân AI Agents sẵn sàng",
+    detailDescription: "Chợ các tác nhân AI Agents sẵn sàng phối hợp và được sử dụng bởi lực lượng lao động mới",
+    angle: 180, // Bottom
   },
   {
     id: "ai-ready-data",
     icon: Database,
     title: "AI Ready Data",
-    description: "Kho dữ liệu sẵn sàng cho các Agents xin khai thác tối đa",
-    position: "left",
-    color: "bg-blue-500"
+    description: "Kho dữ liệu sẵn sàng cho các Agents",
+    detailDescription: "Kho dữ liệu sẵn sàng cho các Agents xin khai thác tối đa",
+    angle: 270, // Left
   }
 ];
 
 export default function AITrainersModel() {
+  const [hoveredComponent, setHoveredComponent] = useState<string | null>(null);
+
+  // Calculate position for each component in a circle
+  const getPosition = (angle: number, radius: number) => {
+    const radian = (angle - 90) * (Math.PI / 180); // -90 to start from top
+    return {
+      x: Math.cos(radian) * radius,
+      y: Math.sin(radian) * radius
+    };
+  };
+
+  const radius = 200; // Distance from center
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,228 +67,136 @@ export default function AITrainersModel() {
           </h2>
         </motion.div>
 
-        {/* Model Diagram */}
-        <div className="relative max-w-5xl mx-auto">
-          <div className="relative h-[600px] flex items-center justify-center">
-            {/* Central Star */}
+        {/* Radial Model Diagram */}
+        <div className="relative flex items-center justify-center" style={{ height: '500px' }}>
+          {/* Central Hub - AI Trainers */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 120 }}
+            whileHover={{ scale: 1.05 }}
+            className="absolute z-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full w-32 h-32 flex flex-col items-center justify-center shadow-2xl cursor-pointer"
+            onMouseEnter={() => setHoveredComponent("ai-trainers")}
+            onMouseLeave={() => setHoveredComponent(null)}
+          >
+            <GraduationCap className="text-white h-8 w-8 mb-1" />
+            <span className="text-white font-bold text-sm text-center">AI Trainers</span>
+          </motion.div>
+
+          {/* Central Description */}
+          {hoveredComponent === "ai-trainers" && (
             <motion.div
-              initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
-              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.2, type: "spring", stiffness: 100 }}
-              whileHover={{ scale: 1.1, rotate: 360 }}
-              className="absolute z-10 flex items-center justify-center cursor-pointer"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              className="absolute z-30 top-20 bg-white rounded-lg shadow-lg p-4 max-w-sm"
             >
-              <motion.svg 
-                width="140" 
-                height="140" 
-                viewBox="0 0 140 140" 
-                className="drop-shadow-2xl"
-                animate={{ 
-                  filter: [
-                    "drop-shadow(0 4px 8px rgba(0,0,0,0.3))",
-                    "drop-shadow(0 8px 16px rgba(220,38,38,0.4))",
-                    "drop-shadow(0 4px 8px rgba(0,0,0,0.3))"
-                  ]
-                }}
+              <p className="text-sm text-gray-700">
+                Dịch vụ đào tạo, huấn luyện chuyên đề AI. Phát triển lực lượng lao động năng lực mới có tư duy và khả năng sử dụng AI-Tools cộng tác cùng AI-Agents cho 5 năm tới.
+              </p>
+            </motion.div>
+          )}
+
+          {/* Surrounding Components */}
+          {aiEcosystemComponents.map((component, index) => {
+            const position = getPosition(component.angle, radius);
+            const IconComponent = component.icon;
+            
+            return (
+              <motion.div
+                key={component.id}
+                initial={{ opacity: 0, scale: 0.3 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
                 transition={{ 
-                  duration: 2, 
-                  repeat: Infinity, 
-                  repeatType: "reverse" 
+                  duration: 0.6, 
+                  delay: 0.4 + index * 0.1,
+                  type: "spring",
+                  stiffness: 100 
                 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="absolute z-10 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                style={{
+                  left: `calc(50% + ${position.x}px - 120px)`,
+                  top: `calc(50% + ${position.y}px - 80px)`,
+                  width: '240px',
+                  height: '160px'
+                }}
+                onMouseEnter={() => setHoveredComponent(component.id)}
+                onMouseLeave={() => setHoveredComponent(null)}
               >
-                <defs>
-                  <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: '#ef4444', stopOpacity: 1 }} />
-                    <stop offset="30%" style={{ stopColor: '#dc2626', stopOpacity: 1 }} />
-                    <stop offset="70%" style={{ stopColor: '#b91c1c', stopOpacity: 1 }} />
-                    <stop offset="100%" style={{ stopColor: '#991b1b', stopOpacity: 1 }} />
-                  </linearGradient>
-                  <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 0.8 }} />
-                    <stop offset="100%" style={{ stopColor: '#ffffff', stopOpacity: 0 }} />
-                  </radialGradient>
-                  <filter id="starShadow">
-                    <feDropShadow dx="0" dy="6" stdDeviation="12" floodOpacity="0.4"/>
-                  </filter>
-                </defs>
-                
-                {/* Main star shape */}
-                <motion.path
-                  d="M70,8 L87,43 L128,43 L96,68 L108,108 L70,83 L32,108 L44,68 L12,43 L53,43 Z"
-                  fill="url(#starGradient)"
-                  stroke="#7f1d1d"
-                  strokeWidth="2"
-                  filter="url(#starShadow)"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ duration: 1.5, delay: 0.5 }}
-                />
-                
-                {/* Inner highlight */}
-                <path
-                  d="M70,22 L82,47 L108,47 L87,64 L94,89 L70,76 L46,89 L53,64 L32,47 L58,47 Z"
-                  fill="url(#starGlow)"
-                  fillOpacity="0.3"
-                />
-                
-                {/* Center circle for extra shine */}
-                <circle
-                  cx="70"
-                  cy="58"
-                  r="15"
-                  fill="url(#starGlow)"
-                  fillOpacity="0.5"
-                />
-              </motion.svg>
-            </motion.div>
-
-            {/* AI Builders - Top */}
-            <motion.div
-              initial={{ opacity: 0, y: -50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="absolute top-0 left-1/2 transform -translate-x-1/2 w-72"
-            >
-              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
-                <div className="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                  <Code className="text-white h-6 w-6" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">AI Builders</h3>
-                <p className="text-sm text-gray-600">
-                  Các hãng công nghệ và đối ngũ tư vấn giải pháp AI năng lực và kinh nghiệm
-                </p>
-              </div>
-            </motion.div>
-
-            {/* AI Trainers - Right (Highlighted) */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 w-80"
-            >
-              <div className="bg-pink-50 rounded-xl p-6 shadow-lg border-2 border-pink-200">
-                <div className="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                  <Users className="text-white h-6 w-6" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">AI Trainers</h3>
-                <div className="bg-pink-100 rounded-lg p-4 mb-3">
-                  <p className="text-sm font-medium text-pink-800">
-                    Dịch vụ đào tạo, huấn luyện chuyên đề AI
+                <div className="p-6 h-full flex flex-col items-center justify-center text-center">
+                  <div className="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center mb-3">
+                    <IconComponent className="text-white h-6 w-6" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-sm mb-2">{component.title}</h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {component.description}
                   </p>
                 </div>
-                <p className="text-sm text-gray-600">
-                  Phát triển lực lượng lao động năng lực mới có tư duy và khả năng sử dụng AI-Tools cộng tác cùng AI-Agents cho 5 năm tới
-                </p>
-              </div>
-            </motion.div>
 
-            {/* AI Workforce - Bottom Right */}
-            <motion.div
-              initial={{ opacity: 0, x: 30, y: 30 }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="absolute bottom-0 right-1/4 w-72"
-            >
-              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
-                <div className="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                  <Briefcase className="text-white h-6 w-6" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">AI Workforce</h3>
-                <p className="text-sm text-gray-600">
-                  Các hãng tuyển dụng, săn người và mạng lưới doanh nghiệp sẵn sàng tuyển dụng, cộng tác cùng nhân lực từ AI Trainers
-                </p>
-              </div>
-            </motion.div>
+                {/* Detailed tooltip on hover */}
+                {hoveredComponent === component.id && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="absolute -top-2 left-1/2 transform -translate-x-1/2 -translate-y-full bg-gray-900 text-white text-xs rounded-lg p-3 max-w-xs z-30"
+                  >
+                    <p>{component.detailDescription}</p>
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+                  </motion.div>
+                )}
+              </motion.div>
+            );
+          })}
 
-            {/* AI Agent Market - Bottom Left */}
-            <motion.div
-              initial={{ opacity: 0, x: -30, y: 30 }}
-              whileInView={{ opacity: 1, x: 0, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="absolute bottom-0 left-1/4 w-72"
-            >
-              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
-                <div className="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                  <ShoppingCart className="text-white h-6 w-6" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">AI Agent Market</h3>
-                <p className="text-sm text-gray-600">
-                  Chợ các tác nhân AI Agents sẵn sàng phối hợp và được sử dụng bởi lực lượng lao động mới
-                </p>
-              </div>
-            </motion.div>
+          {/* Connection Lines */}
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 5 }}>
+            <defs>
+              <radialGradient id="lineGradient" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style={{ stopColor: '#3b82f6', stopOpacity: 0.6 }} />
+                <stop offset="100%" style={{ stopColor: '#3b82f6', stopOpacity: 0.2 }} />
+              </radialGradient>
+            </defs>
+            {aiEcosystemComponents.map((component, index) => {
+              const position = getPosition(component.angle, radius);
+              return (
+                <motion.line
+                  key={component.id}
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  whileInView={{ pathLength: 1, opacity: 0.4 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.8 + index * 0.1 }}
+                  x1="50%"
+                  y1="50%"
+                  x2={`calc(50% + ${position.x}px)`}
+                  y2={`calc(50% + ${position.y}px)`}
+                  stroke="url(#lineGradient)"
+                  strokeWidth="2"
+                  strokeDasharray="5,5"
+                  className={hoveredComponent === component.id ? "opacity-80" : "opacity-40"}
+                />
+              );
+            })}
+          </svg>
 
-            {/* AI Ready Data - Left */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 w-72"
-            >
-              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
-                <div className="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                  <Database className="text-white h-6 w-6" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">AI Ready Data</h3>
-                <p className="text-sm text-gray-600">
-                  Kho dữ liệu sẵn sàng cho các Agents xin khai thác tối đa
-                </p>
-              </div>
-            </motion.div>
 
-            {/* Connecting Lines */}
-            <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
-              {/* Lines from center to each component */}
-              <motion.line
-                initial={{ pathLength: 0, opacity: 0 }}
-                whileInView={{ pathLength: 1, opacity: 0.3 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.9 }}
-                x1="50%" y1="50%" x2="50%" y2="20%"
-                stroke="#6b7280" strokeWidth="2" strokeDasharray="5,5"
-              />
-              <motion.line
-                initial={{ pathLength: 0, opacity: 0 }}
-                whileInView={{ pathLength: 1, opacity: 0.3 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 1 }}
-                x1="50%" y1="50%" x2="80%" y2="50%"
-                stroke="#6b7280" strokeWidth="2" strokeDasharray="5,5"
-              />
-              <motion.line
-                initial={{ pathLength: 0, opacity: 0 }}
-                whileInView={{ pathLength: 1, opacity: 0.3 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 1.1 }}
-                x1="50%" y1="50%" x2="70%" y2="80%"
-                stroke="#6b7280" strokeWidth="2" strokeDasharray="5,5"
-              />
-              <motion.line
-                initial={{ pathLength: 0, opacity: 0 }}
-                whileInView={{ pathLength: 1, opacity: 0.3 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 1.2 }}
-                x1="50%" y1="50%" x2="30%" y2="80%"
-                stroke="#6b7280" strokeWidth="2" strokeDasharray="5,5"
-              />
-              <motion.line
-                initial={{ pathLength: 0, opacity: 0 }}
-                whileInView={{ pathLength: 1, opacity: 0.3 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 1.3 }}
-                x1="50%" y1="50%" x2="20%" y2="50%"
-                stroke="#6b7280" strokeWidth="2" strokeDasharray="5,5"
-              />
-            </svg>
-          </div>
         </div>
+
+        {/* Bottom description */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+          className="text-center mt-16 max-w-3xl mx-auto"
+        >
+          <p className="text-gray-600 text-lg leading-relaxed">
+            Hệ sinh thái tổng hợp tạo nên một mạng lưới hoàn chỉnh cho việc phát triển, 
+            đào tạo và triển khai các giải pháp AI trong doanh nghiệp.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

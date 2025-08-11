@@ -8,44 +8,44 @@ const aiEcosystemComponents = [
     icon: Code,
     title: "AI Builders",
     description: "Các hãng công nghệ và đội ngũ tư vấn giải pháp AI năng lực và kinh nghiệm",
-    angle: 0, // Top
+    angle: -90, // Top (starting from -90 to have first element at top)
   },
   {
     id: "ai-ready-data",
     icon: Database,
     title: "AI Ready Data",
     description: "Kho dữ liệu sẵn sàng cho các Agents xin khai thác tối đa",
-    angle: 72, // Top Right
+    angle: -18, // 72° clockwise from top
   },
   {
     id: "ai-agent-market",
     icon: ShoppingCart,
     title: "AI Agent Market",
     description: "Chợ các tác nhân AI Agents sẵn sàng phối hợp và được sử dụng bởi lực lượng lao động mới",
-    angle: 144, // Bottom Right
+    angle: 54, // 144° clockwise from top
   },
   {
     id: "ai-workforce",
     icon: Briefcase,
     title: "AI Workforce",
     description: "Các hãng tuyển dụng, săn người và mạng lưới doanh nghiệp sẵn sàng tuyển dụng, cộng tác cùng nhân lực từ AI Trainers",
-    angle: 216, // Bottom Left
+    angle: 126, // 216° clockwise from top
   },
   {
     id: "ai-trainers",
     icon: GraduationCap,
     title: "AI Trainers",
     description: "Dịch vụ đào tạo, huấn luyện chuyên đề AI. Phát triển lực lượng lao động năng lực mới có tư duy và khả năng sử dụng AI-Tools, cộng tác cùng AI-Agents cho 5 năm tới",
-    angle: 288, // Top Left
+    angle: 198, // 288° clockwise from top
   }
 ];
 
 export default function AITrainersModel() {
   const [hoveredComponent, setHoveredComponent] = useState<string | null>(null);
 
-  // Calculate position for each component in a circle
+  // Calculate position for each component in a perfect circle
   const getPosition = (angle: number, radius: number) => {
-    const radian = (angle - 90) * (Math.PI / 180); // -90 to start from top
+    const radian = angle * (Math.PI / 180); // Use angle directly, no offset needed
     return {
       x: Math.cos(radian) * radius,
       y: Math.sin(radian) * radius
@@ -72,10 +72,19 @@ export default function AITrainersModel() {
 
         {/* Main Container with Background Circle */}
         <div className="relative flex items-center justify-center min-h-[500px]">
-          {/* Background Circle */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-96 h-96 rounded-full bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 shadow-inner opacity-60"></div>
-          </div>
+          {/* Background Circle - Perfectly centered */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 0.6, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.1 }}
+            className="absolute w-96 h-96 rounded-full bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 shadow-inner"
+            style={{
+              left: '50%',
+              top: '50%',
+              transform: 'translate(-50%, -50%)'
+            }}
+          ></motion.div>
           
           {/* Central Star */}
           <motion.div

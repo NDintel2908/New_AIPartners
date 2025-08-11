@@ -115,44 +115,44 @@ const successStories = [
 ];
 
 export default function SuccessStoriesSection() {
-  // Create a dynamic layout pattern
-  const getCardClassName = (size: string, index: number) => {
-    const baseClasses = "transition-all duration-500 hover:scale-105";
+  // Create a mosaic layout pattern
+  const getMosaicClassName = (size: string, index: number) => {
+    const patterns = [
+      // Pattern for more diverse layouts
+      ["md:col-span-3 lg:col-span-3", "md:col-span-2 lg:col-span-2", "md:col-span-1 lg:col-span-3"],
+      ["md:col-span-2 lg:col-span-2", "md:col-span-2 lg:col-span-3", "md:col-span-2 lg:col-span-3"],
+      ["md:col-span-2 lg:col-span-4", "md:col-span-2 lg:col-span-2", "md:col-span-2 lg:col-span-2"]
+    ];
     
-    switch (size) {
-      case "large":
-        return `${baseClasses} md:col-span-2 md:row-span-2`;
-      case "medium":
-        return `${baseClasses} md:col-span-1 md:row-span-2`;
-      case "small":
-        return `${baseClasses} md:col-span-1 md:row-span-1`;
-      default:
-        return baseClasses;
-    }
+    const rowIndex = Math.floor(index / 3);
+    const colIndex = index % 3;
+    const pattern = patterns[rowIndex % patterns.length];
+    
+    return pattern[colIndex] || "md:col-span-2 lg:col-span-2";
   };
 
-  const getImageHeight = (size: string) => {
+  const getMosaicImageHeight = (size: string) => {
     switch (size) {
       case "large":
-        return "h-64 md:h-80";
-      case "medium":
-        return "h-48 md:h-64";
-      case "small":
         return "h-40 md:h-48";
+      case "medium":
+        return "h-32 md:h-40";
+      case "small":
+        return "h-28 md:h-32";
       default:
-        return "h-48";
+        return "h-32";
     }
   };
 
   return (
-    <section id="success-stories" className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <section id="success-stories" className="py-12 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
@@ -168,96 +168,102 @@ export default function SuccessStoriesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-google-gray max-w-4xl mx-auto"
+            className="text-lg text-google-gray max-w-3xl mx-auto"
           >
             Explore how businesses across diverse industries are leveraging Google Cloud AI
             and our partner network to achieve remarkable results and transform their operations.
           </motion.p>
         </motion.div>
 
-        {/* Artistic Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-auto">
+        {/* Mosaic Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-8 gap-4 auto-rows-auto">
           {successStories.map((story, index) => (
             <motion.div
               key={story.id}
-              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ 
-                duration: 0.6, 
-                delay: index * 0.1,
+                duration: 0.5, 
+                delay: index * 0.08,
                 type: "spring",
-                stiffness: 100 
+                stiffness: 120 
               }}
               whileHover={{ 
-                y: -12,
+                y: -8,
+                scale: 1.02,
                 transition: { duration: 0.3 }
               }}
-              className={getCardClassName(story.size, index)}
+              className={`${getMosaicClassName(story.size, index)} transition-all duration-300`}
             >
-              <Card className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl border-0 h-full group">
-                <div className={`${getImageHeight(story.size)} bg-gradient-to-br ${story.gradient} relative overflow-hidden`}>
+              <Card className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl border-0 h-full group">
+                <div className={`${getMosaicImageHeight(story.size)} bg-gradient-to-br ${story.gradient} relative overflow-hidden`}>
                   <motion.img
                     src={story.image}
-                    alt={`Professional business technology environment representing ${story.company}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    whileHover={{ scale: 1.1 }}
+                    alt={`${story.company} AI implementation showcase`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                   
                   {/* Floating Icon */}
                   <motion.div 
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
-                    transition={{ delay: 0.5 + index * 0.1, type: "spring" }}
-                    className={`absolute top-4 right-4 ${story.bgColor} rounded-full p-3 shadow-lg backdrop-blur-sm bg-white/90`}
+                    transition={{ delay: 0.3 + index * 0.05, type: "spring" }}
+                    className={`absolute top-3 right-3 ${story.bgColor} rounded-lg p-2 shadow-md backdrop-blur-sm bg-white/95`}
                   >
-                    <story.icon className={`${story.iconColor} h-5 w-5`} />
+                    <story.icon className={`${story.iconColor} h-4 w-4`} />
+                  </motion.div>
+
+                  {/* Company Badge */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 + index * 0.05 }}
+                    className="absolute bottom-3 left-3"
+                  >
+                    <div className="bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
+                      <span className="text-xs font-semibold text-gray-900">{story.company.split(' ')[0]}</span>
+                    </div>
                   </motion.div>
                 </div>
                 
-                <CardContent className="p-6">
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.3 + index * 0.1 }}
-                    className="flex items-center mb-4"
-                  >
-                    <div className={`${story.bgColor} rounded-lg p-2 mr-3`}>
-                      <story.icon className={`${story.iconColor} h-4 w-4`} />
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-900 truncate">{story.company}</h3>
-                  </motion.div>
-                  
+                <CardContent className={`${story.size === 'small' ? 'p-4' : 'p-5'}`}>
                   <motion.h4 
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.4 + index * 0.1 }}
-                    className={`font-bold text-gray-900 mb-3 leading-tight ${
-                      story.size === 'large' ? 'text-xl' : 
-                      story.size === 'medium' ? 'text-lg' : 'text-base'
+                    transition={{ delay: 0.2 + index * 0.05 }}
+                    className={`font-bold text-gray-900 mb-2 leading-tight ${
+                      story.size === 'large' ? 'text-lg' : 
+                      story.size === 'medium' ? 'text-base' : 'text-sm'
                     }`}
                   >
-                    {story.title.length > 80 && story.size === 'small' 
-                      ? `${story.title.substring(0, 80)}...` 
+                    {story.size === 'small' && story.title.length > 60 
+                      ? `${story.title.substring(0, 60)}...` 
+                      : story.size === 'medium' && story.title.length > 90
+                      ? `${story.title.substring(0, 90)}...`
                       : story.title}
                   </motion.h4>
                   
                   <motion.p 
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.5 + index * 0.1 }}
-                    className="text-google-gray leading-relaxed"
+                    transition={{ delay: 0.3 + index * 0.05 }}
+                    className={`text-google-gray leading-relaxed ${
+                      story.size === 'small' ? 'text-xs' : 'text-sm'
+                    }`}
                   >
-                    {story.description}
+                    {story.size === 'small' 
+                      ? story.description.substring(0, 80) + "..."
+                      : story.description}
                   </motion.p>
                   
-                  {/* Subtle gradient line */}
+                  {/* Progress indicator */}
                   <motion.div 
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}
-                    transition={{ delay: 0.6 + index * 0.1, duration: 0.8 }}
-                    className={`h-1 bg-gradient-to-r ${story.gradient} rounded-full mt-4 opacity-20`}
+                    transition={{ delay: 0.4 + index * 0.05, duration: 0.6 }}
+                    className={`h-0.5 bg-gradient-to-r ${story.gradient} rounded-full mt-3 opacity-30`}
                   ></motion.div>
                 </CardContent>
               </Card>
@@ -265,20 +271,50 @@ export default function SuccessStoriesSection() {
           ))}
         </div>
 
+        {/* Statistics Row */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6"
+        >
+          {[
+            { number: "500+", label: "Success Stories", color: "from-blue-500 to-purple-500" },
+            { number: "99%", label: "Cost Reduction", color: "from-green-500 to-teal-500" },
+            { number: "24/7", label: "Global Support", color: "from-orange-500 to-red-500" },
+            { number: "50+", label: "Industries", color: "from-purple-500 to-pink-500" }
+          ].map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+              className="bg-white rounded-xl p-4 text-center shadow-md hover:shadow-lg transition-shadow"
+            >
+              <div className={`text-2xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-1`}>
+                {stat.number}
+              </div>
+              <div className="text-sm text-gray-600">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-16"
+          className="text-center mt-10"
         >
-          <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-google-blue to-google-blue-dark text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group">
-            <span className="text-lg font-semibold mr-2">Explore More Success Stories</span>
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-google-blue to-google-blue-dark text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group">
+            <span className="font-semibold mr-2">Explore More Success Stories</span>
             <motion.span
-              animate={{ x: [0, 5, 0] }}
+              animate={{ x: [0, 3, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
-              className="text-xl"
+              className="text-lg"
             >
               →
             </motion.span>

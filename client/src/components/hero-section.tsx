@@ -37,14 +37,7 @@ export default function HeroSection() {
                 <Rocket className="mr-2 h-5 w-5" />
                 Find a partner
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-google-blue px-8 py-4 text-lg font-semibold"
-              >
-                <Play className="mr-2 h-5 w-5" />
-                Watch demo
-              </Button>
+              
             </div>
           </motion.div>
           

@@ -72,21 +72,21 @@ export default function ContactSection() {
                 <MapPin className="text-google-blue text-xl mr-4 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold mb-1">Address</h3>
-                  <p className="text-gray-300">123 Technology Street, District 1, Ho Chi Minh City</p>
+                  <p className="text-gray-300">224A Dien Bien Phu, Xuan Hoa Ward, Ho Chi Minh City</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <Phone className="text-google-blue text-xl mr-4 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold mb-1">Phone</h3>
-                  <p className="text-gray-300">+84 (0) 123 456 789</p>
+                  <p className="text-gray-300">+84 (0) 963254259</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <Mail className="text-google-blue text-xl mr-4 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
-                  <p className="text-gray-300">contact@aisolutions.vn</p>
+                  <p className="text-gray-300">info@aipartners.asia</p>
                 </div>
               </div>
             </div>

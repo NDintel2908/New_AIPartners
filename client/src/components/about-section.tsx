@@ -51,12 +51,10 @@ export default function AboutSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            About AI Solutions
+            About us
           </h2>
           <p className="text-xl text-google-gray max-w-4xl mx-auto leading-relaxed">
-            We are a trusted Google Cloud partner specializing in generative AI solutions. 
-            Our mission is to help businesses across Vietnam and Southeast Asia unlock the 
-            transformative power of artificial intelligence.
+            AIPartners.asia (AIP) là hệ sinh thái công nghệ chuyên cung cấp giải pháp chuyển đổi AI trọn gói (One-stop AI Transformation) dành riêng cho các doanh nghiệp tại Việt Nam và khu vực Châu Á – Thái Bình Dương (APAC).
           </p>
         </motion.div>
 
@@ -74,19 +72,13 @@ export default function AboutSection() {
             </h3>
             <div className="space-y-4 text-google-gray">
               <p className="text-lg leading-relaxed">
-                Founded in 2020, AI Solutions emerged from a vision to democratize artificial 
-                intelligence for businesses of all sizes. As one of Vietnam's leading Google Cloud 
-                partners, we bridge the gap between complex AI technologies and practical business solutions.
+                
               </p>
               <p className="text-lg leading-relaxed">
-                Our team of certified AI engineers and data scientists has delivered over 500 
-                successful AI implementations, helping organizations reduce costs by up to 99% 
-                while dramatically improving operational efficiency.
+                 AIP được thành lập từ tháng 6 năm 2024 với mô hình hoạt động gồm AI Builders – AI Trainers – AI Workforce – AI Agent Market, giúp doanh nghiệp tiếp cận AI dễ dàng, và tiết kiệm.
               </p>
               <p className="text-lg leading-relaxed">
-                Today, we continue to innovate at the forefront of generative AI, machine learning, 
-                and cloud transformation, empowering our clients to stay competitive in an 
-                increasingly digital world.
+                Chúng tôi không chỉ tư vấn – mà còn trực tiếp xây dựng, triển khai và đào tạo để đưa AI vào vận hành thực tế, kết nối nguồn lực từ Việt Nam, Nhật Bản và Thái Lan nhằm thúc đẩy tiến trình chuyển đổi số thông minh và bền vững.
               </p>
             </div>
           </motion.div>

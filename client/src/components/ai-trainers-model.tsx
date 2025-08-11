@@ -15,22 +15,23 @@ const aiEcosystemComponents = [
     icon: Database,
     title: "AI Ready Data",
     description: "Kho dữ liệu sẵn sàng cho các Agents xin khai thác tối đa",
-    angle: 90, // Right
+    angle: 72, // Top Right
   },
   {
     id: "ai-agent-market",
     icon: ShoppingCart,
     title: "AI Agent Market",
     description: "Chợ các tác nhân AI Agents sẵn sàng phối hợp và được sử dụng bởi lực lượng lao động mới",
-    angle: 180, // Bottom
+    angle: 144, // Bottom Right
   },
   {
     id: "ai-workforce",
     icon: Briefcase,
     title: "AI Workforce",
     description: "Các hãng tuyển dụng, săn người và mạng lưới doanh nghiệp sẵn sàng tuyển dụng, cộng tác cùng nhân lực từ AI Trainers",
-    angle: 270, // Left
-  }
+    angle: 216, // Bottom Left
+  },
+
 ];
 
 export default function AITrainersModel() {
@@ -140,7 +141,7 @@ export default function AITrainersModel() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 1 }}
             whileHover={{ scale: 1.05 }}
-            className="absolute z-15 right-0 top-1/2 transform -translate-y-1/2 translate-x-64"
+            className="absolute z-15 right-0 top-1/2 transform -translate-y-1/2 translate-x-80"
             style={{ width: '320px' }}
           >
             <div 

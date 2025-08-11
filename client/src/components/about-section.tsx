@@ -1,40 +1,14 @@
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { Users, Target, Lightbulb, Shield, Globe, Zap } from "lucide-react";
+import { Users } from "lucide-react";
 
 const values = [
   {
-    icon: Target,
     title: "AI Transformation – Growth & Optimization",
     description: "Tập trung vào giải pháp chuyển đổi AI mang tính thực tiễn, tối ưu vận hành và thúc đẩy tăng trưởng bền vững cho doanh nghiệp.",
   },
   {
-    icon: Globe,
     title: "One-stop AI enablement network",
     description: "Cung cấp đầy đủ dịch vụ – từ tư vấn chiến lược, đào tạo, phát triển ứng dụng AI đến triển khai nguồn lực nhân sự – dưới một hệ sinh thái duy nhất.",
-  }
-];
-
-const stats = [
-  {
-    number: "500+",
-    label: "AI Projects Delivered",
-    icon: Zap
-  },
-  {
-    number: "50+",
-    label: "Enterprise Clients",
-    icon: Users
-  },
-  {
-    number: "99.9%",
-    label: "Uptime Reliability",
-    icon: Shield
-  },
-  {
-    number: "24/7",
-    label: "Expert Support",
-    icon: Globe
   }
 ];
 
@@ -121,82 +95,99 @@ export default function AboutSection() {
           </motion.div>
         </div>
 
-        {/* Vision and Mission Section */}
+        {/* Vision and Mission Section - Modern Design */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-20"
+          transition={{ duration: 0.8 }}
+          className="mb-24"
         >
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Vision */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow"
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="group"
             >
-              <div className="mb-6">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Tầm Nhìn</h3>
+              <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 lg:p-10 border border-blue-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-500 ease-out">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-t-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                  Tầm Nhìn
+                </h3>
+                <p className="text-gray-700 text-lg leading-relaxed font-medium">
+                  Trở thành đối tác AI hàng đầu tại Việt Nam và Đông Nam Á, 
+                  giúp các doanh nghiệp khai thác toàn bộ tiềm năng của trí tuệ nhân tạo 
+                  để tạo ra giá trị bền vững và thúc đẩy sự phát triển kinh tế số.
+                </p>
               </div>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Trở thành đối tác AI hàng đầu tại Việt Nam và Đông Nam Á, 
-                giúp các doanh nghiệp khai thác toàn bộ tiềm năng của trí tuệ nhân tạo 
-                để tạo ra giá trị bền vững và thúc đẩy sự phát triển kinh tế số.
-              </p>
             </motion.div>
 
             {/* Mission */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow"
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="group"
             >
-              <div className="mb-6">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Sứ Mệnh</h3>
+              <div className="relative bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 lg:p-10 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-500 ease-out">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-t-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                  Sứ Mệnh
+                </h3>
+                <p className="text-gray-700 text-lg leading-relaxed font-medium">
+                  Cung cấp các giải pháp AI tiên tiến và dễ tiếp cận, 
+                  đồng hành cùng doanh nghiệp trong hành trình chuyển đổi số, 
+                  nâng cao năng suất và tạo ra những trải nghiệm khách hàng xuất sắc 
+                  thông qua công nghệ Google Cloud.
+                </p>
               </div>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Cung cấp các giải pháp AI tiên tiến và dễ tiếp cận, 
-                đồng hành cùng doanh nghiệp trong hành trình chuyển đổi số, 
-                nâng cao năng suất và tạo ra những trải nghiệm khách hàng xuất sắc 
-                thông qua công nghệ Google Cloud.
-              </p>
             </motion.div>
           </div>
         </motion.div>
 
-        {/* Values Section */}
+        {/* Core Values Section - Modern Grid Design */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-20"
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-12">
+          <motion.h3 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-16 leading-tight"
+          >
             Our Core Values
-          </h3>
-          <div className="grid md:grid-cols-2 gap-8">
+          </motion.h3>
+          
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="transition-all duration-300"
+                transition={{ duration: 0.7, delay: 0.4 + index * 0.15 }}
+                className="group"
               >
-                <Card className="bg-white border border-gray-200 shadow-lg hover:shadow-xl">
-                  <CardContent className="p-6 text-center">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h4>
-                    <p className="text-google-gray">{value.description}</p>
-                  </CardContent>
-                </Card>
+                <div className="relative bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 lg:p-10 border border-green-100 shadow-sm hover:shadow-xl hover:border-green-200 transition-all duration-500 ease-out h-full">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-t-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  <h4 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 leading-tight">
+                    {value.title}
+                  </h4>
+                  
+                  <p className="text-gray-700 text-base lg:text-lg leading-relaxed font-medium">
+                    {value.description}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>

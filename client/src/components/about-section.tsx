@@ -154,6 +154,60 @@ export default function AboutSection() {
           </div>
         </motion.div>
 
+        {/* Vision and Mission Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20"
+        >
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Vision */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 border border-blue-200"
+            >
+              <div className="flex items-center mb-6">
+                <div className="bg-blue-600 rounded-full p-3 mr-4">
+                  <Target className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Tầm Nhìn</h3>
+              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Trở thành đối tác AI hàng đầu tại Việt Nam và Đông Nam Á, 
+                giúp các doanh nghiệp khai thác toàn bộ tiềm năng của trí tuệ nhân tạo 
+                để tạo ra giá trị bền vững và thúc đẩy sự phát triển kinh tế số.
+              </p>
+            </motion.div>
+
+            {/* Mission */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 border border-green-200"
+            >
+              <div className="flex items-center mb-6">
+                <div className="bg-green-600 rounded-full p-3 mr-4">
+                  <Lightbulb className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Sứ Mệnh</h3>
+              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Cung cấp các giải pháp AI tiên tiến và dễ tiếp cận, 
+                đồng hành cùng doanh nghiệp trong hành trình chuyển đổi số, 
+                nâng cao năng suất và tạo ra những trải nghiệm khách hàng xuất sắc 
+                thông qua công nghệ Google Cloud.
+              </p>
+            </motion.div>
+          </div>
+        </motion.div>
+
         {/* Statistics Section */}
         <motion.div
           initial={{ opacity: 0 }}

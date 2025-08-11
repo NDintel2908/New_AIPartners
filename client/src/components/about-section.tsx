@@ -138,10 +138,7 @@ export default function AboutSection() {
               transition={{ duration: 0.6 }}
               className="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow"
             >
-              <div className="flex items-center mb-6">
-                <div className="bg-slate-700 rounded-lg p-3 mr-4">
-                  <Target className="h-8 w-8 text-white" />
-                </div>
+              <div className="mb-6">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Tầm Nhìn</h3>
               </div>
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -159,10 +156,7 @@ export default function AboutSection() {
               transition={{ duration: 0.6 }}
               className="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow"
             >
-              <div className="flex items-center mb-6">
-                <div className="bg-google-blue rounded-lg p-3 mr-4">
-                  <Lightbulb className="h-8 w-8 text-white" />
-                </div>
+              <div className="mb-6">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Sứ Mệnh</h3>
               </div>
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -199,9 +193,6 @@ export default function AboutSection() {
               >
                 <Card className="bg-white border border-gray-200 shadow-lg hover:shadow-xl">
                   <CardContent className="p-6 text-center">
-                    <div className="bg-gray-100 rounded-lg p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                      <value.icon className="text-slate-700 h-8 w-8" />
-                    </div>
                     <h4 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h4>
                     <p className="text-google-gray">{value.description}</p>
                   </CardContent>

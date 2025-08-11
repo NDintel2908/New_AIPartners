@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, Cloud } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -20,8 +20,11 @@ export default function NavigationHeader() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              <Cloud className="text-google-blue text-2xl mr-3" />
-              <span className="text-xl font-bold text-gray-900">AI Solutions</span>
+              <img 
+                src="/aipartners-logo.png" 
+                alt="AIPartners.asia" 
+                className="h-8 w-auto"
+              />
             </div>
             <div className="hidden md:ml-10 md:flex md:space-x-8">
               {navItems.map((item) => (

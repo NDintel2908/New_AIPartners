@@ -38,8 +38,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <Cloud className="text-google-blue text-2xl mr-3" />
-              <span className="text-xl font-bold">AI Solutions</span>
+              <img 
+                src="/aipartners-logo.png" 
+                alt="AIPartners.asia" 
+                className="h-8 w-auto"
+              />
             </div>
             <p className="text-gray-400 mb-4">
               Trusted partner for digital transformation and AI of Vietnamese businesses.

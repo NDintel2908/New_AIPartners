@@ -5,17 +5,23 @@ import { Users, Target, Lightbulb, Shield, Globe, Zap } from "lucide-react";
 const values = [
   {
     icon: Target,
-    title: "AI Transformation – Growth & Optimization",
-    description: "Tập trung vào giải pháp chuyển đổi AI mang tính thực tiễn, tối ưu vận hành và thúc đẩy tăng trưởng bền vững cho doanh nghiệp.",
-    color: "text-blue-600",
-    bgColor: "bg-blue-100"
+    title: "Mission-Driven",
+    description: "Empowering businesses to harness the full potential of AI and transform their operations.",
   },
   {
     icon: Lightbulb,
-    title: "One-stop AI enablement network",
-    description: "Cung cấp đầy đủ dịch vụ – từ tư vấn chiến lược, đào tạo, phát triển ứng dụng AI đến triển khai nguồn lực nhân sự – dưới một hệ sinh thái duy nhất.",
-    color: "text-yellow-600",
-    bgColor: "bg-yellow-100"
+    title: "Innovation First",
+    description: "Leading the way with cutting-edge AI solutions that drive real business value.",
+  },
+  {
+    icon: Shield,
+    title: "Trust & Security",
+    description: "Building secure, reliable AI systems that you can trust with your most critical data.",
+  },
+  {
+    icon: Globe,
+    title: "Global Reach",
+    description: "Connecting businesses worldwide with Google Cloud's powerful AI ecosystem.",
   }
 ];
 
@@ -54,11 +60,13 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-3xl font-bold text-gray-900 mb-6">
-            About us
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            About AI Solutions
           </h2>
           <p className="text-xl text-google-gray max-w-4xl mx-auto leading-relaxed">
-            AIPartners.asia (AIP) là hệ sinh thái công nghệ chuyên cung cấp giải pháp chuyển đổi AI trọn gói (One-stop AI Transformation) dành riêng cho các doanh nghiệp tại Việt Nam và khu vực Châu Á – Thái Bình Dương (APAC).
+            We are a trusted Google Cloud partner specializing in generative AI solutions. 
+            Our mission is to help businesses across Vietnam and Southeast Asia unlock the 
+            transformative power of artificial intelligence.
           </p>
         </motion.div>
 
@@ -76,13 +84,20 @@ export default function AboutSection() {
             </h3>
             <div className="space-y-4 text-google-gray">
               <p className="text-lg leading-relaxed">
-                AIP được thành lập từ tháng 6 năm 2024 với mô hình hoạt động gồm AI Builders – AI Trainers – AI Workforce – AI Agent Market, giúp doanh nghiệp tiếp cận AI dễ dàng, và tiết kiệm.
-
+                Founded in 2020, AI Solutions emerged from a vision to democratize artificial 
+                intelligence for businesses of all sizes. As one of Vietnam's leading Google Cloud 
+                partners, we bridge the gap between complex AI technologies and practical business solutions.
               </p>
               <p className="text-lg leading-relaxed">
-                Chúng tôi không chỉ tư vấn – mà còn trực tiếp xây dựng, triển khai và đào tạo để đưa AI vào vận hành thực tế, kết nối nguồn lực từ Việt Nam, Nhật Bản và Thái Lan nhằm thúc đẩy tiến trình chuyển đổi số thông minh và bền vững.
+                Our team of certified AI engineers and data scientists has delivered over 500 
+                successful AI implementations, helping organizations reduce costs by up to 99% 
+                while dramatically improving operational efficiency.
               </p>
-
+              <p className="text-lg leading-relaxed">
+                Today, we continue to innovate at the forefront of generative AI, machine learning, 
+                and cloud transformation, empowering our clients to stay competitive in an 
+                increasingly digital world.
+              </p>
             </div>
           </motion.div>
 
@@ -102,57 +117,27 @@ export default function AboutSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-google-blue/20 to-transparent"></div>
             </div>
-
+            
             {/* Floating Stats Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-
+              className="absolute -bottom-8 -left-8 bg-white rounded-xl shadow-xl p-6 border border-gray-100"
             >
               <div className="flex items-center space-x-4">
-
+                <div className="bg-google-blue text-white rounded-full p-3">
+                  <Users className="h-6 w-6" />
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-gray-900">50+</div>
+                  <div className="text-sm text-google-gray">Expert Team Members</div>
+                </div>
               </div>
             </motion.div>
           </motion.div>
         </div>
-
-        {/* Values Section */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-20"
-        >
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-12">
-            Our Core Values
-          </h3>
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-            {values.map((value, index) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="transition-all duration-300"
-              >
-                <Card className="bg-white border border-gray-200 shadow-lg hover:shadow-xl">
-                  <CardContent className="p-6 text-center">
-                    <div className={`${value.bgColor} rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center`}>
-                      <value.icon className={`${value.color} h-8 w-8`} />
-                    </div>
-                    <h4 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h4>
-                    <p className="text-google-gray">{value.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
 
         {/* Vision and Mission Section */}
         <motion.div
@@ -169,10 +154,10 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 border border-blue-200"
+              className="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow"
             >
               <div className="flex items-center mb-6">
-                <div className="bg-blue-600 rounded-full p-3 mr-4">
+                <div className="bg-slate-700 rounded-lg p-3 mr-4">
                   <Target className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Tầm Nhìn</h3>
@@ -190,10 +175,10 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 border border-green-200"
+              className="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-shadow"
             >
               <div className="flex items-center mb-6">
-                <div className="bg-green-600 rounded-full p-3 mr-4">
+                <div className="bg-google-blue rounded-lg p-3 mr-4">
                   <Lightbulb className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Sứ Mệnh</h3>
@@ -205,6 +190,42 @@ export default function AboutSection() {
                 thông qua công nghệ Google Cloud.
               </p>
             </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Values Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20"
+        >
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-12">
+            Our Core Values
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <motion.div
+                key={value.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -8 }}
+                className="transition-all duration-300"
+              >
+                <Card className="bg-white border border-gray-200 shadow-lg hover:shadow-xl">
+                  <CardContent className="p-6 text-center">
+                    <div className="bg-gray-100 rounded-lg p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                      <value.icon className="text-slate-700 h-8 w-8" />
+                    </div>
+                    <h4 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h4>
+                    <p className="text-google-gray">{value.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 

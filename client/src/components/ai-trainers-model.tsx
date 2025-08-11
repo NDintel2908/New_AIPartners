@@ -52,26 +52,30 @@ export default function AITrainersModel() {
     };
   };
 
-  const radius = 220; // Distance from center
+  const radius = 140; // Reduced distance from center
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-10">
+    <section className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
           <h1 className="text-4xl font-bold text-black mb-5 font-sans">
             AI Trainers là mảng huấn luyện AI của hệ sinh thái AIPartners.asia
           </h1>
         </motion.div>
 
-        {/* Main Container */}
-        <div className="relative flex items-center justify-center min-h-[700px]">
+        {/* Main Container with Background Circle */}
+        <div className="relative flex items-center justify-center min-h-[500px]">
+          {/* Background Circle */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-96 h-96 rounded-full bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 shadow-inner opacity-60"></div>
+          </div>
           
           {/* Central Star */}
           <motion.div
@@ -86,14 +90,14 @@ export default function AITrainersModel() {
               transform: 'translate(-50%, -50%)'
             }}
           >
-            <svg width="120" height="120" viewBox="0 0 120 120" className="drop-shadow-lg">
+            <svg width="80" height="80" viewBox="0 0 80 80" className="drop-shadow-xl">
               <defs>
                 <filter id="starShadow">
-                  <feDropShadow dx="0" dy="4" stdDeviation="6" floodColor="rgba(0,0,0,0.2)" floodOpacity="1"/>
+                  <feDropShadow dx="0" dy="3" stdDeviation="5" floodColor="rgba(0,0,0,0.25)" floodOpacity="1"/>
                 </filter>
               </defs>
               <path
-                d="M60,5 L75,40 L115,40 L85,65 L95,100 L60,80 L25,100 L35,65 L5,40 L45,40 Z"
+                d="M40,3 L50,27 L77,27 L57,43 L63,67 L40,53 L17,67 L23,43 L3,27 L30,27 Z"
                 fill="#D32F2F"
                 filter="url(#starShadow)"
               />
@@ -117,7 +121,7 @@ export default function AITrainersModel() {
                     type: "spring",
                     stiffness: 100 
                   }}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.08 }}
                   className="absolute z-10 flex flex-col items-center cursor-pointer"
                   style={{
                     left: `calc(50% + ${position.x}px)`,
@@ -127,13 +131,13 @@ export default function AITrainersModel() {
                   onMouseEnter={() => setHoveredComponent(component.id)}
                   onMouseLeave={() => setHoveredComponent(null)}
                 >
-                  {/* Icon Circle */}
-                  <div className="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center mb-3 shadow-lg">
-                    <IconComponent className="text-white h-8 w-8" />
+                  {/* Icon Circle - Larger */}
+                  <div className="w-20 h-20 rounded-full bg-blue-500 flex items-center justify-center mb-4 shadow-xl border-4 border-white">
+                    <IconComponent className="text-white h-10 w-10" />
                   </div>
                   
-                  {/* Label */}
-                  <span className="font-bold text-black text-base text-center max-w-[120px] leading-tight font-sans">
+                  {/* Label - Larger and Bolder */}
+                  <span className="font-extrabold text-black text-lg text-center max-w-[140px] leading-tight font-sans">
                     {component.title}
                   </span>
                 </motion.div>
@@ -149,9 +153,9 @@ export default function AITrainersModel() {
                       className="absolute z-30"
                       style={{
                         left: `calc(50% + ${position.x}px)`,
-                        top: `calc(50% + ${position.y}px + 80px)`,
+                        top: `calc(50% + ${position.y}px + 70px)`,
                         transform: 'translate(-50%, 0)',
-                        width: '280px'
+                        width: '300px'
                       }}
                     >
                       <div className="bg-purple-50 border-2 border-purple-400 rounded-2xl p-4 shadow-lg">
@@ -176,33 +180,7 @@ export default function AITrainersModel() {
             );
           })}
 
-          {/* Connection Lines */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 5 }}>
-            <defs>
-              <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style={{ stopColor: '#cbd5e1', stopOpacity: 0.8 }} />
-                <stop offset="100%" style={{ stopColor: '#94a3b8', stopOpacity: 0.4 }} />
-              </linearGradient>
-            </defs>
-            {aiEcosystemComponents.map((component, index) => {
-              const position = getPosition(component.angle, radius);
-              return (
-                <motion.line
-                  key={component.id}
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  whileInView={{ pathLength: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.5, delay: 1.2 + index * 0.1 }}
-                  x1="50%"
-                  y1="50%"
-                  x2={`calc(50% + ${position.x}px)`}
-                  y2={`calc(50% + ${position.y}px)`}
-                  stroke="url(#lineGradient)"
-                  strokeWidth="1"
-                />
-              );
-            })}
-          </svg>
+
         </div>
 
         {/* Bottom description */}

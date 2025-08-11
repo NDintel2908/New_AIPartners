@@ -95,7 +95,7 @@ export default function AboutSection() {
           </motion.div>
         </div>
 
-        {/* Vision and Mission Section - Modern Design */}
+        {/* Vision and Mission Section - Professional Design */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ export default function AboutSection() {
           transition={{ duration: 0.8 }}
           className="mb-24"
         >
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid lg:grid-cols-2 gap-8">
             {/* Vision */}
             <motion.div
               initial={{ opacity: 0, x: -40 }}
@@ -112,12 +112,13 @@ export default function AboutSection() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="group"
             >
-              <div className="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 lg:p-10 border border-blue-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-500 ease-out">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-t-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6 leading-tight">
-                  Tầm Nhìn
-                </h3>
-                <p className="text-gray-700 text-lg leading-relaxed font-medium">
+              <div className="bg-white rounded-lg p-8 lg:p-10 border border-gray-200 shadow-md hover:shadow-lg hover:border-slate-700 transition-all duration-300 ease-out h-full">
+                <div className="border-l-4 border-slate-700 pl-6 mb-6">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 leading-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    Tầm Nhìn
+                  </h3>
+                </div>
+                <p className="text-gray-600 text-lg leading-relaxed font-normal" style={{ fontFamily: 'Inter, sans-serif', lineHeight: '1.7' }}>
                   Trở thành đối tác AI hàng đầu tại Việt Nam và Đông Nam Á, 
                   giúp các doanh nghiệp khai thác toàn bộ tiềm năng của trí tuệ nhân tạo 
                   để tạo ra giá trị bền vững và thúc đẩy sự phát triển kinh tế số.
@@ -133,12 +134,13 @@ export default function AboutSection() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="group"
             >
-              <div className="relative bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 lg:p-10 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-200 transition-all duration-500 ease-out">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-t-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6 leading-tight">
-                  Sứ Mệnh
-                </h3>
-                <p className="text-gray-700 text-lg leading-relaxed font-medium">
+              <div className="bg-slate-50 rounded-lg p-8 lg:p-10 border border-gray-200 shadow-md hover:shadow-lg hover:border-slate-700 transition-all duration-300 ease-out h-full">
+                <div className="border-l-4 border-slate-700 pl-6 mb-6">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 leading-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    Sứ Mệnh
+                  </h3>
+                </div>
+                <p className="text-gray-600 text-lg leading-relaxed font-normal" style={{ fontFamily: 'Inter, sans-serif', lineHeight: '1.7' }}>
                   Cung cấp các giải pháp AI tiên tiến và dễ tiếp cận, 
                   đồng hành cùng doanh nghiệp trong hành trình chuyển đổi số, 
                   nâng cao năng suất và tạo ra những trải nghiệm khách hàng xuất sắc 
@@ -149,7 +151,7 @@ export default function AboutSection() {
           </div>
         </motion.div>
 
-        {/* Core Values Section - Modern Grid Design */}
+        {/* Core Values Section - Professional Grid Design */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -163,11 +165,12 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-16 leading-tight"
+            style={{ fontFamily: 'Inter, sans-serif' }}
           >
             Our Core Values
           </motion.h3>
           
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
@@ -177,14 +180,16 @@ export default function AboutSection() {
                 transition={{ duration: 0.7, delay: 0.4 + index * 0.15 }}
                 className="group"
               >
-                <div className="relative bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 lg:p-10 border border-green-100 shadow-sm hover:shadow-xl hover:border-green-200 transition-all duration-500 ease-out h-full">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-t-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className={`rounded-lg p-8 lg:p-10 border border-gray-200 shadow-md hover:shadow-lg hover:border-slate-700 transition-all duration-300 ease-out h-full ${
+                  index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
+                }`}>
+                  <div className="border-l-4 border-slate-700 pl-6 mb-6">
+                    <h4 className="text-xl lg:text-2xl font-bold text-gray-900 leading-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
+                      {value.title}
+                    </h4>
+                  </div>
                   
-                  <h4 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 leading-tight">
-                    {value.title}
-                  </h4>
-                  
-                  <p className="text-gray-700 text-base lg:text-lg leading-relaxed font-medium">
+                  <p className="text-gray-600 text-base lg:text-lg leading-relaxed font-normal" style={{ fontFamily: 'Inter, sans-serif', lineHeight: '1.7' }}>
                     {value.description}
                   </p>
                 </div>

@@ -68,13 +68,75 @@ export default function AITrainersModel() {
           <div className="relative h-[600px] flex items-center justify-center">
             {/* Central Star */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="absolute z-10 bg-red-600 rounded-full w-32 h-32 flex items-center justify-center shadow-2xl"
+              transition={{ duration: 1, delay: 0.2, type: "spring", stiffness: 100 }}
+              whileHover={{ scale: 1.1, rotate: 360 }}
+              className="absolute z-10 flex items-center justify-center cursor-pointer"
             >
-              <Star className="text-white h-16 w-16 fill-current" />
+              <motion.svg 
+                width="140" 
+                height="140" 
+                viewBox="0 0 140 140" 
+                className="drop-shadow-2xl"
+                animate={{ 
+                  filter: [
+                    "drop-shadow(0 4px 8px rgba(0,0,0,0.3))",
+                    "drop-shadow(0 8px 16px rgba(220,38,38,0.4))",
+                    "drop-shadow(0 4px 8px rgba(0,0,0,0.3))"
+                  ]
+                }}
+                transition={{ 
+                  duration: 2, 
+                  repeat: Infinity, 
+                  repeatType: "reverse" 
+                }}
+              >
+                <defs>
+                  <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style={{ stopColor: '#ef4444', stopOpacity: 1 }} />
+                    <stop offset="30%" style={{ stopColor: '#dc2626', stopOpacity: 1 }} />
+                    <stop offset="70%" style={{ stopColor: '#b91c1c', stopOpacity: 1 }} />
+                    <stop offset="100%" style={{ stopColor: '#991b1b', stopOpacity: 1 }} />
+                  </linearGradient>
+                  <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 0.8 }} />
+                    <stop offset="100%" style={{ stopColor: '#ffffff', stopOpacity: 0 }} />
+                  </radialGradient>
+                  <filter id="starShadow">
+                    <feDropShadow dx="0" dy="6" stdDeviation="12" floodOpacity="0.4"/>
+                  </filter>
+                </defs>
+                
+                {/* Main star shape */}
+                <motion.path
+                  d="M70,8 L87,43 L128,43 L96,68 L108,108 L70,83 L32,108 L44,68 L12,43 L53,43 Z"
+                  fill="url(#starGradient)"
+                  stroke="#7f1d1d"
+                  strokeWidth="2"
+                  filter="url(#starShadow)"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ duration: 1.5, delay: 0.5 }}
+                />
+                
+                {/* Inner highlight */}
+                <path
+                  d="M70,22 L82,47 L108,47 L87,64 L94,89 L70,76 L46,89 L53,64 L32,47 L58,47 Z"
+                  fill="url(#starGlow)"
+                  fillOpacity="0.3"
+                />
+                
+                {/* Center circle for extra shine */}
+                <circle
+                  cx="70"
+                  cy="58"
+                  r="15"
+                  fill="url(#starGlow)"
+                  fillOpacity="0.5"
+                />
+              </motion.svg>
             </motion.div>
 
             {/* AI Builders - Top */}

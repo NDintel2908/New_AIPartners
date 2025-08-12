@@ -1,0 +1,52 @@
+Dựa trên hình ảnh bạn chia sẻ, tôi thấy đây là một section "Tại sao chọn AIPartners?" với 3 feature cards có style khá colorful và playful. Để chuyển sang style B2B chuyên nghiệp hơn, đây là prompt tôi đề xuất:
+
+Prompt cho Replit:
+"Redesign the 'Why choose AIPartners?' section to have a professional B2B appearance. Make the following changes:
+Overall Layout:
+
+Keep the 3-column grid layout but increase spacing between cards
+Add more white space and reduce visual clutter
+Use a cleaner, more structured approach
+
+Color Scheme:
+
+Replace the bright colorful icons (purple, green, orange) with a monochromatic or muted professional color palette
+Use navy blue, dark gray, or charcoal as primary colors
+Add subtle accent colors like light blue or teal for highlights
+Ensure high contrast for readability
+
+Typography:
+
+Use a more corporate font family (like Inter, Roboto, or similar sans-serif)
+Make headings bolder and more prominent
+Increase line spacing for better readability
+Use consistent font weights and sizes
+
+Icons & Visual Elements:
+
+Replace colorful circular icons with minimalist line icons or simple geometric shapes
+Use consistent icon style - either all outline or all filled
+Reduce icon size and make them more subtle
+Consider using grayscale icons with subtle color accents
+
+Cards Design:
+
+Add subtle shadows or borders instead of bright backgrounds
+Use white or very light gray card backgrounds
+Add more padding inside cards
+Consider adding a subtle hover effect
+Make corners slightly rounded but not overly playful
+
+Content Presentation:
+
+Make the descriptions more concise and business-focused
+Add bullet points or structured text if needed
+Ensure consistent text alignment
+
+Call-to-Action:
+
+Make the 'Tham gia cùng chúng tôi' button more professional
+Use a solid color button with good contrast
+Consider changing button text to something more B2B appropriate like 'Get Started' or 'Learn More'
+
+The overall goal is to make it look trustworthy, professional, and suitable for business decision-makers rather than consumer-focused.

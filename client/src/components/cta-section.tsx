@@ -1,32 +1,33 @@
+
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Rocket, Phone } from "lucide-react";
+import { Users, Target, Lightbulb } from "lucide-react";
 
-const ctaFeatures = [
+const whyChooseUs = [
   {
-    title: "Free consultation",
-    description: "Get expert advice",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200",
-    alt: "Professional business consultation meeting with experts discussing AI solutions"
+    icon: Target,
+    title: "Mạng lưới AI đầy đủ năng lực",
+    description: "Một mạng lưới AI đầy đủ năng lực triển khai – từ chiến lược, công nghệ đến nguồn lực.",
+    gradient: "from-blue-500 to-purple-600"
   },
   {
-    title: "Live demo",
-    description: "See AI in real action",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200",
-    alt: "Abstract digital technology patterns representing AI and machine learning concepts"
+    icon: Users,
+    title: "Đội ngũ chuyên gia đa ngành",
+    description: "Đội ngũ chuyên gia đa ngành, sẵn sàng thử nghiệm, học hỏi nhanh và linh hoạt thích nghi.",
+    gradient: "from-green-500 to-teal-600"
   },
   {
-    title: "Fast deployment",
-    description: "Start in days",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200",
-    alt: "Modern workspace with team collaboration and technology implementation"
+    icon: Lightbulb,
+    title: "Sự đồng hành tin cậy",
+    description: "Sự đồng hành tin cậy trong hành trình chuyển đổi AI – với cam kết \"đi đến cùng\" để đạt được thành công thực tế.",
+    gradient: "from-orange-500 to-red-600"
   }
 ];
 
 export default function CTASection() {
   return (
-    <section className="py-20 bg-google-blue-light">
+    <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -34,60 +35,94 @@ export default function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <Card className="bg-white rounded-2xl shadow-xl p-12 text-center">
-            <CardContent className="p-0">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Ready to transform your business with AI?
-              </h2>
-              <p className="text-xl text-google-gray mb-8 max-w-3xl mx-auto">
-                Join thousands of businesses that trust Google Cloud and our partners
-                to drive innovation through generative AI.
-              </p>
+          <Card className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-200/50 overflow-hidden">
+            <CardContent className="p-12 text-center">
+              {/* Header */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="mb-12"
+              >
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  Tại sao chọn AIPartners?
+                </h2>
+                <div className="w-24 h-1 bg-gradient-to-r from-google-blue to-google-blue-dark mx-auto rounded-full"></div>
+              </motion.div>
               
+              {/* Features Grid */}
               <div className="grid md:grid-cols-3 gap-8 mb-12">
-                {ctaFeatures.map((feature, index) => (
+                {whyChooseUs.map((feature, index) => (
                   <motion.div
                     key={feature.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="text-center"
+                    transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+                    whileHover={{ 
+                      y: -8,
+                      scale: 1.02,
+                      transition: { duration: 0.3 }
+                    }}
+                    className="group"
                   >
-                    <img
-                      src={feature.image}
-                      alt={feature.alt}
-                      className="rounded-lg mx-auto mb-4 w-full h-40 object-cover"
-                    />
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                    <p className="text-google-gray">{feature.description}</p>
+                    <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl border border-gray-100 transition-all duration-300 h-full">
+                      {/* Icon with gradient background */}
+                      <motion.div 
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        transition={{ delay: 0.3 + index * 0.1, type: "spring" }}
+                        className={`w-16 h-16 rounded-full bg-gradient-to-br ${feature.gradient} flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}
+                      >
+                        <feature.icon className="w-8 h-8 text-white" />
+                      </motion.div>
+                      
+                      <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed text-base">
+                        {feature.description}
+                      </p>
+                      
+                      {/* Animated underline */}
+                      <motion.div 
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "60%" }}
+                        transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
+                        className={`h-0.5 bg-gradient-to-r ${feature.gradient} rounded-full mt-4 mx-auto opacity-40`}
+                      ></motion.div>
+                    </div>
                   </motion.div>
                 ))}
               </div>
 
+              {/* Call to Action Button */}
               <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center"
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="flex justify-center"
               >
                 <Button
                   size="lg"
-                  className="bg-google-blue hover:bg-google-blue-dark text-white px-8 py-4 text-lg font-semibold"
+                  className="bg-gradient-to-r from-google-blue to-google-blue-dark hover:from-google-blue-dark hover:to-google-blue text-white px-12 py-6 text-xl font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group"
                 >
-                  <Rocket className="mr-2 h-5 w-5" />
-                  Start today
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-2 border-google-blue text-google-blue hover:bg-google-blue hover:text-white px-8 py-4 text-lg font-semibold"
-                >
-                  <Phone className="mr-2 h-5 w-5" />
-                  Contact sales
+                  <span className="mr-3">Tham gia cùng chúng tôi</span>
+                  <motion.span
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                    className="inline-block group-hover:translate-x-1 transition-transform duration-300"
+                  >
+                    →
+                  </motion.span>
                 </Button>
               </motion.div>
+
+              {/* Decorative elements */}
+              <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-br from-green-400/10 to-teal-400/10 rounded-full blur-3xl"></div>
             </CardContent>
           </Card>
         </motion.div>

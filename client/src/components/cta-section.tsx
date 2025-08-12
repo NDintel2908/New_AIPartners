@@ -7,20 +7,20 @@ import { Users, Target, Lightbulb } from "lucide-react";
 const whyChooseUs = [
   {
     icon: Target,
-    title: "Mạng lưới AI đầy đủ năng lực",
-    description: "Một mạng lưới AI đầy đủ năng lực triển khai – từ chiến lược, công nghệ đến nguồn lực.",
+    title: "Comprehensive AI Infrastructure",
+    description: "Enterprise-grade AI solutions spanning strategic consulting, technology implementation, and resource deployment for measurable business outcomes.",
     gradient: "from-blue-500 to-purple-600"
   },
   {
     icon: Users,
-    title: "Đội ngũ chuyên gia đa ngành",
-    description: "Đội ngũ chuyên gia đa ngành, sẵn sàng thử nghiệm, học hỏi nhanh và linh hoạt thích nghi.",
+    title: "Cross-Functional Expertise",
+    description: "Multi-disciplinary team of certified AI specialists delivering rapid prototyping, advanced analytics, and scalable enterprise solutions.",
     gradient: "from-green-500 to-teal-600"
   },
   {
     icon: Lightbulb,
-    title: "Sự đồng hành tin cậy",
-    description: "Sự đồng hành tin cậy trong hành trình chuyển đổi AI – với cam kết \"đi đến cùng\" để đạt được thành công thực tế.",
+    title: "Strategic Partnership Commitment",
+    description: "End-to-end transformation partnership with guaranteed ROI delivery and continuous optimization for sustained competitive advantage.",
     gradient: "from-orange-500 to-red-600"
   }
 ];
@@ -46,7 +46,7 @@ export default function CTASection() {
                 className="mb-12"
               >
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  Tại sao chọn AIPartners?
+                  Why Choose AIPartners?
                 </h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-google-blue to-google-blue-dark mx-auto rounded-full"></div>
               </motion.div>
@@ -109,7 +109,7 @@ export default function CTASection() {
                   size="lg"
                   className="bg-gradient-to-r from-google-blue to-google-blue-dark hover:from-google-blue-dark hover:to-google-blue text-white px-12 py-6 text-xl font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group"
                 >
-                  <span className="mr-3">Tham gia cùng chúng tôi</span>
+                  <span className="mr-3">Partner with Us</span>
                   <motion.span
                     animate={{ x: [0, 4, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}

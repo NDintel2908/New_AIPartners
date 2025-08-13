@@ -1,51 +1,39 @@
+
 {
   "title": "包括的なAIエコシステム",
-  "subtitle": "AIPartnersの完全なAIエコシステムを構成する5つのコア要素をご紹介",
+  "subtitle": "AIPartnersの完全なAIエコシステムを構成する5つのコア要素をご紹介します",
   "description": "エコシステム内の各構成要素は相互に作用し、支援し合うよう設計されており、お客様のビジネスに強力で効率的な包括的AIソリューションを提供します。",
-  "cta": "エコシステムを探索",
+  "cta": "エコシステムを探索する",
   "services": {
     "aiBuilders": {
       "shortTitle": "AI Builders",
       "title": "AI Builders",
-      "description": "B2B、金融、不動産、製造業などの業界に向けた実用的なAI製品の設計・展開。",
+      "description": "B2B、金融、不動産、製造業などの業界に向けた実用的なAI製品の設計・開発・展開を行います。",
       "target": "AI実装準備済み企業向け"
     },
     "aiTrainers": {
-      "shortTitle": "AI Trainers",
+      "shortTitle": "AI Trainers", 
       "title": "AI Trainers",
-      "description": "戦略的コンサルティング、スキル開発、AI変革に向けた内部能力構築。",
+      "description": "戦略的コンサルティング、スキル開発、AI変革に向けた内部能力構築を支援します。",
       "target": "AI教育を求める組織向け"
     },
     "aiReadyData": {
       "shortTitle": "AI Ready Data",
-      "title": "AI Ready Data",
-      "description": "専門的なデータ準備・処理により、AIアプリケーション向けに最適化されたデータを提供。",
+      "title": "AI Ready Data", 
+      "description": "専門的なデータ準備・処理により、AIアプリケーション向けに最適化されたデータを提供します。",
       "target": "生データ資産を持つ企業向け"
     },
     "aiWorkforce": {
       "shortTitle": "AI Workforce",
-      "title": "AI Workforce", 
-      "description": "インターンシップ、研修、採用、企業要件に合わせたAIチーム移管サービスを提供。",
+      "title": "AI Workforce",
+      "description": "インターンシップ、研修、採用、企業要件に合わせたAIチーム移管サービスを提供します。",
       "target": "AI人材不足の企業向け"
     },
     "aiAgentMarket": {
       "shortTitle": "AI Agent Market",
       "title": "AI Agent Market",
-      "description": "多様で専門的なAIアプリケーションツール（AIエージェント）の検証・最適化済みリポジトリ。",
+      "description": "多様で専門的なAIアプリケーションツール（AIエージェント）の検証・最適化済みリポジトリです。",
       "target": "迅速なソリューションを求める企業向け"
-    }
-  }
-}orkforce": {
-      "title": "AI Workforce",
-      "description": "各プロジェクトの専門要件を満たす、高品質なAI人材の採用と育成。"
-    },
-    "aiAgentMarket": {
-      "title": "AI Agent Market", 
-      "description": "多様なAIツールとソリューションのマーケットプレイス、検証済みで最適化されたAIエージェントを提供。"
-    },
-    "aiReadyData": {
-      "title": "AI Ready Data",
-      "description": "プロフェッショナルなデータ準備と管理サービス、AIアプリケーション用のデータ準備を保証。"
     }
   }
 }

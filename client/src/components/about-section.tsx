@@ -109,7 +109,7 @@ export default function AboutSection() {
             viewport={{ once: false }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           ></motion.div>
-          
+
           {/* AI Technology Pattern Overlay */}
           <div className="absolute inset-0 opacity-5">
             <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -124,7 +124,7 @@ export default function AboutSection() {
               <rect width="100%" height="100%" fill="url(#circuit)"/>
             </svg>
           </div>
-          
+
           <div className="relative z-10 py-16">
             {/* Vision Section - Full Width */}
             <motion.div
@@ -138,19 +138,19 @@ export default function AboutSection() {
                 <div className="max-w-4xl mx-auto text-center">
                   <div className="mb-8">
                     <span className="text-sm font-semibold text-slate-600 uppercase tracking-wider mb-4 block" style={{ fontFamily: 'Inter, sans-serif' }}>
-                      "One-Stop Winning AI Transformation Station"
+                      {t('AboutSection.visionSubtitle')}
                     </span>
                     <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 uppercase tracking-wide mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
                       <span className="border-b-4 border-slate-700 pb-2">TẦM NHÌN</span>
                     </h3>
                   </div>
-                  
+
                   <div className="text-center mb-8">
                     <blockquote className="text-xl lg:text-2xl text-gray-700 leading-relaxed font-medium italic mb-6" style={{ fontFamily: 'Inter, sans-serif', lineHeight: '1.6' }}>
                       "Trở thành trạm dừng lý tưởng cho mọi nhu cầu chuyển đổi AI – nơi hội tụ đầy đủ nguồn lực, giải pháp và chuyên gia, đồng hành cùng doanh nghiệp trên hành trình chuyển đổi AI Transformation một cách hiệu quả, thực tế và thành công."
                     </blockquote>
                   </div>
-                  
+
                   <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-sm text-slate-600 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
                     <span className="bg-slate-100 px-4 py-2 rounded-full">Mục tiêu: Top 3 APAC 2027</span>
                     <span className="bg-slate-100 px-4 py-2 rounded-full">10,000+ doanh nghiệp chuyển đổi</span>
@@ -170,13 +170,13 @@ export default function AboutSection() {
                 <div className="max-w-4xl mx-auto text-center">
                   <div className="mb-8">
                     <span className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4 block" style={{ fontFamily: 'Inter, sans-serif' }}>
-                      "Synergy & Leveraging Members' Capabilities"
+                      {t('AboutSection.missionSubtitle')}
                     </span>
                     <h3 className="text-4xl lg:text-5xl font-bold text-white uppercase tracking-wide mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
                       <span className="border-b-4 border-blue-400 pb-2">SỨ MỆNH</span>
                     </h3>
                   </div>
-                  
+
                   <div className="text-center">
                     <blockquote className="text-xl lg:text-2xl text-gray-200 leading-relaxed font-medium italic" style={{ fontFamily: 'Inter, sans-serif', lineHeight: '1.6' }}>
                       "Khai thác sức mạnh cộng hưởng trong hệ sinh thái – kết nối, bổ trợ và nâng tầm năng lực giữa các đối tác trong hệ sinh thái, cùng kiến tạo những giải pháp AI phù hợp và đột phá cho doanh nghiệp."
@@ -207,7 +207,7 @@ export default function AboutSection() {
             >
               <span className="border-b-2 border-slate-300 pb-2">OUR CORE VALUES</span>
             </motion.h3>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               {values.map((value, index) => (
                 <motion.div
@@ -226,7 +226,7 @@ export default function AboutSection() {
                         {value.title}
                       </h4>
                     </div>
-                    
+
                     <p className="text-gray-600 text-base lg:text-lg leading-relaxed font-normal" style={{ fontFamily: 'Inter, sans-serif', lineHeight: '1.7' }}>
                       {value.description}
                     </p>

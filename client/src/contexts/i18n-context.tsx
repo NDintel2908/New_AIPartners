@@ -41,7 +41,7 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
       setIsLoading(true);
       try {
         // Load all section files
-        const landingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection', 'AITrainersModel', 'StrategicDirectionSection', 'Footer', 'SuccessStoriesSection', 'PartnersSection', 'ContactSection'];
+        const landingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection', 'AITrainersModel', 'StrategicDirectionSection', 'OrbitalEcosystemSection', 'Footer', 'SuccessStoriesSection', 'PartnersSection', 'ContactSection'];
         const pagesSections = ['App', 'NotFoundPage'];
         const translations: Record<string, any> = {};
         
@@ -74,11 +74,11 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
         console.error('Failed to load translations:', error);
         // Fallback to Vietnamese if loading fails
         if (language !== 'vi') {
-          const landingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection', 'AITrainersModel', 'StrategicDirectionSection', 'Footer', 'SuccessStoriesSection', 'PartnersSection', 'ContactSection'];
+          const landingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection', 'AITrainersModel', 'StrategicDirectionSection', 'OrbitalEcosystemSection', 'Footer', 'SuccessStoriesSection', 'PartnersSection', 'ContactSection'];
           const pagesSections = ['App', 'NotFoundPage'];
           const fallbackTranslations: Record<string, any> = {};
           
-          const fallbackLandingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection', 'AITrainersModel', 'StrategicDirectionSection', 'Footer', 'SuccessStoriesSection', 'PartnersSection', 'ContactSection'];
+          const fallbackLandingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection', 'AITrainersModel', 'StrategicDirectionSection', 'OrbitalEcosystemSection', 'Footer', 'SuccessStoriesSection', 'PartnersSection', 'ContactSection'];
           
           // Load fallback landing sections
           for (const section of fallbackLandingSections) {

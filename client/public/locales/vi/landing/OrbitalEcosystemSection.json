@@ -1,0 +1,27 @@
+{
+  "title": "Hệ sinh thái AI toàn diện",
+  "subtitle": "Khám phá 5 thành phần cốt lõi tạo nên hệ sinh thái AI hoàn chỉnh của AIPartners",
+  "description": "Mỗi thành phần trong hệ sinh thái được thiết kế để tương tác và hỗ trợ lẫn nhau, tạo ra một giải pháp AI tổng thể mạnh mẽ và hiệu quả cho doanh nghiệp của bạn.",
+  "services": {
+    "aiBuilders": {
+      "title": "AI Builders",
+      "description": "Phát triển sản phẩm AI tùy chỉnh theo nhu cầu cụ thể của doanh nghiệp, từ ý tưởng đến triển khai hoàn chỉnh."
+    },
+    "aiTrainers": {
+      "title": "AI Trainers", 
+      "description": "Tư vấn chiến lược và đào tạo chuyên sâu về AI, giúp doanh nghiệp xây dựng năng lực nội bộ bền vững."
+    },
+    "aiWorkforce": {
+      "title": "AI Workforce",
+      "description": "Tuyển dụng và phát triển đội ngũ nhân tài AI chất lượng cao, đáp ứng nhu cầu chuyên môn của từng dự án."
+    },
+    "aiAgentMarket": {
+      "title": "AI Agent Market",
+      "description": "Thị trường công cụ và giải pháp AI đa dạng, cung cấp các agent AI được kiểm nghiệm và tối ưu hóa."
+    },
+    "aiReadyData": {
+      "title": "AI Ready Data",
+      "description": "Dịch vụ chuẩn bị và quản lý dữ liệu chuyên nghiệp, đảm bảo dữ liệu sẵn sàng cho các ứng dụng AI."
+    }
+  }
+}

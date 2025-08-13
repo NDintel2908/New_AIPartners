@@ -1,0 +1,27 @@
+{
+  "title": "包括的なAIエコシステム",
+  "subtitle": "AIPartnersの完全なAIエコシステムを構成する5つのコア要素をご紹介",
+  "description": "エコシステム内の各構成要素は相互に作用し、支援し合うよう設計されており、お客様のビジネスに強力で効率的な包括的AIソリューションを提供します。",
+  "services": {
+    "aiBuilders": {
+      "title": "AI Builders",
+      "description": "具体的なビジネスニーズに合わせたカスタムAI製品開発を、コンセプトから完全な展開まで提供。"
+    },
+    "aiTrainers": {
+      "title": "AI Trainers",
+      "description": "戦略的コンサルティングと包括的なAIトレーニングで、企業の持続可能な内部能力構築を支援。"
+    },
+    "aiWorkforce": {
+      "title": "AI Workforce",
+      "description": "各プロジェクトの専門要件を満たす、高品質なAI人材の採用と育成。"
+    },
+    "aiAgentMarket": {
+      "title": "AI Agent Market", 
+      "description": "多様なAIツールとソリューションのマーケットプレイス、検証済みで最適化されたAIエージェントを提供。"
+    },
+    "aiReadyData": {
+      "title": "AI Ready Data",
+      "description": "プロフェッショナルなデータ準備と管理サービス、AIアプリケーション用のデータ準備を保証。"
+    }
+  }
+}

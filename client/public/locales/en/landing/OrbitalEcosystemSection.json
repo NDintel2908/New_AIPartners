@@ -1,0 +1,27 @@
+{
+  "title": "Comprehensive AI Ecosystem",
+  "subtitle": "Discover the 5 core components that make up AIPartners' complete AI ecosystem",
+  "description": "Each component in the ecosystem is designed to interact and support each other, creating a powerful and efficient comprehensive AI solution for your business.",
+  "services": {
+    "aiBuilders": {
+      "title": "AI Builders",
+      "description": "Custom AI product development tailored to specific business needs, from concept to complete deployment."
+    },
+    "aiTrainers": {
+      "title": "AI Trainers",
+      "description": "Strategic consulting and comprehensive AI training, helping businesses build sustainable internal capabilities."
+    },
+    "aiWorkforce": {
+      "title": "AI Workforce", 
+      "description": "Recruitment and development of high-quality AI talent, meeting the specialized requirements of each project."
+    },
+    "aiAgentMarket": {
+      "title": "AI Agent Market",
+      "description": "Diverse marketplace of AI tools and solutions, providing verified and optimized AI agents."
+    },
+    "aiReadyData": {
+      "title": "AI Ready Data",
+      "description": "Professional data preparation and management services, ensuring data readiness for AI applications."
+    }
+  }
+}

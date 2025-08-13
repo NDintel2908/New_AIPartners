@@ -18,57 +18,52 @@ import {
 const ecosystemServices = [
   {
     id: "ai-builders",
-    icon: Code2,
     key: "aiBuilders",
-    gradient: "from-blue-600 to-blue-700",
-    bgGradient: "from-blue-50/80 to-blue-100/60",
-    borderColor: "border-blue-200/50",
-    hoverBorder: "hover:border-blue-400/70",
-    iconBg: "bg-blue-600",
+    gradient: "from-slate-700 to-slate-800",
+    bgGradient: "from-slate-50/90 to-white/95",
+    borderColor: "border-slate-200/70",
+    hoverBorder: "hover:border-slate-400/80",
+    accentColor: "text-slate-700",
     category: "Development"
   },
   {
     id: "ai-trainers", 
-    icon: GraduationCap,
     key: "aiTrainers",
-    gradient: "from-indigo-600 to-purple-600",
-    bgGradient: "from-indigo-50/80 to-purple-50/60",
-    borderColor: "border-indigo-200/50",
-    hoverBorder: "hover:border-indigo-400/70",
-    iconBg: "bg-indigo-600",
+    gradient: "from-slate-600 to-slate-700",
+    bgGradient: "from-slate-50/90 to-gray-50/95",
+    borderColor: "border-slate-200/70",
+    hoverBorder: "hover:border-slate-400/80",
+    accentColor: "text-slate-600",
     category: "Training"
   },
   {
     id: "ai-ready-data",
-    icon: Database,
     key: "aiReadyData",
-    gradient: "from-emerald-600 to-teal-600",
-    bgGradient: "from-emerald-50/80 to-teal-50/60",
-    borderColor: "border-emerald-200/50",
-    hoverBorder: "hover:border-emerald-400/70",
-    iconBg: "bg-emerald-600",
+    gradient: "from-gray-700 to-slate-800",
+    bgGradient: "from-gray-50/90 to-slate-50/95",
+    borderColor: "border-gray-200/70",
+    hoverBorder: "hover:border-gray-400/80",
+    accentColor: "text-gray-700",
     category: "Data Solutions"
   },
   {
     id: "ai-workforce",
-    icon: Users,
     key: "aiWorkforce",
-    gradient: "from-violet-600 to-purple-600",
-    bgGradient: "from-violet-50/80 to-purple-50/60",
-    borderColor: "border-violet-200/50",
-    hoverBorder: "hover:border-violet-400/70",
-    iconBg: "bg-violet-600",
+    gradient: "from-slate-600 to-gray-700",
+    bgGradient: "from-slate-50/90 to-white/95",
+    borderColor: "border-slate-200/70",
+    hoverBorder: "hover:border-slate-400/80",
+    accentColor: "text-slate-600",
     category: "Workforce"
   },
   {
     id: "ai-agent-market",
-    icon: ShoppingCart,
     key: "aiAgentMarket",
-    gradient: "from-cyan-600 to-blue-600",
-    bgGradient: "from-cyan-50/80 to-blue-50/60",
-    borderColor: "border-cyan-200/50",
-    hoverBorder: "hover:border-cyan-400/70",
-    iconBg: "bg-cyan-600",
+    gradient: "from-gray-600 to-slate-700",
+    bgGradient: "from-gray-50/90 to-slate-50/95",
+    borderColor: "border-gray-200/70",
+    hoverBorder: "hover:border-gray-400/80",
+    accentColor: "text-gray-600",
     category: "Marketplace"
   }
 ];
@@ -105,12 +100,12 @@ export default function OrbitalEcosystemSection() {
   const { t } = useI18n();
 
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-50 via-white to-blue-50/20 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-slate-50 via-white to-gray-50/30 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-indigo-100/40 rounded-full blur-3xl" />
-        <div className="absolute inset-0 bg-grid-slate-100/50 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-slate-100/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gray-100/30 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-grid-slate-100/30 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -123,16 +118,16 @@ export default function OrbitalEcosystemSection() {
           className="text-center mb-20"
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/80 backdrop-blur-sm border border-blue-200/60 rounded-full mb-8 shadow-sm">
-            <Building2 className="w-5 h-5 text-blue-600" />
-            <span className="text-sm font-semibold text-blue-700 tracking-wide">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/90 backdrop-blur-sm border border-slate-200/60 rounded-full mb-8 shadow-sm">
+            <Building2 className="w-5 h-5 text-slate-600" />
+            <span className="text-sm font-semibold text-slate-700 tracking-wide">
               ENTERPRISE AI ECOSYSTEM
             </span>
           </div>
 
           {/* Main Title */}
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-            <span className="bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-slate-900 via-gray-800 to-slate-900 bg-clip-text text-transparent">
               {t("OrbitalEcosystemSection.title")}
             </span>
           </h2>
@@ -145,15 +140,15 @@ export default function OrbitalEcosystemSection() {
           {/* Key Statistics */}
           <div className="flex flex-wrap justify-center gap-8 mt-12">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">5</div>
+              <div className="text-3xl font-bold text-slate-700">5</div>
               <div className="text-sm text-gray-600 font-medium">Core Components</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">360°</div>
+              <div className="text-3xl font-bold text-slate-700">360°</div>
               <div className="text-sm text-gray-600 font-medium">Comprehensive Coverage</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">∞</div>
+              <div className="text-3xl font-bold text-slate-700">∞</div>
               <div className="text-sm text-gray-600 font-medium">Scalable Solutions</div>
             </div>
           </div>
@@ -168,7 +163,6 @@ export default function OrbitalEcosystemSection() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
         >
           {ecosystemServices.map((service, index) => {
-            const Icon = service.icon;
             const isLarge = index < 2; // First two cards are larger
 
             return (
@@ -185,53 +179,41 @@ export default function OrbitalEcosystemSection() {
                 <div className={`
                   relative h-full p-8 bg-gradient-to-br ${service.bgGradient} 
                   ${service.borderColor} ${service.hoverBorder}
-                  border-2 rounded-3xl shadow-lg hover:shadow-2xl 
+                  border rounded-2xl shadow-sm hover:shadow-lg 
                   transition-all duration-500 backdrop-blur-sm
-                  min-h-[320px] flex flex-col
+                  min-h-[280px] flex flex-col
                 `}>
                   {/* Category Badge */}
                   <div className="absolute top-6 right-6">
-                    <span className="inline-flex items-center px-3 py-1 bg-white/90 text-xs font-semibold text-gray-700 rounded-full border border-gray-200/50">
+                    <span className="inline-flex items-center px-3 py-1 bg-white/95 text-xs font-medium text-slate-600 rounded-full border border-slate-200/50">
                       {service.category}
                     </span>
                   </div>
 
-                  {/* Icon */}
-                  <div className="mb-6">
-                    <div className={`
-                      inline-flex items-center justify-center w-16 h-16 
-                      ${service.iconBg} rounded-2xl shadow-lg
-                      group-hover:scale-110 group-hover:shadow-xl
-                      transition-all duration-300
-                    `}>
-                      <Icon className="w-8 h-8 text-white" strokeWidth={2} />
-                    </div>
-                  </div>
-
                   {/* Content */}
-                  <div className="flex-1 flex flex-col">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">
+                  <div className="flex-1 flex flex-col pt-4">
+                    <h3 className={`text-2xl font-bold ${service.accentColor} mb-4 leading-tight`}>
                       {t(`OrbitalEcosystemSection.services.${service.key}.title`)}
                     </h3>
 
-                    <p className="text-gray-700 leading-relaxed mb-6 flex-1">
+                    <p className="text-slate-700 leading-relaxed mb-6 flex-1 text-sm">
                       {t(`OrbitalEcosystemSection.services.${service.key}.description`)}
                     </p>
 
                     {/* Target Audience */}
                     <div className="space-y-4">
-                      <div className="flex items-center gap-2 text-sm font-medium text-gray-800">
+                      <div className="flex items-center gap-2 text-sm font-medium text-slate-600">
                         <Target className="w-4 h-4" />
                         {t(`OrbitalEcosystemSection.services.${service.key}.target`)}
                       </div>
                       
                       {/* CTA */}
-                      <div className="flex items-center justify-between pt-4 border-t border-white/50">
-                        <span className="text-sm font-semibold text-gray-600">
+                      <div className="flex items-center justify-between pt-4 border-t border-slate-200/40">
+                        <span className="text-sm font-medium text-slate-500">
                           Learn More
                         </span>
                         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <div className={`w-8 h-8 rounded-full bg-gradient-to-r ${service.gradient} flex items-center justify-center`}>
+                          <div className={`w-8 h-8 rounded-full bg-gradient-to-r ${service.gradient} flex items-center justify-center shadow-sm`}>
                             <ArrowRight className="w-4 h-4 text-white" />
                           </div>
                         </div>
@@ -242,7 +224,7 @@ export default function OrbitalEcosystemSection() {
                   {/* Hover overlay */}
                   <div className={`
                     absolute inset-0 bg-gradient-to-br ${service.gradient} 
-                    opacity-0 group-hover:opacity-[0.03] rounded-3xl
+                    opacity-0 group-hover:opacity-[0.02] rounded-2xl
                     transition-opacity duration-500
                   `} />
                 </div>
@@ -304,7 +286,7 @@ export default function OrbitalEcosystemSection() {
           className="text-center"
         >
           <motion.button
-            className="group inline-flex items-center gap-4 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 hover:from-blue-700 hover:via-blue-800 hover:to-indigo-800 text-white px-12 py-5 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            className="group inline-flex items-center gap-4 bg-gradient-to-r from-slate-700 via-slate-800 to-gray-800 hover:from-slate-800 hover:via-gray-800 hover:to-slate-900 text-white px-12 py-5 rounded-xl font-semibold text-lg shadow-sm hover:shadow-md transition-all duration-300"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.98 }}
           >

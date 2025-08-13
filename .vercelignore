@@ -1,0 +1,9 @@
+node_modules
+.env
+.env.local
+.replit
+.git
+*.log
+client/node_modules
+server/node_modules
+dist

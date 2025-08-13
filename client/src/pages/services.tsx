@@ -1,10 +1,10 @@
 
-import NavigationHeader from "@/components/navigation-header";
-import Footer from "@/components/footer";
-import OrbitalEcosystemSection from "@/components/orbital-ecosystem-section";
-import FeaturesSection from "@/components/features-section";
+import NavigationHeader from "../components/navigation-header";
+import Footer from "../components/footer";
+import OrbitalEcosystemSection from "../components/orbital-ecosystem-section";
+import FeaturesSection from "../components/features-section";
 import { motion } from "framer-motion";
-import { useI18n } from "@/contexts/i18n-context";
+import { useI18n } from "../contexts/i18n-context";
 
 export default function Services() {
   const { t } = useI18n();

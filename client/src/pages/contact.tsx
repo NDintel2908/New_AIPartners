@@ -1,9 +1,9 @@
 
-import NavigationHeader from "@/components/navigation-header";
-import Footer from "@/components/footer";
-import ContactSection from "@/components/contact-section";
+import NavigationHeader from "../components/navigation-header";
+import Footer from "../components/footer";
+import ContactSection from "../components/contact-section";
 import { motion } from "framer-motion";
-import { useI18n } from "@/contexts/i18n-context";
+import { useI18n } from "../contexts/i18n-context";
 
 export default function Contact() {
   const { t } = useI18n();

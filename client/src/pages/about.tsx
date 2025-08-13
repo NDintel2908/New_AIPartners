@@ -1,9 +1,9 @@
 
-import NavigationHeader from "@/components/navigation-header";
-import Footer from "@/components/footer";
-import AboutSection from "@/components/about-section";
-import StrategicDirectionSection from "@/components/strategic-direction-section";
-import SuccessStoriesSection from "@/components/success-stories-section";
+import NavigationHeader from "../components/navigation-header";
+import Footer from "../components/footer";
+import AboutSection from "../components/about-section";
+import StrategicDirectionSection from "../components/strategic-direction-section";
+import SuccessStoriesSection from "../components/success-stories-section";
 import { motion } from "framer-motion";
 
 export default function About() {

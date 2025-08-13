@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Globe } from 'lucide-react';
-import { useI18n, Language } from '@/contexts/i18n-context';
+import { useI18n, Language } from '../contexts/i18n-context';
 
 const languages = [
   { code: 'vi' as Language, name: 'Tiếng Việt', flag: 'https://flagcdn.com/w20/vn.png', short: 'VI' },

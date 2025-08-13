@@ -1,3 +1,22 @@
+// Apply ES module polyfill immediately
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const projectRoot = dirname(__dirname);
+
+// Set global polyfills before any other imports
+(globalThis as any).__dirname = projectRoot;
+(globalThis as any).__filename = __filename;
+(global as any).__dirname = projectRoot;
+(global as any).__filename = __filename;
+
+// Also make it available on the process object for dynamic imports
+process.env.__ES_MODULE_DIR = projectRoot;
+
+console.log('[Server] ES Module polyfill applied for project root:', projectRoot);
+
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Users } from "lucide-react";
-import { useI18n } from "@/contexts/i18n-context";
+import { useI18n } from "../contexts/i18n-context";
 
 const getValues = (t: (key: string) => string) => [
   {

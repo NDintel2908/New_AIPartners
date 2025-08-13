@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import { Rocket, Play } from "lucide-react";
-import { useI18n } from "@/contexts/i18n-context";
+import { useI18n } from "../contexts/i18n-context";
 
 const partnerLogos = [
   { name: "AES", logo: "AES" },

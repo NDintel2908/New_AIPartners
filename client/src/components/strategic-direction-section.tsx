@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { useI18n } from "@/contexts/i18n-context";
+import { useI18n } from "../contexts/i18n-context";
 import { Building2, Handshake, Globe, ArrowRight } from "lucide-react";
 
 const getIcons = () => [Building2, Handshake, Globe];

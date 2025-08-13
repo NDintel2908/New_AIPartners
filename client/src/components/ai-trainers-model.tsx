@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Database, Code, Briefcase, ShoppingCart, GraduationCap } from "lucide-react";
-import { useI18n } from "@/contexts/i18n-context";
+import { useI18n } from "../contexts/i18n-context";
 
 const getAIEcosystemComponents = (t: (key: string) => string) => [
   {

@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { useI18n } from "@/contexts/i18n-context";
+import { useI18n } from "../contexts/i18n-context";
 import { 
   Code2, 
   GraduationCap, 

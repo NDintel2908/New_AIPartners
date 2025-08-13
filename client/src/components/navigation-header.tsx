@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useI18n } from "@/contexts/i18n-context";
-import LanguageSwitcher from "@/components/language-switcher";
+import { Button } from "./ui/button";
+import { useI18n } from "../contexts/i18n-context";
+import LanguageSwitcher from "./language-switcher";
 
 export default function NavigationHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

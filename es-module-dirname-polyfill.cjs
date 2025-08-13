@@ -16,6 +16,12 @@ if (typeof global !== 'undefined' && typeof global.__dirname === 'undefined') {
   console.log('[ES Module Fix] __dirname polyfill applied for project root:', __dirname);
 }
 
+// Immediately set globalThis for ES modules
+if (typeof globalThis !== 'undefined') {
+  globalThis.__dirname = __dirname;
+  globalThis.__filename = __filename;
+}
+
 module.exports = {
   dirname: __dirname,
   filename: __filename

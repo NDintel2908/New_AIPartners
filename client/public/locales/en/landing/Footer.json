@@ -1,0 +1,33 @@
+{
+  "description": "Trusted partner for digital transformation and AI of Vietnamese businesses.",
+  "sections": {
+    "solutions": {
+      "title": "Solutions",
+      "links": {
+        "generativeAI": "Generative AI",
+        "machineLearning": "Machine Learning",
+        "cloudMigration": "Cloud Migration",
+        "dataAnalytics": "Data Analytics"
+      }
+    },
+    "company": {
+      "title": "Company",
+      "links": {
+        "aboutUs": "About us",
+        "news": "News",
+        "careers": "Careers",
+        "contact": "Contact"
+      }
+    },
+    "support": {
+      "title": "Support",
+      "links": {
+        "documentation": "Documentation",
+        "apiReference": "API Reference",
+        "community": "Community",
+        "support": "Support"
+      }
+    }
+  },
+  "copyright": "© 2025 AIPartners.asia. All rights reserved."
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Khám phá các câu chuyện thành công AI trong thực tế",
+  "subtitle": "Tìm hiểu cách các doanh nghiệp trong nhiều ngành công nghiệp khác nhau đang tận dụng Google Cloud AI và mạng lưới đối tác của chúng tôi để đạt được những kết quả đáng chú ý và chuyển đổi hoạt động kinh doanh.",
+  "stories": [
+    {
+      "title": "AES giảm 99% chi phí kiểm toán và nâng cao độ chính xác với Claude của Anthropic trên Google Cloud Vertex AI",
+      "company": "AES",
+      "description": "Chuyển đổi quy trình kiểm toán với việc giảm 99% chi phí thông qua tự động hóa AI"
+    },
+    {
+      "title": "Airwallex sử dụng GitLab trên Google Cloud cho CI/CD có khả năng mở rộng và mở rộng fintech toàn cầu",
+      "company": "Airwallex ♥ GitLab",
+      "description": "Mở rộng hoạt động fintech toàn cầu với các giải pháp CI/CD tiên tiến"
+    },
+    {
+      "title": "Allegro sử dụng GrowthLoop và Google Cloud AI để giao tiếp khách hàng được cá nhân hóa ở quy mô",
+      "company": "Allegro 📹 GrowthLoop",
+      "description": "Cá nhân hóa trải nghiệm khách hàng với các nền tảng giao tiếp được hỗ trợ bởi AI"
+    },
+    {
+      "title": "TechCorp tăng tốc phân tích dữ liệu với thông tin chi tiết AI thời gian thực trên Google Cloud",
+      "company": "TechCorp",
+      "description": "Phân tích thời gian thực thúc đẩy trí tuệ kinh doanh và ra quyết định"
+    },
+    {
+      "title": "SecureBank triển khai phát hiện gian lận được hỗ trợ bởi AI giảm 85% false positive",
+      "company": "SecureBank",
+      "description": "Giải pháp bảo mật được hỗ trợ bởi AI bảo vệ các giao dịch tài chính"
+    },
+    {
+      "title": "GlobalRetail tối ưu hóa chuỗi cung ứng với các mô hình AI dự đoán",
+      "company": "GlobalRetail",
+      "description": "Phân tích dự đoán chuyển đổi hoạt động chuỗi cung ứng toàn cầu"
+    },
+    {
+      "title": "HealthTech cách mạng hóa chăm sóc bệnh nhân với chẩn đoán được hỗ trợ bởi AI",
+      "company": "HealthTech",
+      "description": "Chẩn đoán AI cải thiện kết quả chăm sóc sức khỏe và sự hài lòng của bệnh nhân"
+    },
+    {
+      "title": "InnovateLab phát triển giải pháp thành phố thông minh với tích hợp IoT và AI",
+      "company": "InnovateLab",
+      "description": "Đổi mới thành phố thông minh được hỗ trợ bởi công nghệ AI và IoT"
+    },
+    {
+      "title": "DataFlow chuyển đổi quản lý dữ liệu doanh nghiệp với pipeline AI tự động",
+      "company": "DataFlow",
+      "description": "Pipeline dữ liệu tự động hóa hoạt động doanh nghiệp"
+    }
+  ]
+}

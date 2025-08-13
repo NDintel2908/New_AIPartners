@@ -1,0 +1,33 @@
+{
+  "description": "Đối tác tin cậy trong chuyển đổi số và ứng dụng AI của các doanh nghiệp Việt Nam.",
+  "sections": {
+    "solutions": {
+      "title": "Giải pháp",
+      "links": {
+        "generativeAI": "AI Sáng tạo",
+        "machineLearning": "Học máy",
+        "cloudMigration": "Di chuyển đám mây",
+        "dataAnalytics": "Phân tích dữ liệu"
+      }
+    },
+    "company": {
+      "title": "Công ty",
+      "links": {
+        "aboutUs": "Về chúng tôi",
+        "news": "Tin tức",
+        "careers": "Tuyển dụng",
+        "contact": "Liên hệ"
+      }
+    },
+    "support": {
+      "title": "Hỗ trợ",
+      "links": {
+        "documentation": "Tài liệu",
+        "apiReference": "Tham chiếu API",
+        "community": "Cộng đồng",
+        "support": "Hỗ trợ"
+      }
+    }
+  },
+  "copyright": "© 2025 AIPartners.asia. Tất cả quyền được bảo lưu."
+}

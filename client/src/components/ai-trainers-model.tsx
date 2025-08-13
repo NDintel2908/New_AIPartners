@@ -1,45 +1,48 @@
 import { motion } from "framer-motion";
 import { Database, Code, Briefcase, ShoppingCart, GraduationCap } from "lucide-react";
+import { useI18n } from "@/contexts/i18n-context";
 
-const aiEcosystemComponents = [
+const getAIEcosystemComponents = (t: (key: string) => string) => [
   {
     id: "ai-builders",
     icon: Code,
-    title: "AI Builders",
-    description: "Các hãng công nghệ và đội ngũ tư vấn giải pháp AI năng lực và kinh nghiệm",
+    title: t("AITrainersModel.components.aiBuilders.title"),
+    description: t("AITrainersModel.components.aiBuilders.description"),
     angle: -90, // Top (starting from -90 to have first element at top)
   },
   {
     id: "ai-ready-data",
     icon: Database,
-    title: "AI Ready Data",
-    description: "Kho dữ liệu sẵn sàng cho các Agents xin khai thác tối đa",
+    title: t("AITrainersModel.components.aiReadyData.title"),
+    description: t("AITrainersModel.components.aiReadyData.description"),
     angle: -18, // 72° clockwise from top
   },
   {
     id: "ai-agent-market",
     icon: ShoppingCart,
-    title: "AI Agent Market",
-    description: "Chợ các tác nhân AI Agents sẵn sàng phối hợp và được sử dụng bởi lực lượng lao động mới",
+    title: t("AITrainersModel.components.aiAgentMarket.title"),
+    description: t("AITrainersModel.components.aiAgentMarket.description"),
     angle: 54, // 144° clockwise from top
   },
   {
     id: "ai-workforce",
     icon: Briefcase,
-    title: "AI Workforce",
-    description: "Các hãng tuyển dụng, săn người và mạng lưới doanh nghiệp sẵn sàng tuyển dụng, cộng tác cùng nhân lực từ AI Trainers",
+    title: t("AITrainersModel.components.aiWorkforce.title"),
+    description: t("AITrainersModel.components.aiWorkforce.description"),
     angle: 126, // 216° clockwise from top
   },
   {
     id: "ai-trainers",
     icon: GraduationCap,
-    title: "AI Trainers",
-    description: "Dịch vụ đào tạo, huấn luyện chuyên đề AI. Phát triển lực lượng lao động năng lực mới có tư duy và khả năng sử dụng AI-Tools, cộng tác cùng AI-Agents cho 5 năm tới",
+    title: t("AITrainersModel.components.aiTrainers.title"),
+    description: t("AITrainersModel.components.aiTrainers.description"),
     angle: 198, // 288° clockwise from top
   }
 ];
 
 export default function AITrainersModel() {
+  const { t } = useI18n();
+  const aiEcosystemComponents = getAIEcosystemComponents(t);
 
   // Calculate position for each component in a perfect circle
   const getPosition = (angle: number, radius: number) => {
@@ -64,7 +67,7 @@ export default function AITrainersModel() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl font-bold text-black mb-5 font-sans">
-            AI Trainers là mảng huấn luyện AI của hệ sinh thái AIPartners.asia
+            {t("AITrainersModel.title")}
           </h1>
         </motion.div>
 

@@ -1,0 +1,35 @@
+{
+  "title": "Contact us",
+  "subtitle": "Have questions about AI Solutions? Our team of experts is ready to help you.",
+  "contactInfo": {
+    "address": {
+      "label": "Address",
+      "value": "224A Dien Bien Phu, Xuan Hoa Ward, Ho Chi Minh City"
+    },
+    "phone": {
+      "label": "Phone",
+      "value": "+84 (0) 963254259"
+    },
+    "email": {
+      "label": "Email",
+      "value": "info@aipartners.asia"
+    }
+  },
+  "form": {
+    "title": "Send us a message",
+    "fields": {
+      "name": "Full Name *",
+      "email": "Email *",
+      "company": "Company",
+      "message": "Message *"
+    },
+    "sendButton": "Send message",
+    "validation": {
+      "required": "Please fill in all required fields."
+    },
+    "success": {
+      "title": "Message Sent",
+      "message": "Thank you for your message. We'll get back to you soon!"
+    }
+  }
+}

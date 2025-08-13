@@ -2,119 +2,122 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { TrendingUp, GitBranch, Users, Zap, Shield, Globe, Target, Lightbulb, Database } from "lucide-react";
+import { useI18n } from "@/contexts/i18n-context";
 
-const successStories = [
+const getSuccessStories = (t: (key: string) => string) => [
   {
     id: 1,
-    title: "AES reduces audit costs 99% and boosts accuracy with Anthropic's Claude on Google Cloud Vertex AI",
-    company: "AES",
+    title: t("SuccessStoriesSection.stories.0.title"),
+    company: t("SuccessStoriesSection.stories.0.company"),
     icon: TrendingUp,
     iconColor: "text-blue-600",
     bgColor: "bg-blue-100",
     gradient: "from-blue-500 to-purple-600",
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
-    description: "Transforming audit processes with 99% cost reduction through AI automation",
+    description: t("SuccessStoriesSection.stories.0.description"),
     size: "large"
   },
   {
     id: 2,
-    title: "Airwallex uses GitLab on Google Cloud for scalable CI/CD and global fintech expansion",
-    company: "Airwallex ♥ GitLab",
+    title: t("SuccessStoriesSection.stories.1.title"),
+    company: t("SuccessStoriesSection.stories.1.company"),
     icon: GitBranch,
     iconColor: "text-purple-600",
     bgColor: "bg-purple-100",
     gradient: "from-purple-500 to-pink-600",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
-    description: "Scaling fintech operations globally with advanced CI/CD solutions",
+    description: t("SuccessStoriesSection.stories.1.description"),
     size: "medium"
   },
   {
     id: 3,
-    title: "Allegro uses GrowthLoop and Google Cloud AI for personalized customer communication at scale",
-    company: "Allegro 📹 GrowthLoop",
+    title: t("SuccessStoriesSection.stories.2.title"),
+    company: t("SuccessStoriesSection.stories.2.company"),
     icon: Users,
     iconColor: "text-orange-600",
     bgColor: "bg-orange-100",
     gradient: "from-orange-500 to-yellow-600",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
-    description: "Personalizing customer experiences with AI-driven communication platforms",
+    description: t("SuccessStoriesSection.stories.2.description"),
     size: "medium"
   },
   {
     id: 4,
-    title: "TechCorp accelerates data analytics with real-time AI insights on Google Cloud",
-    company: "TechCorp",
+    title: t("SuccessStoriesSection.stories.3.title"),
+    company: t("SuccessStoriesSection.stories.3.company"),
     icon: Zap,
     iconColor: "text-yellow-600",
     bgColor: "bg-yellow-100",
     gradient: "from-yellow-500 to-orange-500",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
-    description: "Real-time analytics driving business intelligence and decision making",
+    description: t("SuccessStoriesSection.stories.3.description"),
     size: "small"
   },
   {
     id: 5,
-    title: "SecureBank implements AI-powered fraud detection reducing false positives by 85%",
-    company: "SecureBank",
+    title: t("SuccessStoriesSection.stories.4.title"),
+    company: t("SuccessStoriesSection.stories.4.company"),
     icon: Shield,
     iconColor: "text-green-600",
     bgColor: "bg-green-100",
     gradient: "from-green-500 to-teal-600",
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
-    description: "AI-powered security solutions protecting financial transactions",
+    description: t("SuccessStoriesSection.stories.4.description"),
     size: "large"
   },
   {
     id: 6,
-    title: "GlobalRetail optimizes supply chain with predictive AI models",
-    company: "GlobalRetail",
+    title: t("SuccessStoriesSection.stories.5.title"),
+    company: t("SuccessStoriesSection.stories.5.company"),
     icon: Globe,
     iconColor: "text-indigo-600",
     bgColor: "bg-indigo-100",
     gradient: "from-indigo-500 to-blue-600",
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
-    description: "Predictive analytics transforming global supply chain operations",
+    description: t("SuccessStoriesSection.stories.5.description"),
     size: "medium"
   },
   {
     id: 7,
-    title: "HealthTech revolutionizes patient care with AI-powered diagnostics",
-    company: "HealthTech",
+    title: t("SuccessStoriesSection.stories.6.title"),
+    company: t("SuccessStoriesSection.stories.6.company"),
     icon: Target,
     iconColor: "text-red-600",
     bgColor: "bg-red-100",
     gradient: "from-red-500 to-pink-600",
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
-    description: "AI diagnostics improving healthcare outcomes and patient satisfaction",
+    description: t("SuccessStoriesSection.stories.6.description"),
     size: "small"
   },
   {
     id: 8,
-    title: "InnovateLab develops smart city solutions with IoT and AI integration",
-    company: "InnovateLab",
+    title: t("SuccessStoriesSection.stories.7.title"),
+    company: t("SuccessStoriesSection.stories.7.company"),
     icon: Lightbulb,
     iconColor: "text-cyan-600",
     bgColor: "bg-cyan-100",
     gradient: "from-cyan-500 to-blue-500",
     image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
-    description: "Smart city innovations powered by AI and IoT technologies",
+    description: t("SuccessStoriesSection.stories.7.description"),
     size: "medium"
   },
   {
     id: 9,
-    title: "DataFlow transforms enterprise data management with automated AI pipelines",
-    company: "DataFlow",
+    title: t("SuccessStoriesSection.stories.8.title"),
+    company: t("SuccessStoriesSection.stories.8.company"),
     icon: Database,
     iconColor: "text-violet-600",
     bgColor: "bg-violet-100",
     gradient: "from-violet-500 to-purple-600",
     image: "https://images.unsplash.com/photo-1518186233392-c232efbf2373?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400",
-    description: "Automated data pipelines streamlining enterprise operations",
+    description: t("SuccessStoriesSection.stories.8.description"),
     size: "small"
   }
 ];
 
 export default function SuccessStoriesSection() {
+  const { t } = useI18n();
+  const successStories = getSuccessStories(t);
   // Create a mosaic layout pattern
   const getMosaicClassName = (size: string, index: number) => {
     const patterns = [
@@ -161,7 +164,7 @@ export default function SuccessStoriesSection() {
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
           >
-            Discover Real-World AI Success Stories
+            {t("SuccessStoriesSection.title")}
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
@@ -170,8 +173,7 @@ export default function SuccessStoriesSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-google-gray max-w-3xl mx-auto"
           >
-            Explore how businesses across diverse industries are leveraging Google Cloud AI
-            and our partner network to achieve remarkable results and transform their operations.
+            {t("SuccessStoriesSection.subtitle")}
           </motion.p>
         </motion.div>
 

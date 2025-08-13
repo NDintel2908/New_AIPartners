@@ -1,0 +1,25 @@
+{
+  "title": "AI Trainers is the AI training division of the AIPartners.asia ecosystem",
+  "components": {
+    "aiBuilders": {
+      "title": "AI Builders",
+      "description": "Technology companies and consulting teams with AI solution expertise and experience"
+    },
+    "aiReadyData": {
+      "title": "AI Ready Data",
+      "description": "Data repositories ready for Agents to maximize exploitation"
+    },
+    "aiAgentMarket": {
+      "title": "AI Agent Market",
+      "description": "Marketplace of AI Agents ready to coordinate and be utilized by the new workforce"
+    },
+    "aiWorkforce": {
+      "title": "AI Workforce",
+      "description": "Recruitment companies, headhunters, and enterprise networks ready to hire and collaborate with talent from AI Trainers"
+    },
+    "aiTrainers": {
+      "title": "AI Trainers",
+      "description": "Specialized AI training and coaching services. Developing a new skilled workforce with the mindset and ability to use AI-Tools, collaborating with AI-Agents for the next 5 years"
+    }
+  }
+}

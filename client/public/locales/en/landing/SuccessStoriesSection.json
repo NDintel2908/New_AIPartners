@@ -1,0 +1,51 @@
+{
+  "title": "Discover Real-World AI Success Stories",
+  "subtitle": "Explore how businesses across diverse industries are leveraging Google Cloud AI and our partner network to achieve remarkable results and transform their operations.",
+  "stories": [
+    {
+      "title": "AES reduces audit costs 99% and boosts accuracy with Anthropic's Claude on Google Cloud Vertex AI",
+      "company": "AES",
+      "description": "Transforming audit processes with 99% cost reduction through AI automation"
+    },
+    {
+      "title": "Airwallex uses GitLab on Google Cloud for scalable CI/CD and global fintech expansion",
+      "company": "Airwallex ♥ GitLab",
+      "description": "Scaling fintech operations globally with advanced CI/CD solutions"
+    },
+    {
+      "title": "Allegro uses GrowthLoop and Google Cloud AI for personalized customer communication at scale",
+      "company": "Allegro 📹 GrowthLoop",
+      "description": "Personalizing customer experiences with AI-driven communication platforms"
+    },
+    {
+      "title": "TechCorp accelerates data analytics with real-time AI insights on Google Cloud",
+      "company": "TechCorp",
+      "description": "Real-time analytics driving business intelligence and decision making"
+    },
+    {
+      "title": "SecureBank implements AI-powered fraud detection reducing false positives by 85%",
+      "company": "SecureBank",
+      "description": "AI-powered security solutions protecting financial transactions"
+    },
+    {
+      "title": "GlobalRetail optimizes supply chain with predictive AI models",
+      "company": "GlobalRetail",
+      "description": "Predictive analytics transforming global supply chain operations"
+    },
+    {
+      "title": "HealthTech revolutionizes patient care with AI-powered diagnostics",
+      "company": "HealthTech",
+      "description": "AI diagnostics improving healthcare outcomes and patient satisfaction"
+    },
+    {
+      "title": "InnovateLab develops smart city solutions with IoT and AI integration",
+      "company": "InnovateLab",
+      "description": "Smart city innovations powered by AI and IoT technologies"
+    },
+    {
+      "title": "DataFlow transforms enterprise data management with automated AI pipelines",
+      "company": "DataFlow",
+      "description": "Automated data pipelines streamlining enterprise operations"
+    }
+  ]
+}

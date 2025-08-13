@@ -7,8 +7,10 @@ import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useI18n } from "@/contexts/i18n-context";
 
 export default function ContactSection() {
+  const { t } = useI18n();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,7 +25,7 @@ export default function ContactSection() {
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Validation Error",
-        description: "Please fill in all required fields.",
+        description: t("ContactSection.form.validation.required"),
         variant: "destructive"
       });
       return;
@@ -31,8 +33,8 @@ export default function ContactSection() {
 
     // Here you would normally send the form data to your backend
     toast({
-      title: "Message Sent",
-      description: "Thank you for your message. We'll get back to you soon!",
+      title: t("ContactSection.form.success.title"),
+      description: t("ContactSection.form.success.message"),
     });
     
     setFormData({
@@ -61,32 +63,32 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Contact us
+              {t("ContactSection.title")}
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Have questions about AI Solutions? Our team of experts is ready to help you.
+              {t("ContactSection.subtitle")}
             </p>
             
             <div className="space-y-6">
               <div className="flex items-start">
                 <MapPin className="text-google-blue text-xl mr-4 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-1">Address</h3>
-                  <p className="text-gray-300">224A Dien Bien Phu, Xuan Hoa Ward, Ho Chi Minh City</p>
+                  <h3 className="font-semibold mb-1">{t("ContactSection.contactInfo.address.label")}</h3>
+                  <p className="text-gray-300">{t("ContactSection.contactInfo.address.value")}</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <Phone className="text-google-blue text-xl mr-4 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-1">Phone</h3>
-                  <p className="text-gray-300">+84 (0) 963254259</p>
+                  <h3 className="font-semibold mb-1">{t("ContactSection.contactInfo.phone.label")}</h3>
+                  <p className="text-gray-300">{t("ContactSection.contactInfo.phone.value")}</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <Mail className="text-google-blue text-xl mr-4 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-1">Email</h3>
-                  <p className="text-gray-300">info@aipartners.asia</p>
+                  <h3 className="font-semibold mb-1">{t("ContactSection.contactInfo.email.label")}</h3>
+                  <p className="text-gray-300">{t("ContactSection.contactInfo.email.value")}</p>
                 </div>
               </div>
             </div>
@@ -100,12 +102,12 @@ export default function ContactSection() {
           >
             <Card className="bg-white text-gray-900">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6">Send us a message</h3>
+                <h3 className="text-2xl font-bold mb-6">{t("ContactSection.form.title")}</h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <Label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Full Name *
+                        {t("ContactSection.form.fields.name")}
                       </Label>
                       <Input
                         type="text"
@@ -119,7 +121,7 @@ export default function ContactSection() {
                     </div>
                     <div>
                       <Label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email *
+                        {t("ContactSection.form.fields.email")}
                       </Label>
                       <Input
                         type="email"
@@ -134,7 +136,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <Label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                      Company
+                      {t("ContactSection.form.fields.company")}
                     </Label>
                     <Input
                       type="text"
@@ -147,7 +149,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <Label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Message *
+                      {t("ContactSection.form.fields.message")}
                     </Label>
                     <Textarea
                       id="message"
@@ -164,7 +166,7 @@ export default function ContactSection() {
                     className="w-full bg-google-blue hover:bg-google-blue-dark text-white font-semibold"
                   >
                     <Send className="mr-2 h-4 w-4" />
-                    Send message
+                    {t("ContactSection.form.sendButton")}
                   </Button>
                 </form>
               </CardContent>

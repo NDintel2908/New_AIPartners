@@ -1,0 +1,33 @@
+{
+  "description": "ベトナム企業のデジタル変革とAIの信頼できるパートナー。",
+  "sections": {
+    "solutions": {
+      "title": "ソリューション",
+      "links": {
+        "generativeAI": "生成AI",
+        "machineLearning": "機械学習",
+        "cloudMigration": "クラウド移行",
+        "dataAnalytics": "データ分析"
+      }
+    },
+    "company": {
+      "title": "会社",
+      "links": {
+        "aboutUs": "私たちについて",
+        "news": "ニュース",
+        "careers": "採用",
+        "contact": "お問い合わせ"
+      }
+    },
+    "support": {
+      "title": "サポート",
+      "links": {
+        "documentation": "ドキュメント",
+        "apiReference": "APIリファレンス",
+        "community": "コミュニティ",
+        "support": "サポート"
+      }
+    }
+  },
+  "copyright": "© 2025 AIPartners.asia. 全著作権所有。"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "AI TrainersはAIPartners.asiaエコシステムのAI研修部門です",
+  "components": {
+    "aiBuilders": {
+      "title": "AI Builders",
+      "description": "AIソリューションの専門知識と経験を持つ技術企業とコンサルティングチーム"
+    },
+    "aiReadyData": {
+      "title": "AI Ready Data",
+      "description": "エージェントが最大限に活用できる準備済みデータリポジトリ"
+    },
+    "aiAgentMarket": {
+      "title": "AI Agent Market",
+      "description": "新しい労働力によって調整され利用される準備ができたAIエージェントのマーケットプレイス"
+    },
+    "aiWorkforce": {
+      "title": "AI Workforce",
+      "description": "AI Trainersの人材を雇用し、協力する準備ができた人材紹介会社、ヘッドハンター、企業ネットワーク"
+    },
+    "aiTrainers": {
+      "title": "AI Trainers",
+      "description": "専門的なAI研修・コーチングサービス。AI-Toolsを使用する思考と能力を持ち、今後5年間AIエージェントと協力する新しい熟練労働力の開発"
+    }
+  }
+}

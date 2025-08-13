@@ -32,8 +32,8 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
     const loadTranslations = async () => {
       try {
         // Load all section files
-        const landingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection'];
-        const pagesSections = ['App'];
+        const landingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection', 'AITrainersModel', 'Footer', 'SuccessStoriesSection', 'PartnersSection', 'ContactSection'];
+        const pagesSections = ['App', 'NotFoundPage'];
         const translations: Record<string, any> = {};
         
         // Load landing sections
@@ -63,8 +63,8 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
         console.error('Failed to load translations:', error);
         // Fallback to Vietnamese if loading fails
         if (language !== 'vi') {
-          const landingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection'];
-          const pagesSections = ['App'];
+          const landingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection', 'AITrainersModel', 'Footer', 'SuccessStoriesSection', 'PartnersSection', 'ContactSection'];
+          const pagesSections = ['App', 'NotFoundPage'];
           const fallbackTranslations: Record<string, any> = {};
           
           // Load fallback landing sections

@@ -1,37 +1,40 @@
 import { Cloud } from "lucide-react";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { useI18n } from "@/contexts/i18n-context";
 
-const footerSections = [
+const getFooterSections = (t: (key: string) => string) => [
   {
-    title: "Solutions",
+    title: t("Footer.sections.solutions.title"),
     links: [
-      { label: "Generative AI", href: "#" },
-      { label: "Machine Learning", href: "#" },
-      { label: "Cloud Migration", href: "#" },
-      { label: "Data Analytics", href: "#" }
+      { label: t("Footer.sections.solutions.links.generativeAI"), href: "#" },
+      { label: t("Footer.sections.solutions.links.machineLearning"), href: "#" },
+      { label: t("Footer.sections.solutions.links.cloudMigration"), href: "#" },
+      { label: t("Footer.sections.solutions.links.dataAnalytics"), href: "#" }
     ]
   },
   {
-    title: "Company",
+    title: t("Footer.sections.company.title"),
     links: [
-      { label: "About us", href: "#" },
-      { label: "News", href: "#" },
-      { label: "Careers", href: "#" },
-      { label: "Contact", href: "#" }
+      { label: t("Footer.sections.company.links.aboutUs"), href: "#" },
+      { label: t("Footer.sections.company.links.news"), href: "#" },
+      { label: t("Footer.sections.company.links.careers"), href: "#" },
+      { label: t("Footer.sections.company.links.contact"), href: "#" }
     ]
   },
   {
-    title: "Support", 
+    title: t("Footer.sections.support.title"), 
     links: [
-      { label: "Documentation", href: "#" },
-      { label: "API Reference", href: "#" },
-      { label: "Community", href: "#" },
-      { label: "Support", href: "#" }
+      { label: t("Footer.sections.support.links.documentation"), href: "#" },
+      { label: t("Footer.sections.support.links.apiReference"), href: "#" },
+      { label: t("Footer.sections.support.links.community"), href: "#" },
+      { label: t("Footer.sections.support.links.support"), href: "#" }
     ]
   }
 ];
 
 export default function Footer() {
+  const { t } = useI18n();
+  const footerSections = getFooterSections(t);
   return (
     <footer className="bg-gray-900 text-white py-12 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +48,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-gray-400 mb-4">
-              Trusted partner for digital transformation and AI of Vietnamese businesses.
+              {t("Footer.description")}
             </p>
             <div className="flex space-x-4">
               <a
@@ -89,7 +92,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 AIPartners.asia. All rights reserved.</p>
+          <p>{t("Footer.copyright")}</p>
         </div>
       </div>
     </footer>

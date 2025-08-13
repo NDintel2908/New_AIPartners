@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Handshake } from "lucide-react";
+import { useI18n } from "@/contexts/i18n-context";
 
 const partners = [
   "AES",
@@ -12,6 +13,7 @@ const partners = [
 ];
 
 export default function PartnersSection() {
+  const { t } = useI18n();
   return (
     <section id="partners" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,10 +25,10 @@ export default function PartnersSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Trusted partners, proven AI solutions
+            {t("PartnersSection.title")}
           </h2>
           <p className="text-xl text-google-gray max-w-3xl mx-auto">
-            Connect with Google Cloud partner network to find AI solutions that fit your needs
+            {t("PartnersSection.subtitle")}
           </p>
         </motion.div>
 
@@ -59,7 +61,7 @@ export default function PartnersSection() {
         >
           <Button className="bg-google-blue hover:bg-google-blue-dark text-white px-8 py-3 text-lg font-semibold">
             <Handshake className="mr-2 h-5 w-5" />
-            Explore all partners
+            {t("PartnersSection.exploreButton")}
           </Button>
         </motion.div>
       </div>

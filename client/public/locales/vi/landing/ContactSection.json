@@ -1,0 +1,35 @@
+{
+  "title": "Liên hệ với chúng tôi",
+  "subtitle": "Có câu hỏi về Giải pháp AI? Đội ngũ chuyên gia của chúng tôi sẵn sàng giúp đỡ bạn.",
+  "contactInfo": {
+    "address": {
+      "label": "Địa chỉ",
+      "value": "224A Điện Biên Phủ, Phường Xuân Hòa, Thành phố Hồ Chí Minh"
+    },
+    "phone": {
+      "label": "Điện thoại",
+      "value": "+84 (0) 963254259"
+    },
+    "email": {
+      "label": "Email",
+      "value": "info@aipartners.asia"
+    }
+  },
+  "form": {
+    "title": "Gửi tin nhắn cho chúng tôi",
+    "fields": {
+      "name": "Họ và tên *",
+      "email": "Email *",
+      "company": "Công ty",
+      "message": "Tin nhắn *"
+    },
+    "sendButton": "Gửi tin nhắn",
+    "validation": {
+      "required": "Vui lòng điền đầy đủ các trường bắt buộc."
+    },
+    "success": {
+      "title": "Tin nhắn đã gửi",
+      "message": "Cảm ơn bạn đã gửi tin nhắn. Chúng tôi sẽ liên hệ lại với bạn sớm!"
+    }
+  }
+}

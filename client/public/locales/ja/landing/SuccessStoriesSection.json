@@ -1,0 +1,51 @@
+{
+  "title": "実世界のAI成功事例を発見",
+  "subtitle": "多様な業界の企業がGoogle Cloud AIと当社のパートナーネットワークを活用して、目覚ましい結果を達成し、業務を変革している方法をご覧ください。",
+  "stories": [
+    {
+      "title": "AESはGoogle Cloud Vertex AI上のAnthropic's Claudeで監査コストを99%削減し、精度を向上",
+      "company": "AES",
+      "description": "AI自動化による99%のコスト削減で監査プロセスを変革"
+    },
+    {
+      "title": "AirwallexはGoogle Cloud上のGitLabをスケーラブルなCI/CDとグローバルフィンテック拡大に使用",
+      "company": "Airwallex ♥ GitLab",
+      "description": "高度なCI/CDソリューションでフィンテック事業をグローバルにスケール"
+    },
+    {
+      "title": "AllegroはGrowthLoopとGoogle Cloud AIを大規模なパーソナライズ顧客コミュニケーションに使用",
+      "company": "Allegro 📹 GrowthLoop",
+      "description": "AI駆動のコミュニケーションプラットフォームで顧客体験をパーソナライズ"
+    },
+    {
+      "title": "TechCorpはGoogle Cloud上のリアルタイムAIインサイトでデータ分析を加速",
+      "company": "TechCorp",
+      "description": "ビジネスインテリジェンスと意思決定を推進するリアルタイム分析"
+    },
+    {
+      "title": "SecureBankはAI搭載不正検知を実装し、誤検知を85%削減",
+      "company": "SecureBank",
+      "description": "金融取引を保護するAI搭載セキュリティソリューション"
+    },
+    {
+      "title": "GlobalRetailは予測AIモデルでサプライチェーンを最適化",
+      "company": "GlobalRetail",
+      "description": "グローバルサプライチェーン業務を変革する予測分析"
+    },
+    {
+      "title": "HealthTechはAI搭載診断で患者ケアを革命化",
+      "company": "HealthTech",
+      "description": "医療成果と患者満足度を向上させるAI診断"
+    },
+    {
+      "title": "InnovateLabはIoTとAI統合でスマートシティソリューションを開発",
+      "company": "InnovateLab",
+      "description": "AIとIoT技術を活用したスマートシティイノベーション"
+    },
+    {
+      "title": "DataFlowは自動化AIパイプラインで企業データ管理を変革",
+      "company": "DataFlow",
+      "description": "企業業務を効率化する自動データパイプライン"
+    }
+  ]
+}

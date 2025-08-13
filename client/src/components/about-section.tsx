@@ -2,19 +2,20 @@ import { motion } from "framer-motion";
 import { Users } from "lucide-react";
 import { useI18n } from "@/contexts/i18n-context";
 
-const values = [
+const getValues = (t: (key: string) => string) => [
   {
-    title: "AI Transformation – Growth & Optimization",
-    description: "Tập trung vào giải pháp chuyển đổi AI mang tính thực tiễn, tối ưu vận hành và thúc đẩy tăng trưởng bền vững cho doanh nghiệp.",
+    title: t("AboutSection.values.0.title"),
+    description: t("AboutSection.values.0.description"),
   },
   {
-    title: "One-stop AI enablement network",
-    description: "Cung cấp đầy đủ dịch vụ – từ tư vấn chiến lược, đào tạo, phát triển ứng dụng AI đến triển khai nguồn lực nhân sự – dưới một hệ sinh thái duy nhất.",
+    title: t("AboutSection.values.1.title"),
+    description: t("AboutSection.values.1.description"),
   }
 ];
 
 export default function AboutSection() {
   const { t } = useI18n();
+  const values = getValues(t);
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

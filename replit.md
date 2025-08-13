@@ -103,3 +103,13 @@ Preferred communication style: Simple, everyday language.
   - Fixed mission statement content to match user specifications: "Khai thác sức mạnh cộng hưởng trong hệ sinh thái..."
   - Added structured core values data with proper translations
   - All components now fully support language switching without any hardcoded strings remaining
+
+### Strategic Direction Section Addition
+- **Date**: January 13, 2025
+- **Changes Made**:
+  - Created new StrategicDirectionSection component with professional B2B design
+  - Added comprehensive JSON translation files for all three languages (VI/EN/JP)
+  - Integrated section between "Our Core Values" and "Success Stories" on homepage
+  - Updated i18n context to load new section translations
+  - Content covers: Enterprise Partnership, AI Talent Development, and International Collaboration
+  - Features modern card-based design with hover animations and gradient accents

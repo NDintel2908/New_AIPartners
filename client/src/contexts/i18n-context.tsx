@@ -41,7 +41,7 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
       setIsLoading(true);
       try {
         // Load all section files
-        const landingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection', 'AITrainersModel', 'Footer', 'SuccessStoriesSection', 'PartnersSection', 'ContactSection'];
+        const landingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection', 'AITrainersModel', 'StrategicDirectionSection', 'Footer', 'SuccessStoriesSection', 'PartnersSection', 'ContactSection'];
         const pagesSections = ['App', 'NotFoundPage'];
         const translations: Record<string, any> = {};
         
@@ -74,12 +74,14 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
         console.error('Failed to load translations:', error);
         // Fallback to Vietnamese if loading fails
         if (language !== 'vi') {
-          const landingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection', 'AITrainersModel', 'Footer', 'SuccessStoriesSection', 'PartnersSection', 'ContactSection'];
+          const landingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection', 'AITrainersModel', 'StrategicDirectionSection', 'Footer', 'SuccessStoriesSection', 'PartnersSection', 'ContactSection'];
           const pagesSections = ['App', 'NotFoundPage'];
           const fallbackTranslations: Record<string, any> = {};
           
+          const fallbackLandingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection', 'AITrainersModel', 'StrategicDirectionSection', 'Footer', 'SuccessStoriesSection', 'PartnersSection', 'ContactSection'];
+          
           // Load fallback landing sections
-          for (const section of landingSections) {
+          for (const section of fallbackLandingSections) {
             try {
               const response = await fetch(`/locales/vi/landing/${section}.json`);
               const data = await response.json();

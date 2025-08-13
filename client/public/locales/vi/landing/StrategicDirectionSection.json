@@ -1,0 +1,17 @@
+{
+  "title": "Định hướng chiến lược",
+  "items": [
+    {
+      "title": "Đồng hành doanh nghiệp",
+      "description": "Đồng hành cùng các doanh nghiệp tại Việt Nam và khu vực SEA để đánh giá mức độ sẵn sàng AI, huấn luyện nội bộ, và ứng dụng AI vào vận hành."
+    },
+    {
+      "title": "Phát triển nhân lực AI",
+      "description": "Phát triển các mô hình đào tạo và thực tập AI cho lực lượng trẻ nhằm đáp ứng nhu cầu nhân lực ngành công nghệ tương lai."
+    },
+    {
+      "title": "Kết nối quốc tế",
+      "description": "Kết nối và cộng tác với các đối tác quốc tế trong lĩnh vực AI, IOT, Robotics, an ninh mạng và dữ liệu lớn."
+    }
+  ]
+}

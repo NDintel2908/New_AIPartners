@@ -9,11 +9,20 @@ export default function NavigationHeader() {
   const { t } = useI18n();
 
   const navItems = [
-    { href: "/", label: t("Header.navigation.home") },
-    { href: "/about", label: t("Header.navigation.about") },
-    { href: "/services", label: t("Header.navigation.services") },
-    { href: "/contact", label: t("Header.navigation.contact") },
+    { href: "#hero", label: t("Header.navigation.home") },
+    { href: "#about", label: t("Header.navigation.about") },
+    { href: "#services", label: t("Header.navigation.services") },
+    { href: "#contact", label: t("Header.navigation.contact") },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const sectionId = href.replace('#', '');
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 backdrop-blur-sm bg-white/95">
@@ -32,7 +41,8 @@ export default function NavigationHeader() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-google-gray hover:text-google-blue px-3 py-2 text-sm font-medium transition-colors"
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="text-google-gray hover:text-google-blue px-3 py-2 text-sm font-medium transition-colors cursor-pointer"
                 >
                   {item.label}
                 </a>
@@ -68,30 +78,19 @@ export default function NavigationHeader() {
       {isMenuOpen && (
         <div className="md:hidden">
           <nav className="px-2 pt-2 pb-3 space-y-1">
-                <a
-                  href="/"
-                  className="block px-3 py-2 text-gray-700 hover:text-google-blue transition-colors duration-200 font-medium"
-                >
-                  {t("Header.navigation.home")}
-                </a>
-                <a
-                  href="/about"
-                  className="block px-3 py-2 text-gray-700 hover:text-google-blue transition-colors duration-200 font-medium"
-                >
-                  {t("Header.navigation.about")}
-                </a>
-                <a
-                  href="/services"
-                  className="block px-3 py-2 text-gray-700 hover:text-google-blue transition-colors duration-200 font-medium"
-                >
-                  {t("Header.navigation.services")}
-                </a>
-                <a
-                  href="/contact"
-                  className="block px-3 py-2 text-gray-700 hover:text-google-blue transition-colors duration-200 font-medium"
-                >
-                  {t("Header.navigation.contact")}
-                </a>
+                {navItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={(e) => {
+                      handleNavClick(e, item.href);
+                      setIsMenuOpen(false);
+                    }}
+                    className="block px-3 py-2 text-gray-700 hover:text-google-blue transition-colors duration-200 font-medium cursor-pointer"
+                  >
+                    {item.label}
+                  </a>
+                ))}
               </nav>
         </div>
       )}

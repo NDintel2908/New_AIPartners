@@ -38,7 +38,7 @@ export default function FeaturesSection() {
   const { t } = useI18n();
   
   return (
-    <section id="features" className="relative py-20 bg-white overflow-hidden">
+    <section id="services" className="relative py-20 bg-white overflow-hidden">
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
         <svg className="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">

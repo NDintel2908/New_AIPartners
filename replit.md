@@ -89,7 +89,17 @@ Preferred communication style: Simple, everyday language.
   - `locales/{language}/pages/` - Application-wide translations
 - **Fallback System**: Automatic fallback to Vietnamese if translation loading fails
 
-## Recent Changes (January 2025)
+## Recent Changes
+
+### 2025-08-13 - Navigation Updated to Single Page Experience
+- **Change**: Updated navigation from multi-page routing to single-page smooth scrolling
+- **Implementation**: 
+  1. Modified navigation-header.tsx to use anchor links (#hero, #about, #services, #contact)
+  2. Added smooth scroll behavior with handleNavClick function
+  3. Updated all CTA buttons to scroll to contact section
+  4. Added proper section IDs for navigation targets
+- **User Request**: "khi nhấn vào phần nào trên header thì cuộn xuống phần đó, chứ không cần phải redirect tới một trang riêng đâu"
+- **Current Status**: Single-page application with smooth scrolling navigation (January 2025)
 
 ### i18n Implementation Completion
 - **Date**: January 13, 2025

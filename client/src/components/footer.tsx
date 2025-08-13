@@ -1,5 +1,5 @@
 import { Cloud } from "lucide-react";
-import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { useI18n } from "@/contexts/i18n-context";
 
 const getFooterSections = (t: (key: string) => string) => [
@@ -52,22 +52,20 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/aipartners.asia"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-google-blue transition-colors"
               >
                 <FaFacebook className="text-xl" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/ai-partners-asia"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-google-blue transition-colors"
               >
                 <FaLinkedin className="text-xl" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-google-blue transition-colors"
-              >
-                <FaTwitter className="text-xl" />
               </a>
             </div>
           </div>

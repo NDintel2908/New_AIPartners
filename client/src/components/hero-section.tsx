@@ -27,10 +27,10 @@ export default function HeroSection() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               AIPARTNERS
                
-              <span className="block">{t("hero.title")}</span>
+              <span className="block">{t("HeroSection.title")}</span>
             </h1>
             <p className="text-xl text-blue-50 mb-8 leading-relaxed max-w-2xl">
-              {t("hero.subtitle")}
+              {t("HeroSection.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -38,7 +38,7 @@ export default function HeroSection() {
                 className="bg-white text-google-blue hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
               >
                 <Rocket className="mr-2 h-5 w-5" />
-                {t("hero.cta")}
+                {t("HeroSection.cta")}
               </Button>
               
             </div>

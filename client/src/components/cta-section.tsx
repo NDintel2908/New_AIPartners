@@ -9,20 +9,20 @@ export default function CTASection() {
   const whyChooseUs = [
     {
       icon: Target,
-      title: t("whyChoose.infrastructure.title"),
-      description: t("whyChoose.infrastructure.description"),
+      title: t("FeaturesSection.infrastructure.title"),
+      description: t("FeaturesSection.infrastructure.description"),
       accent: "slate-600"
     },
     {
       icon: Users,
-      title: t("whyChoose.expertise.title"),
-      description: t("whyChoose.expertise.description"),
+      title: t("FeaturesSection.expertise.title"),
+      description: t("FeaturesSection.expertise.description"),
       accent: "slate-600"
     },
     {
       icon: Lightbulb,
-      title: t("whyChoose.partnership.title"),
-      description: t("whyChoose.partnership.description"),
+      title: t("FeaturesSection.partnership.title"),
+      description: t("FeaturesSection.partnership.description"),
       accent: "slate-600"
     }
   ];
@@ -38,7 +38,7 @@ export default function CTASection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
-            {t("whyChoose.title")}
+            {t("FeaturesSection.title")}
           </h2>
           <div className="w-24 h-1 bg-slate-600 mx-auto rounded-sm"></div>
         </motion.div>
@@ -88,7 +88,7 @@ export default function CTASection() {
             className="bg-slate-700 hover:bg-slate-800 text-white px-10 py-4 text-lg font-semibold rounded-md shadow-sm hover:shadow-md transition-all duration-300"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            {t("whyChoose.cta")}
+            {t("FeaturesSection.cta")}
           </Button>
         </motion.div>
       </div>

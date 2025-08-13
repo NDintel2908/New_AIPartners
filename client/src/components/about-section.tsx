@@ -27,10 +27,10 @@ export default function AboutSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            {t("aboutUs.title")}
+            {t("AboutSection.title")}
           </h2>
           <p className="text-xl text-google-gray max-w-4xl mx-auto leading-relaxed">
-            {t("aboutUs.description")}
+            {t("AboutSection.description")}
           </p>
         </motion.div>
 
@@ -44,11 +44,11 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              {t("aboutUs.storyTitle")}
+              {t("AboutSection.storyTitle")}
             </h3>
             <div className="space-y-4 text-google-gray">
               <p className="text-lg leading-relaxed">
-                {t("aboutUs.storyContent")}
+                {t("AboutSection.storyContent")}
               </p>
             </div>
           </motion.div>

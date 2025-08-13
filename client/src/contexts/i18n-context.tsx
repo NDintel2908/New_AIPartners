@@ -31,16 +31,65 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
   useEffect(() => {
     const loadTranslations = async () => {
       try {
-        const response = await fetch(`/locales/${language}/common.json`);
-        const data = await response.json();
-        setTranslations(data);
+        // Load all section files
+        const landingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection'];
+        const pagesSections = ['App'];
+        const translations: Record<string, any> = {};
+        
+        // Load landing sections
+        for (const section of landingSections) {
+          try {
+            const response = await fetch(`/locales/${language}/landing/${section}.json`);
+            const data = await response.json();
+            translations[section] = data;
+          } catch (error) {
+            console.error(`Failed to load ${section} translations:`, error);
+          }
+        }
+        
+        // Load pages sections
+        for (const section of pagesSections) {
+          try {
+            const response = await fetch(`/locales/${language}/pages/${section}.json`);
+            const data = await response.json();
+            translations[section] = data;
+          } catch (error) {
+            console.error(`Failed to load pages ${section} translations:`, error);
+          }
+        }
+        
+        setTranslations(translations);
       } catch (error) {
         console.error('Failed to load translations:', error);
         // Fallback to Vietnamese if loading fails
         if (language !== 'vi') {
-          const fallbackResponse = await fetch('/locales/vi/common.json');
-          const fallbackData = await fallbackResponse.json();
-          setTranslations(fallbackData);
+          const landingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection'];
+          const pagesSections = ['App'];
+          const fallbackTranslations: Record<string, any> = {};
+          
+          // Load fallback landing sections
+          for (const section of landingSections) {
+            try {
+              const response = await fetch(`/locales/vi/landing/${section}.json`);
+              const data = await response.json();
+              fallbackTranslations[section] = data;
+            } catch (error) {
+              console.error(`Failed to load fallback ${section} translations:`, error);
+            }
+          }
+          
+          // Load fallback pages sections
+          for (const section of pagesSections) {
+            try {
+              const response = await fetch(`/locales/vi/pages/${section}.json`);
+              const data = await response.json();
+              fallbackTranslations[section] = data;
+            } catch (error) {
+              console.error(`Failed to load fallback pages ${section} translations:`, error);
+            }
+          }
+          
+          setTranslations(fallbackTranslations);
         }
       }
     };

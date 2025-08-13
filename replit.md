@@ -44,6 +44,7 @@ Preferred communication style: Simple, everyday language.
 - **Client**: React application with component-based architecture and page routing
 - **Server**: Express API server with modular route and storage architecture
 - **Shared**: Common TypeScript types, database schemas, and utilities shared between client and server
+- **Internationalization**: Multi-language support with section-based JSON structure (`locales/{lang}/landing/` and `locales/{lang}/pages/`)
 
 ## External Dependencies
 
@@ -75,3 +76,15 @@ Preferred communication style: Simple, everyday language.
 ### Form Handling & Validation
 - **Hookform Resolvers**: Validation resolvers for React Hook Form
 - **Drizzle Zod**: Integration between Drizzle schemas and Zod validation
+
+### Internationalization (i18n)
+- **Multi-language Support**: Vietnamese (default), English, and Japanese translations
+- **Structured Organization**: Translation files organized by sections (`Header.json`, `HeroSection.json`, `AboutSection.json`, `FeaturesSection.json`) within language directories
+- **Context-based System**: React Context API for global language state management with localStorage persistence
+- **Section-based Loading**: Dynamic loading of translation files by section for better performance and maintainability
+- **Professional Language Switcher**: Responsive UI component with flag icons and smooth animations
+- **Translation Keys**: Dot-notation access (e.g., `t("FeaturesSection.title")`) for structured content organization
+- **File Structure**: 
+  - `locales/{language}/landing/` - Landing page sections
+  - `locales/{language}/pages/` - Application-wide translations
+- **Fallback System**: Automatic fallback to Vietnamese if translation loading fails

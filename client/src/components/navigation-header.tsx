@@ -9,9 +9,9 @@ export default function NavigationHeader() {
   const { t } = useI18n();
 
   const navItems = [
-    { href: "#about", label: t("navigation.about") },
-    { href: "#success-stories", label: t("navigation.services") },
-    { href: "#contact", label: t("navigation.contact") },
+    { href: "#about", label: t("Header.navigation.about") },
+    { href: "#success-stories", label: t("Header.navigation.services") },
+    { href: "#contact", label: t("Header.navigation.contact") },
   ];
 
   return (

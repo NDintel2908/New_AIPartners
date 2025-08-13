@@ -7,6 +7,16 @@
   "mission": "Sứ mệnh", 
   "values": "Giá trị cốt lõi",
   "visionText": "Trở thành đối tác tin cậy hàng đầu trong việc ứng dụng trí tuệ nhân tạo, góp phần xây dựng một tương lai thông minh và bền vững.",
-  "missionText": "Cung cấp các giải pháp AI tiên tiến, dễ tiếp cận và hiệu quả, giúp doanh nghiệp chuyển đổi số thành công và tạo ra giá trị bền vững.",
-  "valuesText": "Đổi mới sáng tạo, chất lượng vượt trội, đạo đức trong công nghệ và cam kết phục vụ khách hàng."
+  "missionText": "Khai thác sức mạnh cộng hưởng trong hệ sinh thái – kết nối, bổ trợ và nâng tầm năng lực giữa các đối tác trong hệ sinh thái, cùng kiến tạo những giải pháp AI phù hợp và đột phá cho doanh nghiệp.",
+  "valuesText": "Đổi mới sáng tạo, chất lượng vượt trội, đạo đức trong công nghệ và cam kết phục vụ khách hàng.",
+  "values": [
+    {
+      "title": "AI Transformation – Growth & Optimization",
+      "description": "Tập trung vào giải pháp chuyển đổi AI mang tính thực tiễn, tối ưu vận hành và thúc đẩy tăng trưởng bền vững cho doanh nghiệp."
+    },
+    {
+      "title": "One-stop AI enablement network",
+      "description": "Cung cấp đầy đủ dịch vụ – từ tư vấn chiến lược, đào tạo, phát triển ứng dụng AI đến triển khai nguồn lực nhân sự – dưới một hệ sinh thái duy nhất."
+    }
+  ]
 }

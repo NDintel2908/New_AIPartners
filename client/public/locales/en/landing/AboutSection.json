@@ -7,6 +7,16 @@
   "mission": "Mission", 
   "values": "Core Values",
   "visionText": "To become the leading trusted partner in artificial intelligence applications, contributing to building an intelligent and sustainable future.",
-  "missionText": "Providing advanced, accessible, and effective AI solutions that help businesses successfully transform digitally and create sustainable value.",
-  "valuesText": "Innovation, superior quality, ethics in technology, and commitment to customer service."
+  "missionText": "Harness the power of synergy within the ecosystem – connecting, supporting, and enhancing capabilities among ecosystem partners, co-creating appropriate and breakthrough AI solutions for businesses.",
+  "valuesText": "Innovation, superior quality, ethics in technology, and commitment to customer service.",
+  "values": [
+    {
+      "title": "AI Transformation – Growth & Optimization",
+      "description": "Focus on practical AI transformation solutions that optimize operations and drive sustainable business growth."
+    },
+    {
+      "title": "One-stop AI enablement network",
+      "description": "Provide comprehensive services – from strategic consulting, training, AI application development to human resource deployment – under a single ecosystem."
+    }
+  ]
 }

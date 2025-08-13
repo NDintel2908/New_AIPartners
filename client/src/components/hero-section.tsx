@@ -37,6 +37,12 @@ export default function HeroSection() {
               <Button
                 size="lg"
                 className="bg-white text-google-blue hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold"
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 <Rocket className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 {t("HeroSection.startFree")}

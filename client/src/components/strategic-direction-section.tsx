@@ -154,7 +154,16 @@ export default function StrategicDirectionSection() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <button className="inline-flex items-center px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-medium rounded-md shadow-sm hover:shadow-md transition-all duration-300" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+          <button 
+            className="inline-flex items-center px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-medium rounded-md shadow-sm hover:shadow-md transition-all duration-300" 
+            style={{ fontFamily: 'Inter, system-ui, sans-serif' }}
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
             <span className="mr-2">Explore Strategic Vision</span>
             <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
           </button>

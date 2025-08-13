@@ -42,7 +42,15 @@ export default function NavigationHeader() {
 
           <div className="flex items-center space-x-4">
             <LanguageSwitcher />
-            <Button className="bg-google-blue hover:bg-google-blue-dark text-white px-6 py-2 rounded-md text-sm font-medium">
+            <Button 
+              className="bg-google-blue hover:bg-google-blue-dark text-white px-6 py-2 rounded-md text-sm font-medium"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               Join us
             </Button>
             <Button

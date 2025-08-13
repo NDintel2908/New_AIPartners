@@ -311,7 +311,15 @@ export default function SuccessStoriesSection() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center mt-10"
         >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-google-blue to-google-blue-dark text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group">
+          <div 
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-google-blue to-google-blue-dark text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
             <span className="font-semibold mr-2">Explore More Success Stories</span>
             <motion.span
               animate={{ x: [0, 3, 0] }}

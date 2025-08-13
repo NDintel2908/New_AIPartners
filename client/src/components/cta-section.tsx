@@ -87,6 +87,12 @@ export default function CTASection() {
             size="lg"
             className="bg-slate-700 hover:bg-slate-800 text-white px-10 py-4 text-lg font-semibold rounded-md shadow-sm hover:shadow-md transition-all duration-300"
             style={{ fontFamily: 'Inter, sans-serif' }}
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
             {t("FeaturesSection.cta")}
           </Button>

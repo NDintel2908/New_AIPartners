@@ -207,7 +207,15 @@ export default function FeaturesSection() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center mt-16"
         >
-          <Button className="bg-google-blue hover:bg-google-blue/90 text-white px-8 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 group">
+          <Button 
+            className="bg-google-blue hover:bg-google-blue/90 text-white px-8 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 group"
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
             {t("FeaturesSection.cta")}
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>

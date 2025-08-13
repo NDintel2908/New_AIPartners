@@ -59,7 +59,15 @@ export default function PartnersSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-12"
         >
-          <Button className="bg-google-blue hover:bg-google-blue-dark text-white px-8 py-3 text-lg font-semibold">
+          <Button 
+            className="bg-google-blue hover:bg-google-blue-dark text-white px-8 py-3 text-lg font-semibold"
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
             <Handshake className="mr-2 h-5 w-5" />
             {t("PartnersSection.exploreButton")}
           </Button>

@@ -1,27 +1,38 @@
 {
   "title": "Hệ sinh thái AI toàn diện",
   "subtitle": "Khám phá 5 thành phần cốt lõi tạo nên hệ sinh thái AI hoàn chỉnh của AIPartners",
-  "description": "Mỗi thành phần trong hệ sinh thái được thiết kế để tương tác và hỗ trợ lẫn nhau, tạo ra một giải pháp AI tổng thể mạnh mẽ và hiệu quả cho doanh nghiệp của bạn.",
+  "description": "Mỗi thành phần trong hệ sinh thái được thiết kế để tương tác và hỗ trợ lẫn nhau, tạo ra giải pháp AI toàn diện mạnh mẽ và hiệu quả cho doanh nghiệp của bạn.",
+  "cta": "Khám phá hệ sinh thái",
   "services": {
     "aiBuilders": {
+      "shortTitle": "AI Builders",
       "title": "AI Builders",
-      "description": "Phát triển sản phẩm AI tùy chỉnh theo nhu cầu cụ thể của doanh nghiệp, từ ý tưởng đến triển khai hoàn chỉnh."
+      "description": "Thiết kế và triển khai các sản phẩm AI thực tế, phục vụ các ngành B2B, tài chính, bất động sản, sản xuất...",
+      "target": "Dành cho doanh nghiệp muốn triển khai AI"
     },
     "aiTrainers": {
-      "title": "AI Trainers", 
-      "description": "Tư vấn chiến lược và đào tạo chuyên sâu về AI, giúp doanh nghiệp xây dựng năng lực nội bộ bền vững."
-    },
-    "aiWorkforce": {
-      "title": "AI Workforce",
-      "description": "Tuyển dụng và phát triển đội ngũ nhân tài AI chất lượng cao, đáp ứng nhu cầu chuyên môn của từng dự án."
-    },
-    "aiAgentMarket": {
-      "title": "AI Agent Market",
-      "description": "Thị trường công cụ và giải pháp AI đa dạng, cung cấp các agent AI được kiểm nghiệm và tối ưu hóa."
+      "shortTitle": "AI Trainers",
+      "title": "AI Trainers",
+      "description": "Tư vấn chiến lược, đào tạo kỹ năng và xây dựng năng lực nội bộ sẵn sàng cho chuyển đổi AI.",
+      "target": "Dành cho tổ chức muốn đào tạo AI"
     },
     "aiReadyData": {
+      "shortTitle": "AI Ready Data",
       "title": "AI Ready Data",
-      "description": "Dịch vụ chuẩn bị và quản lý dữ liệu chuyên nghiệp, đảm bảo dữ liệu sẵn sàng cho các ứng dụng AI."
+      "description": "Chuẩn bị và xử lý dữ liệu chuyên nghiệp, đảm bảo dữ liệu sẵn sàng và tối ưu cho các ứng dụng AI.",
+      "target": "Dành cho doanh nghiệp có dữ liệu thô"
+    },
+    "aiWorkforce": {
+      "shortTitle": "AI Workforce",
+      "title": "AI Workforce",
+      "description": "Cung cấp nhân sự thực tập, đào tạo, tuyển dụng và chuyển giao đội ngũ AI phù hợp theo yêu cầu doanh nghiệp.",
+      "target": "Dành cho doanh nghiệp thiếu nhân lực AI"
+    },
+    "aiAgentMarket": {
+      "shortTitle": "AI Agent Market",
+      "title": "AI Agent Market",
+      "description": "Kho công cụ AI ứng dụng (AI Agents) đa dạng và chuyên biệt, đã được kiểm chứng và tối ưu hóa.",
+      "target": "Dành cho doanh nghiệp cần giải pháp nhanh"
     }
   }
 }

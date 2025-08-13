@@ -100,7 +100,7 @@ export default function OrbitalEcosystemSection() {
   const { t } = useI18n();
 
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-50 via-white to-gray-50/30 relative overflow-hidden">
+    <section id="services" className="py-24 bg-gradient-to-b from-slate-50 via-white to-gray-50/30 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-slate-100/30 rounded-full blur-3xl" />

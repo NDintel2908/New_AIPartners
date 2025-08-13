@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Rocket, Play } from "lucide-react";
+import { useI18n } from "@/contexts/i18n-context";
 
 const partnerLogos = [
   { name: "AES", logo: "AES" },
@@ -12,6 +13,8 @@ const partnerLogos = [
 ];
 
 export default function HeroSection() {
+  const { t } = useI18n();
+  
   return (
     <section className="hero-gradient text-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,10 +27,10 @@ export default function HeroSection() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               AIPARTNERS
                
-              <span className="block">One-Stop Winning AI Transformation Station</span>
+              <span className="block">{t("hero.title")}</span>
             </h1>
             <p className="text-xl text-blue-50 mb-8 leading-relaxed max-w-2xl">
-              Từ chiến lược đến triển khai, mọi giải pháp AI đều hội tụ tại đây. Chúng tôi giúp doanh nghiệp tăng tốc chuyển đổi số và bứt phá trong kỷ nguyên AI. Một điểm dừng, trọn hành trình chiến thắng.
+              {t("hero.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -35,7 +38,7 @@ export default function HeroSection() {
                 className="bg-white text-google-blue hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
               >
                 <Rocket className="mr-2 h-5 w-5" />
-                Find a partner
+                {t("hero.cta")}
               </Button>
               
             </div>

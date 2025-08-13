@@ -1,29 +1,31 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Users, Target, Lightbulb } from "lucide-react";
-
-const whyChooseUs = [
-  {
-    icon: Target,
-    title: "Comprehensive AI Infrastructure",
-    description: "Enterprise-grade AI solutions spanning strategic consulting, technology implementation, and resource deployment for measurable business outcomes.",
-    accent: "slate-600"
-  },
-  {
-    icon: Users,
-    title: "Cross-Functional Expertise",
-    description: "Multi-disciplinary team of certified AI specialists delivering rapid prototyping, advanced analytics, and scalable enterprise solutions.",
-    accent: "slate-600"
-  },
-  {
-    icon: Lightbulb,
-    title: "Strategic Partnership Commitment",
-    description: "End-to-end transformation partnership with guaranteed ROI delivery and continuous optimization for sustained competitive advantage.",
-    accent: "slate-600"
-  }
-];
+import { useI18n } from "@/contexts/i18n-context";
 
 export default function CTASection() {
+  const { t } = useI18n();
+  
+  const whyChooseUs = [
+    {
+      icon: Target,
+      title: t("whyChoose.infrastructure.title"),
+      description: t("whyChoose.infrastructure.description"),
+      accent: "slate-600"
+    },
+    {
+      icon: Users,
+      title: t("whyChoose.expertise.title"),
+      description: t("whyChoose.expertise.description"),
+      accent: "slate-600"
+    },
+    {
+      icon: Lightbulb,
+      title: t("whyChoose.partnership.title"),
+      description: t("whyChoose.partnership.description"),
+      accent: "slate-600"
+    }
+  ];
   return (
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,7 +38,7 @@ export default function CTASection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
-            Why Choose AIPartners?
+            {t("whyChoose.title")}
           </h2>
           <div className="w-24 h-1 bg-slate-600 mx-auto rounded-sm"></div>
         </motion.div>
@@ -86,7 +88,7 @@ export default function CTASection() {
             className="bg-slate-700 hover:bg-slate-800 text-white px-10 py-4 text-lg font-semibold rounded-md shadow-sm hover:shadow-md transition-all duration-300"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            Partner with Us
+            {t("whyChoose.cta")}
           </Button>
         </motion.div>
       </div>

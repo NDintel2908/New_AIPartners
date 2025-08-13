@@ -1,0 +1,43 @@
+{
+  "navigation": {
+    "home": "Trang chủ",
+    "about": "Về chúng tôi",
+    "services": "Dịch vụ",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "title": "Giải pháp AI thông minh cho doanh nghiệp hiện đại",
+    "subtitle": "Chúng tôi cung cấp các giải pháp AI tiên tiến giúp doanh nghiệp tối ưu hóa quy trình, tăng hiệu quả và đạt được lợi thế cạnh tranh bền vững.",
+    "cta": "Khám phá ngay"
+  },
+  "about": {
+    "vision": "Tầm nhìn",
+    "mission": "Sứ mệnh", 
+    "values": "Giá trị cốt lõi",
+    "visionText": "Trở thành đối tác tin cậy hàng đầu trong việc ứng dụng trí tuệ nhân tạo, góp phần xây dựng một tương lai thông minh và bền vững.",
+    "missionText": "Cung cấp các giải pháp AI tiên tiến, dễ tiếp cận và hiệu quả, giúp doanh nghiệp chuyển đổi số thành công và tạo ra giá trị bền vững.",
+    "valuesText": "Đổi mới sáng tạo, chất lượng vượt trội, đạo đức trong công nghệ và cam kết phục vụ khách hàng."
+  },
+  "aboutUs": {
+    "title": "Về chúng tôi",
+    "description": "AIPartners.asia (AIP) là hệ sinh thái công nghệ chuyên cung cấp giải pháp chuyển đổi AI trọn gói (One-stop AI Transformation) dành riêng cho các doanh nghiệp tại Việt Nam và khu vực Châu Á – Thái Bình Dương (APAC).",
+    "storyTitle": "Câu chuyện của chúng tôi",
+    "storyContent": "AIP được thành lập từ tháng 6 năm 2024 với mô hình hoạt động gồm AI Builders – AI Trainers – AI Workforce – AI Agent Market, giúp doanh nghiệp tiếp cận AI dễ dàng, và tiết kiệm. Chúng tôi không chỉ tư vấn – mà còn trực tiếp xây dựng, triển khai và đào tạo để đưa AI vào vận hành thực tế, kết nối nguồn lực từ Việt Nam, Nhật Bản và Thái Lan nhằm thúc đẩy tiến trình chuyển đổi số thông minh và bền vững."
+  },
+  "whyChoose": {
+    "title": "Tại sao chọn AIPartners?",
+    "infrastructure": {
+      "title": "Cơ sở hạ tầng AI toàn diện",
+      "description": "Giải pháp AI cấp doanh nghiệp bao gồm tư vấn chiến lược, triển khai công nghệ và phân bổ tài nguyên để đạt được kết quả kinh doanh có thể đo lường."
+    },
+    "expertise": {
+      "title": "Chuyên môn đa chức năng",
+      "description": "Đội ngũ chuyên gia AI được chứng nhận đa ngành cung cấp nguyên mẫu nhanh chóng, phân tích nâng cao và giải pháp doanh nghiệp có thể mở rộng."
+    },
+    "partnership": {
+      "title": "Cam kết đối tác chiến lược",
+      "description": "Đối tác chuyển đổi toàn diện với cam kết cung cấp ROI và tối ưu hóa liên tục để duy trì lợi thế cạnh tranh."
+    },
+    "cta": "Hợp tác với chúng tôi"
+  }
+}

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Users } from "lucide-react";
+import { useI18n } from "@/contexts/i18n-context";
 
 const values = [
   {
@@ -13,6 +14,7 @@ const values = [
 ];
 
 export default function AboutSection() {
+  const { t } = useI18n();
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,10 +27,10 @@ export default function AboutSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            About us
+            {t("aboutUs.title")}
           </h2>
           <p className="text-xl text-google-gray max-w-4xl mx-auto leading-relaxed">
-            AIPartners.asia (AIP) là hệ sinh thái công nghệ chuyên cung cấp giải pháp chuyển đổi AI trọn gói (One-stop AI Transformation) dành riêng cho các doanh nghiệp tại Việt Nam và khu vực Châu Á – Thái Bình Dương (APAC).
+            {t("aboutUs.description")}
           </p>
         </motion.div>
 
@@ -42,17 +44,11 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              Our Story
+              {t("aboutUs.storyTitle")}
             </h3>
             <div className="space-y-4 text-google-gray">
               <p className="text-lg leading-relaxed">
-                
-              </p>
-              <p className="text-lg leading-relaxed">
-                 AIP được thành lập từ tháng 6 năm 2024 với mô hình hoạt động gồm AI Builders – AI Trainers – AI Workforce – AI Agent Market, giúp doanh nghiệp tiếp cận AI dễ dàng, và tiết kiệm.
-              </p>
-              <p className="text-lg leading-relaxed">
-                Chúng tôi không chỉ tư vấn – mà còn trực tiếp xây dựng, triển khai và đào tạo để đưa AI vào vận hành thực tế, kết nối nguồn lực từ Việt Nam, Nhật Bản và Thái Lan nhằm thúc đẩy tiến trình chuyển đổi số thông minh và bền vững.
+                {t("aboutUs.storyContent")}
               </p>
             </div>
           </motion.div>

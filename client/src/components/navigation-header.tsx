@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { useI18n } from "@/contexts/i18n-context";
+import LanguageSwitcher from "@/components/language-switcher";
 
 export default function NavigationHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useI18n();
 
   const navItems = [
-    { href: "#about", label: "About" },
-    { href: "#success-stories", label: "Success Stories" },
-    { href: "#contact", label: "Contact" },
+    { href: "#about", label: t("navigation.about") },
+    { href: "#success-stories", label: t("navigation.services") },
+    { href: "#contact", label: t("navigation.contact") },
   ];
 
   return (
@@ -38,6 +40,7 @@ export default function NavigationHeader() {
           </div>
           
           <div className="flex items-center space-x-4">
+            <LanguageSwitcher />
             <Button className="bg-google-blue hover:bg-google-blue-dark text-white px-6 py-2 rounded-md text-sm font-medium">
               Start free
             </Button>

@@ -85,7 +85,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-gray-900">50+</div>
-                  <div className="text-sm text-google-gray">Expert Team Members</div>
+                  <div className="text-sm text-google-gray">{t("AboutSection.expertTeamMembers")}</div>
                 </div>
               </div>
             </motion.div>
@@ -141,19 +141,19 @@ export default function AboutSection() {
                       {t('AboutSection.visionSubtitle')}
                     </span>
                     <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 uppercase tracking-wide mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
-                      <span className="border-b-4 border-slate-700 pb-2">TẦM NHÌN</span>
+                      <span className="border-b-4 border-slate-700 pb-2">{t("AboutSection.visionTitle")}</span>
                     </h3>
                   </div>
 
                   <div className="text-center mb-8">
                     <blockquote className="text-xl lg:text-2xl text-gray-700 leading-relaxed font-medium italic mb-6" style={{ fontFamily: 'Inter, sans-serif', lineHeight: '1.6' }}>
-                      "Trở thành trạm dừng lý tưởng cho mọi nhu cầu chuyển đổi AI – nơi hội tụ đầy đủ nguồn lực, giải pháp và chuyên gia, đồng hành cùng doanh nghiệp trên hành trình chuyển đổi AI Transformation một cách hiệu quả, thực tế và thành công."
+                      "{t("AboutSection.visionText")}"
                     </blockquote>
                   </div>
 
                   <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-sm text-slate-600 font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    <span className="bg-slate-100 px-4 py-2 rounded-full">Mục tiêu: Top 3 APAC 2027</span>
-                    <span className="bg-slate-100 px-4 py-2 rounded-full">10,000+ doanh nghiệp chuyển đổi</span>
+                    <span className="bg-slate-100 px-4 py-2 rounded-full">{t("AboutSection.targetGoal")}</span>
+                    <span className="bg-slate-100 px-4 py-2 rounded-full">{t("AboutSection.businessesTransformed")}</span>
                   </div>
                 </div>
               </div>
@@ -173,13 +173,13 @@ export default function AboutSection() {
                       {t('AboutSection.missionSubtitle')}
                     </span>
                     <h3 className="text-4xl lg:text-5xl font-bold text-white uppercase tracking-wide mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
-                      <span className="border-b-4 border-blue-400 pb-2">SỨ MỆNH</span>
+                      <span className="border-b-4 border-blue-400 pb-2">{t("AboutSection.missionTitle")}</span>
                     </h3>
                   </div>
 
                   <div className="text-center">
                     <blockquote className="text-xl lg:text-2xl text-gray-200 leading-relaxed font-medium italic" style={{ fontFamily: 'Inter, sans-serif', lineHeight: '1.6' }}>
-                      "Khai thác sức mạnh cộng hưởng trong hệ sinh thái – kết nối, bổ trợ và nâng tầm năng lực giữa các đối tác trong hệ sinh thái, cùng kiến tạo những giải pháp AI phù hợp và đột phá cho doanh nghiệp."
+                      "{t("AboutSection.missionText")}"
                     </blockquote>
                   </div>
                 </div>
@@ -205,7 +205,7 @@ export default function AboutSection() {
               className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-16 leading-tight"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              <span className="border-b-2 border-slate-300 pb-2">OUR CORE VALUES</span>
+              <span className="border-b-2 border-slate-300 pb-2">{t("AboutSection.coreValuesTitle")}</span>
             </motion.h3>
 
             <div className="grid md:grid-cols-2 gap-8">

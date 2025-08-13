@@ -4,9 +4,9 @@ import { ChevronDown, Globe } from 'lucide-react';
 import { useI18n, Language } from '@/contexts/i18n-context';
 
 const languages = [
-  { code: 'vi' as Language, name: 'Tiếng Việt', flag: '🇻🇳', short: 'VI' },
-  { code: 'en' as Language, name: 'English', flag: '🇺🇸', short: 'EN' },
-  { code: 'ja' as Language, name: '日本語', flag: '🇯🇵', short: 'JP' }
+  { code: 'vi' as Language, name: 'Tiếng Việt', flag: 'https://flagcdn.com/w20/vn.png', short: 'VI' },
+  { code: 'en' as Language, name: 'English', flag: 'https://flagcdn.com/w20/us.png', short: 'EN' },
+  { code: 'ja' as Language, name: '日本語', flag: 'https://flagcdn.com/w20/jp.png', short: 'JP' }
 ];
 
 export default function LanguageSwitcher() {
@@ -50,7 +50,7 @@ export default function LanguageSwitcher() {
                     language === lang.code ? 'text-google-blue bg-blue-50' : 'text-gray-700'
                   }`}
                 >
-                  <span className="text-lg">{lang.flag}</span>
+                  <img src={lang.flag} alt={`${lang.name} flag`} className="w-5 h-auto" />
                   <div>
                     <div className="font-medium text-sm">{lang.name}</div>
                     <div className="text-xs text-gray-500">{lang.short}</div>
@@ -68,7 +68,7 @@ export default function LanguageSwitcher() {
           onClick={() => setIsOpen(!isOpen)}
           className="flex items-center space-x-1 px-3 py-2 text-gray-700 hover:text-google-blue transition-colors duration-200"
         >
-          <span className="text-sm">{currentLanguage.flag}</span>
+          <img src={currentLanguage.flag} alt={`${currentLanguage.name} flag`} className="w-4 h-auto" />
           <span className="font-medium text-xs">{currentLanguage.short}</span>
           <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
         </button>
@@ -90,7 +90,7 @@ export default function LanguageSwitcher() {
                     language === lang.code ? 'text-google-blue bg-blue-50' : 'text-gray-700'
                   }`}
                 >
-                  <span className="text-sm">{lang.flag}</span>
+                  <img src={lang.flag} alt={`${lang.name} flag`} className="w-4 h-auto" />
                   <span className="font-medium text-xs">{lang.short}</span>
                 </button>
               ))}

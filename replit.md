@@ -8,6 +8,16 @@ This is a modern web application showcasing generative AI success stories and Go
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes
+
+### 2025-08-13 - Critical ES Module Compatibility Issue
+- **Issue**: Recurring "Failed to load url /src/main.tsx" Vite pre-transform error
+- **Root Cause**: Project uses `"type": "module"` but vite.config.ts relies on `__dirname` (CommonJS)
+- **Impact**: Application fails to load, blank page, connection errors
+- **Analysis**: The vite configuration needs `__dirname` for path resolution but ES modules don't provide it
+- **Solution Implemented**: Created `es-module-dirname-polyfill.cjs` to provide __dirname globally
+- **Current Status**: Permanent ES module compatibility polyfill in place
+
 ## System Architecture
 
 ### Frontend Architecture

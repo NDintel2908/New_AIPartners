@@ -6,28 +6,28 @@ const getFooterSections = (t: (key: string) => string) => [
   {
     title: t("Footer.sections.solutions.title"),
     links: [
-      { label: t("Footer.sections.solutions.links.generativeAI"), href: "#" },
-      { label: t("Footer.sections.solutions.links.machineLearning"), href: "#" },
-      { label: t("Footer.sections.solutions.links.cloudMigration"), href: "#" },
-      { label: t("Footer.sections.solutions.links.dataAnalytics"), href: "#" }
+      { label: t("Footer.sections.solutions.links.generativeAI"), href: "/services" },
+      { label: t("Footer.sections.solutions.links.machineLearning"), href: "/services" },
+      { label: t("Footer.sections.solutions.links.cloudMigration"), href: "/services" },
+      { label: t("Footer.sections.solutions.links.dataAnalytics"), href: "/services" }
     ]
   },
   {
     title: t("Footer.sections.company.title"),
     links: [
-      { label: t("Footer.sections.company.links.aboutUs"), href: "#" },
-      { label: t("Footer.sections.company.links.news"), href: "#" },
-      { label: t("Footer.sections.company.links.careers"), href: "#" },
-      { label: t("Footer.sections.company.links.contact"), href: "#" }
+      { label: t("Footer.sections.company.links.aboutUs"), href: "/about" },
+      { label: t("Footer.sections.company.links.news"), href: "/about" },
+      { label: t("Footer.sections.company.links.careers"), href: "/contact" },
+      { label: t("Footer.sections.company.links.contact"), href: "/contact" }
     ]
   },
   {
     title: t("Footer.sections.support.title"), 
     links: [
-      { label: t("Footer.sections.support.links.documentation"), href: "#" },
-      { label: t("Footer.sections.support.links.apiReference"), href: "#" },
-      { label: t("Footer.sections.support.links.community"), href: "#" },
-      { label: t("Footer.sections.support.links.support"), href: "#" }
+      { label: t("Footer.sections.support.links.documentation"), href: "/services" },
+      { label: t("Footer.sections.support.links.apiReference"), href: "/services" },
+      { label: t("Footer.sections.support.links.community"), href: "/about" },
+      { label: t("Footer.sections.support.links.support"), href: "/contact" }
     ]
   }
 ];

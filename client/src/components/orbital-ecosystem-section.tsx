@@ -285,7 +285,8 @@ export default function OrbitalEcosystemSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center"
         >
-          <motion.button
+          <motion.a
+            href="/services"
             className="group inline-flex items-center gap-4 bg-gradient-to-r from-slate-700 via-slate-800 to-gray-800 hover:from-slate-800 hover:via-gray-800 hover:to-slate-900 text-white px-12 py-5 rounded-xl font-semibold text-lg shadow-sm hover:shadow-md transition-all duration-300"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.98 }}
@@ -293,7 +294,7 @@ export default function OrbitalEcosystemSection() {
             <Building2 className="w-6 h-6" />
             <span>{t("OrbitalEcosystemSection.cta")}</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </motion.button>
+          </motion.a>
 
           <p className="text-sm text-gray-500 mt-6 max-w-md mx-auto">
             Ready to transform your business with our comprehensive AI ecosystem? 

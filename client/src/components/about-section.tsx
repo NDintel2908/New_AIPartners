@@ -141,7 +141,7 @@ export default function AboutSection() {
                 <div className="max-w-4xl mx-auto text-center">
                   <div className="mb-8">
                     <span className="text-sm font-semibold text-slate-600 uppercase tracking-wider mb-4 block" style={{ fontFamily: 'Inter, sans-serif' }}>
-                      "Định hướng tương lai"
+                      "One-Stop Winning AI Transformation Station"
                     </span>
                     <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 uppercase tracking-wide mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
                       <span className="border-b-4 border-slate-700 pb-2">TẦM NHÌN</span>
@@ -150,9 +150,7 @@ export default function AboutSection() {
                   
                   <div className="text-center mb-8">
                     <blockquote className="text-xl lg:text-2xl text-gray-700 leading-relaxed font-medium italic mb-6" style={{ fontFamily: 'Inter, sans-serif', lineHeight: '1.6' }}>
-                      "Trở thành đối tác AI hàng đầu tại Việt Nam và Đông Nam Á, 
-                      giúp các doanh nghiệp khai thác toàn bộ tiềm năng của trí tuệ nhân tạo 
-                      để tạo ra giá trị bền vững và thúc đẩy sự phát triển kinh tế số."
+                      "Trở thành trạm dừng lý tưởng cho mọi nhu cầu chuyển đổi AI – nơi hội tụ đầy đủ nguồn lực, giải pháp và chuyên gia, đồng hành cùng doanh nghiệp trên hành trình chuyển đổi AI Transformation một cách hiệu quả, thực tế và thành công."
                     </blockquote>
                   </div>
                   
@@ -175,7 +173,7 @@ export default function AboutSection() {
                 <div className="max-w-4xl mx-auto text-center">
                   <div className="mb-8">
                     <span className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4 block" style={{ fontFamily: 'Inter, sans-serif' }}>
-                      "Cam kết hành động"
+                      "Synergy & Leveraging Members' Capabilities"
                     </span>
                     <h3 className="text-4xl lg:text-5xl font-bold text-white uppercase tracking-wide mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
                       <span className="border-b-4 border-blue-400 pb-2">SỨ MỆNH</span>
@@ -184,10 +182,7 @@ export default function AboutSection() {
                   
                   <div className="text-center">
                     <blockquote className="text-xl lg:text-2xl text-gray-200 leading-relaxed font-medium italic" style={{ fontFamily: 'Inter, sans-serif', lineHeight: '1.6' }}>
-                      "Cung cấp các giải pháp AI tiên tiến và dễ tiếp cận, 
-                      đồng hành cùng doanh nghiệp trong hành trình chuyển đổi số, 
-                      nâng cao năng suất và tạo ra những trải nghiệm khách hàng xuất sắc 
-                      thông qua công nghệ Google Cloud."
+                      "Khai thác sức mạnh cộng hưởng trong hệ sinh thái – kết nối, bổ trợ và nâng tầm năng lực giữa các đối tác trong hệ sinh thái, cùng kiến tạo những giải pháp AI phù hợp và đột phá cho doanh nghiệp."
                     </blockquote>
                   </div>
                 </div>

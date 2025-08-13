@@ -7,6 +7,8 @@ interface I18nContextType {
   setLanguage: (lang: Language) => void;
   translations: Record<string, any>;
   t: (key: string) => string;
+  isLoading: boolean;
+  isInitialized: boolean;
 }
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
@@ -24,12 +26,19 @@ interface I18nProviderProps {
 }
 
 export const I18nProvider = ({ children }: I18nProviderProps) => {
-  const [language, setLanguage] = useState<Language>('vi');
+  const [language, setLanguage] = useState<Language>(() => {
+    // Get saved language from localStorage or default to 'vi'
+    const savedLang = localStorage.getItem('preferred-language') as Language;
+    return savedLang && ['vi', 'en', 'ja'].includes(savedLang) ? savedLang : 'vi';
+  });
   const [translations, setTranslations] = useState<Record<string, any>>({});
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isInitialized, setIsInitialized] = useState<boolean>(false);
 
   // Load translations when language changes
   useEffect(() => {
     const loadTranslations = async () => {
+      setIsLoading(true);
       try {
         // Load all section files
         const landingSections = ['Header', 'HeroSection', 'AboutSection', 'FeaturesSection', 'AITrainersModel', 'Footer', 'SuccessStoriesSection', 'PartnersSection', 'ContactSection'];
@@ -59,6 +68,8 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
         }
         
         setTranslations(translations);
+        setIsInitialized(true);
+        setIsLoading(false);
       } catch (error) {
         console.error('Failed to load translations:', error);
         // Fallback to Vietnamese if loading fails
@@ -90,25 +101,24 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
           }
           
           setTranslations(fallbackTranslations);
+          setIsInitialized(true);
         }
+        setIsLoading(false);
       }
     };
 
     loadTranslations();
   }, [language]);
 
-  // Load saved language preference on mount
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem('aipartners-language') as Language;
-    if (savedLanguage && ['vi', 'en', 'ja'].includes(savedLanguage)) {
-      setLanguage(savedLanguage);
-    }
-  }, []);
-
   // Save language preference to localStorage
+  useEffect(() => {
+    localStorage.setItem('preferred-language', language);
+  }, [language]);
+
+  // Save language preference when changed
   const handleSetLanguage = (lang: Language) => {
     setLanguage(lang);
-    localStorage.setItem('aipartners-language', lang);
+    localStorage.setItem('preferred-language', lang);
   };
 
   // Translation function with nested key support
@@ -132,7 +142,9 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
       language,
       setLanguage: handleSetLanguage,
       translations,
-      t
+      t,
+      isLoading,
+      isInitialized
     }}>
       {children}
     </I18nContext.Provider>

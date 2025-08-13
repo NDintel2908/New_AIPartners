@@ -25,36 +25,19 @@ interface I18nProviderProps {
   children: ReactNode;
 }
 
-// Cache for loaded translations to prevent re-fetching
-const translationsCache = new Map<string, Record<string, any>>();
-
 export const I18nProvider = ({ children }: I18nProviderProps) => {
   const [language, setLanguage] = useState<Language>(() => {
     // Get saved language from localStorage or default to 'vi'
-    try {
-      const savedLang = localStorage.getItem('preferred-language') as Language;
-      return savedLang && ['vi', 'en', 'ja'].includes(savedLang) ? savedLang : 'vi';
-    } catch {
-      return 'vi';
-    }
+    const savedLang = localStorage.getItem('preferred-language') as Language;
+    return savedLang && ['vi', 'en', 'ja'].includes(savedLang) ? savedLang : 'vi';
   });
-  
-  // Start with empty translations - will be loaded immediately in useEffect
   const [translations, setTranslations] = useState<Record<string, any>>({});
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isInitialized, setIsInitialized] = useState<boolean>(false);
 
   // Load translations when language changes
   useEffect(() => {
     const loadTranslations = async () => {
-      // Check cache first
-      const cacheKey = language;
-      if (translationsCache.has(cacheKey)) {
-        setTranslations(translationsCache.get(cacheKey)!);
-        setIsInitialized(true);
-        return;
-      }
-
       setIsLoading(true);
       try {
         // Load all section files
@@ -84,8 +67,6 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
           }
         }
         
-        // Cache the loaded translations
-        translationsCache.set(cacheKey, translations);
         setTranslations(translations);
         setIsInitialized(true);
         setIsLoading(false);
@@ -119,8 +100,6 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
             }
           }
           
-          // Cache fallback translations
-          translationsCache.set(cacheKey, fallbackTranslations);
           setTranslations(fallbackTranslations);
           setIsInitialized(true);
         }
@@ -142,13 +121,8 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
     localStorage.setItem('preferred-language', lang);
   };
 
-  // Translation function with nested key support and smart fallbacks
+  // Translation function with nested key support
   const t = (key: string): string => {
-    // If not initialized yet, return a more user-friendly placeholder
-    if (!isInitialized) {
-      return '';
-    }
-    
     const keys = key.split('.');
     let value = translations;
     
@@ -156,12 +130,11 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
       if (value && typeof value === 'object' && k in value) {
         value = value[k];
       } else {
-        // Instead of returning key, return empty string while loading
-        return '';
+        return key; // Return key if translation not found
       }
     }
     
-    return typeof value === 'string' ? value : '';
+    return typeof value === 'string' ? value : key;
   };
 
   return (

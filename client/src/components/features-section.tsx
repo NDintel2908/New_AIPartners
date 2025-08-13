@@ -1,8 +1,8 @@
 
 import { motion } from "framer-motion";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { Building2, Brain, Handshake, ArrowRight, Sparkles, TrendingUp } from "lucide-react";
-import { useI18n } from "../contexts/i18n-context";
+import { useI18n } from "@/contexts/i18n-context";
 
 const features = [
   {

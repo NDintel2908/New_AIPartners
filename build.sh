@@ -6,10 +6,14 @@ echo "Building AIPartners platform for Vercel deployment..."
 echo "Installing dependencies..."
 npm install
 
-# Build the project (both client and server)
-echo "Building project..."
+# Build client (frontend)
+echo "Building client..."
+cd client
 npm run build
 
+# Return to root
+cd ..
+
 echo "Build completed successfully!"
-echo "Files built to: dist/"
+echo "Client built to: client/dist"
 echo "Ready for Vercel deployment"

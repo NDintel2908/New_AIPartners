@@ -1,6 +1,6 @@
 import { Cloud } from "lucide-react";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { useI18n } from "../contexts/i18n-context";
+import { useI18n } from "@/contexts/i18n-context";
 
 const getFooterSections = (t: (key: string) => string) => [
   {

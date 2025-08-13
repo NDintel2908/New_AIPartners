@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { Card, CardContent } from "./ui/card";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-import { Label } from "./ui/label";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { useState } from "react";
-import { useToast } from "../hooks/use-toast";
-import { useI18n } from "../contexts/i18n-context";
+import { useToast } from "@/hooks/use-toast";
+import { useI18n } from "@/contexts/i18n-context";
 
 export default function ContactSection() {
   const { t } = useI18n();

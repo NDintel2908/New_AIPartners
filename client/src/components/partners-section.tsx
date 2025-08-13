@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { Handshake } from "lucide-react";
-import { useI18n } from "../contexts/i18n-context";
+import { useI18n } from "@/contexts/i18n-context";
 
 const partners = [
   "AES",

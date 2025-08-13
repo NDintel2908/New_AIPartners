@@ -1,8 +1,8 @@
 
 import { motion } from "framer-motion";
-import { Card, CardContent } from "./ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { TrendingUp, GitBranch, Users, Zap, Shield, Globe, Target, Lightbulb, Database } from "lucide-react";
-import { useI18n } from "../contexts/i18n-context";
+import { useI18n } from "@/contexts/i18n-context";
 
 const getSuccessStories = (t: (key: string) => string) => [
   {

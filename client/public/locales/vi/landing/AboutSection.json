@@ -19,13 +19,15 @@
   "targetGoal": "Mục tiêu: Top 3 APAC 2027",
   "businessesTransformed": "10,000+ doanh nghiệp chuyển đổi",
   "expertTeamMembers": "Expert Team Members",
+  "transformationOptimization": "Chuyển đổi AI – Tăng trưởng & Tối ưu hóa",
+  "oneStopNetwork": "Mạng lưới hỗ trợ AI một cửa",
   "values": [
     {
-      "title": "AI Transformation – Growth & Optimization",
+      "title": "Chuyển đổi AI – Tăng trưởng & Tối ưu hóa",
       "description": "Tập trung vào giải pháp chuyển đổi AI mang tính thực tiễn, tối ưu vận hành và thúc đẩy tăng trưởng bền vững cho doanh nghiệp."
     },
     {
-      "title": "One-stop AI enablement network",
+      "title": "Mạng lưới hỗ trợ AI một cửa",
       "description": "Cung cấp đầy đủ dịch vụ – từ tư vấn chiến lược, đào tạo, phát triển ứng dụng AI đến triển khai nguồn lực nhân sự – dưới một hệ sinh thái duy nhất."
     }
   ]

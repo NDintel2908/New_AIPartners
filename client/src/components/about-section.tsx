@@ -95,14 +95,14 @@ export default function AboutSection() {
         {/* Vision and Mission Section - Full Width Storytelling Design */}
         <div className="mb-24 relative overflow-hidden">
           {/* Parallax Background Layers */}
-          <motion.div 
+          <motion.div
             className="absolute inset-0 bg-gradient-to-br from-slate-50 to-gray-100"
             style={{ y: "-50px" }}
             whileInView={{ y: "0px" }}
             viewport={{ once: false }}
             transition={{ duration: 1.5, ease: "easeOut" }}
           ></motion.div>
-          <motion.div 
+          <motion.div
             className="absolute inset-0 bg-gradient-to-r from-slate-900/8 to-blue-900/8"
             style={{ y: "-30px" }}
             whileInView={{ y: "0px" }}
@@ -197,7 +197,7 @@ export default function AboutSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-20"
           >
-            <motion.h3 
+            <motion.h3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -209,30 +209,32 @@ export default function AboutSection() {
             </motion.h3>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {values.map((value, index) => (
-                <motion.div
-                  key={value.title}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.7, delay: 0.4 + index * 0.15 }}
-                  className="group"
-                >
-                  <div className={`rounded-lg p-8 lg:p-10 border border-gray-200 shadow-md hover:shadow-lg hover:border-slate-700 transition-all duration-300 ease-out h-full ${
-                    index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
-                  }`}>
-                    <div className="border-l-4 border-slate-700 pl-6 mb-6">
-                      <h4 className="text-xl lg:text-2xl font-bold text-gray-900 leading-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
-                        {value.title}
-                      </h4>
-                    </div>
-
-                    <p className="text-gray-600 text-base lg:text-lg leading-relaxed font-normal" style={{ fontFamily: 'Inter, sans-serif', lineHeight: '1.7' }}>
-                      {value.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  {t("AboutSection.transformationOptimization")}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {t("AboutSection.values.0.description")}
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  {t("AboutSection.oneStopNetwork")}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {t("AboutSection.values.1.description")}
+                </p>
+              </motion.div>
             </div>
           </motion.div>
         </div>

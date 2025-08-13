@@ -19,13 +19,15 @@
   "targetGoal": "目標：APAC トップ3 2027",
   "businessesTransformed": "10,000+ 企業が変革",
   "expertTeamMembers": "エキスパートチームメンバー",
+  "transformationOptimization": "AI変革 – 成長と最適化",
+  "oneStopNetwork": "ワンストップAI支援ネットワーク",
   "values": [
     {
-      "title": "AI Transformation – Growth & Optimization",
+      "title": "AI変革 – 成長と最適化",
       "description": "実用的なAI変革ソリューションに焦点を当て、運営を最適化し、持続可能なビジネス成長を促進します。"
     },
     {
-      "title": "One-stop AI enablement network", 
+      "title": "ワンストップAI支援ネットワーク", 
       "description": "戦略コンサルティング、トレーニング、AIアプリケーション開発から人材配置まで、包括的なサービスを単一のエコシステムの下で提供します。"
     }
   ]

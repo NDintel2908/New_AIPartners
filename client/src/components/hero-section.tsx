@@ -38,7 +38,7 @@ export default function HeroSection() {
                 className="bg-white text-google-blue hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
               >
                 <Rocket className="mr-2 h-5 w-5" />
-                {t("HeroSection.cta")}
+                {t("HeroSection.startFree")}
               </Button>
               
             </div>
@@ -66,7 +66,7 @@ export default function HeroSection() {
         >
           <div className="text-center mb-8">
             <p className="text-blue-100 text-lg font-medium">
-              Trusted by leading companies worldwide
+              {t("HeroSection.trustedBy")}
             </p>
           </div>
           <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12 opacity-70">

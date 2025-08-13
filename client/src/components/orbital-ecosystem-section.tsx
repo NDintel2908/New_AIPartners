@@ -174,6 +174,12 @@ export default function OrbitalEcosystemSection() {
                   scale: 1.02,
                   transition: { duration: 0.3, ease: "easeOut" }
                 }}
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
                 className={`group cursor-pointer ${isLarge ? 'lg:col-span-1' : ''} ${index === 0 ? 'md:col-span-1' : ''}`}
               >
                 <div className={`
@@ -286,8 +292,15 @@ export default function OrbitalEcosystemSection() {
           className="text-center"
         >
           <motion.a
-            href="/services"
-            className="group inline-flex items-center gap-4 bg-gradient-to-r from-slate-700 via-slate-800 to-gray-800 hover:from-slate-800 hover:via-gray-800 hover:to-slate-900 text-white px-12 py-5 rounded-xl font-semibold text-lg shadow-sm hover:shadow-md transition-all duration-300"
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="group inline-flex items-center gap-4 bg-gradient-to-r from-slate-700 via-slate-800 to-gray-800 hover:from-slate-800 hover:via-gray-800 hover:to-slate-900 text-white px-12 py-5 rounded-xl font-semibold text-lg shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.98 }}
           >
